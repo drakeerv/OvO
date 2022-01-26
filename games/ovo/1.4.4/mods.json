@@ -1,7 +1,7 @@
 {
-    "multiplayer": "https://ovomods.drakefletcher.repl.co/multiplayer.js",
-    "savestate": "https://ovomods.drakefletcher.repl.co/savestate.js",
-    "flymod": "https://ovomods.drakefletcher.repl.co/flymod.js",
-    "explorer": "https://ovomods.drakefletcher.repl.co/explorer.js",
-    "hurricane": "https://ovomods.drakefletcher.repl.co/hurricane.js"
+    "multiplayer": "https://ovo-mods.glitch.me//multiplayer.js",
+    "savestate": "https://ovo-mods.glitch.me/savestate.js",
+    "flymod": "https://ovo-mods.glitch.me/flymod.js",
+    "explorer": "https://ovo-mods.glitch.me/explorer.js",
+    "hurricane": "https://ovo-mods.glitch.me/hurricane.js"
 }

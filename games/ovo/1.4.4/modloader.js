@@ -123,7 +123,7 @@ const mods = {
                 border-width: 6px;
                 font-family: "Retron2000";
                 position: absolute;
-                z-index: 99999999999999999;
+                z-index: 9999999999;
                 cursor: pointer;
             }
 
