@@ -1,0 +1,7 @@
+{
+    "multiplayer": "https://ovomods.drakefletcher.repl.co/multiplayer.js",
+    "savestate": "https://ovomods.drakefletcher.repl.co/savestate.js",
+    "flymod": "https://ovomods.drakefletcher.repl.co/flymod.js",
+    "explorer": "https://ovomods.drakefletcher.repl.co/explorer.js",
+    "hurricane": "https://ovomods.drakefletcher.repl.co/hurricane.js"
+}
