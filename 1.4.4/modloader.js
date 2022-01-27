@@ -74,7 +74,7 @@ const mods = {
 
     let promptMod = () => {
         var mod = prompt("Please enter a mod name/url");
-        (!mod&&reutrn);
+        (!mod&&return());
 
         if (!validURL(mod)) {
             if (mods[mod.toLowerCase()]) {
@@ -94,7 +94,7 @@ const mods = {
     let modloader = {
         init() {
             document.addEventListener("keydown", (event) => {
-                if (event.code === "KeyL" && !this.removed) {
+                if (event.code === "KeyL") {
                     if (event.shiftKey) {
                         promptMod();
                     }
@@ -104,7 +104,6 @@ const mods = {
             this.initDomUI();
             this.updateDomContainers();
             this.initialised = true;
-            this.removed = false;
             this.mainElements = [];
 
             globalThis.modLoader = this;
@@ -160,14 +159,6 @@ const mods = {
 
         updateDomContainers() {
 
-        },
-      
-        remove() {
-          this.mainElements.forEach((element) => {
-            element.remove();
-          });
-          
-          this.removed = true;
         }
     }
 
