@@ -1,5 +1,5 @@
 const mods = {
-    "multiplayer": "https://ovo-mods.glitch.me//multiplayer.js",
+    "multiplayer": "https://ovo-mods.glitch.me/multiplayer.js",
     "savestate": "https://ovo-mods.glitch.me/savestate.js",
     "flymod": "https://ovo-mods.glitch.me/flymod.js",
     "explorer": "https://ovo-mods.glitch.me/explorer.js",
@@ -94,7 +94,7 @@ const mods = {
     let modloader = {
         init() {
             document.addEventListener("keydown", (event) => {
-                if (event.code === "KeyL") {
+                if (event.code === "KeyL" && !this.removed) {
                     if (event.shiftKey) {
                         promptMod();
                     }
@@ -104,6 +104,8 @@ const mods = {
             this.initDomUI();
             this.updateDomContainers();
             this.initialised = true;
+            this.removed = false;
+            this.mainElements = [];
 
             globalThis.modLoader = this;
         },
@@ -152,10 +154,20 @@ const mods = {
             toggleButton.style.zIndex = "9999999999";
             toggleButton.onclick = promptMod;
             document.body.appendChild(toggleButton);
+          
+            this.mainElements += [style, toggleButton];
         },
 
         updateDomContainers() {
 
+        },
+      
+        remove() {
+          this.mainElements.forEach((element) => {
+            element.remove();
+          });
+          
+          this.removed = true;
         }
     }
 
