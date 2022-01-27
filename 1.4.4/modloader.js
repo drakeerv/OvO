@@ -43,7 +43,7 @@ const mods = {
                 };
             });
 
-            modloader.init();
+            ovoModloader.init();
 
             setTimeout(() => {
                 notify("Mod loaded", "Modloader mod loaded");
