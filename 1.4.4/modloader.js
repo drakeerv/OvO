@@ -62,7 +62,7 @@ const mods = {
     }
 
     let loadModUrl = (modURL) => {
-        js = document.createElement("script");
+        let js = document.createElement("script");
         js.type = "application/javascript";
         js.src = modURL;
         document.head.appendChild(js);
@@ -94,7 +94,7 @@ const mods = {
         notify("Code Ran/Added", "Please wait");
     }
 
-    let modloader = {
+    let ovoModloader = {
         init() {
             document.addEventListener("keydown", (event) => {
                 if (event.code === "KeyL" && !this.removed) {
