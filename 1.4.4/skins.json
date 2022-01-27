@@ -207,6 +207,15 @@
     "achievement": -1
   },
   {
+    "name": "Cool Math Games",
+    "hidden": false,
+    "icon": "cmg.png",
+    "skin": "cmg",
+    "lang": "cmg",
+    "price": 0,
+    "achievement": -1
+  },
+  {
     "name": "ShyGuy",
     "hidden": false,
     "icon": "shyguy.png",
