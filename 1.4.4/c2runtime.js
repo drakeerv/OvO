@@ -33694,7 +33694,6 @@ cr.plugins_.aekiro_proui2 = function (runtime) {
 			this.tags_lastResetTick = this.runtime.tickcount;
 		}*/
     if (this.tags.hasOwnProperty(tag)) {
-      console.error("PROUI: Tag %s already exist !", tag);
       return;
     }
     this.tags[tag] = inst;
