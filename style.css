@@ -1,0 +1,20 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: grey;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:active {
+    color: lightgrey;
+}
