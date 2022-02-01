@@ -20973,7 +20973,7 @@ cr.plugins_.GameAnalytics = function(runtime)
     };
     Acts.prototype.addProgressionEvent = function (progressionStatus, progression01, progression02, progression03)
     {
-        if(typeof window["GameAnalytics"]["addProgressionEvent"] == "function")
+        if(window["GameAnalytics"] && typeof window["GameAnalytics"]["addProgressionEvent"] == "function")
         {
             GameAnalytics.addProgressionEvent({
                 progressionStatus: progressionStatus,
@@ -20994,7 +20994,7 @@ cr.plugins_.GameAnalytics = function(runtime)
     };
     Acts.prototype.addProgressionEventWithScore = function (progressionStatus, progression01, progression02, progression03, score)
     {
-        if(typeof window["GameAnalytics"]["addProgressionEvent"] == "function")
+        if(window["GameAnalytics"] && typeof window["GameAnalytics"]["addProgressionEvent"] == "function")
         {
             GameAnalytics.addProgressionEvent({
                 progressionStatus: progressionStatus,
@@ -21016,7 +21016,7 @@ cr.plugins_.GameAnalytics = function(runtime)
     };
     Acts.prototype.addDesignEvent = function (eventId)
     {
-        if(typeof window["GameAnalytics"]["addDesignEvent"] == "function")
+        if(window["GameAnalytics"] && typeof window["GameAnalytics"]["addDesignEvent"] == "function")
         {
             GameAnalytics.addDesignEvent({
                 eventId: eventId
