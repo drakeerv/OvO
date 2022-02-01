@@ -20838,7 +20838,7 @@ cr.plugins_.GameAnalytics = function(runtime)
     Acts.prototype.initialize = function ()
     {
         var VERSION = "1.1.1";
-        if(typeof window["GameAnalytics"]["initialize"] == "function")
+        if(window["gameanalytics"] && typeof window["GameAnalytics"]["initialize"] == "function")
         {
             if(this.enableInfoLog)
             {
@@ -20882,7 +20882,7 @@ cr.plugins_.GameAnalytics = function(runtime)
                 sdkVersion: sdkVersion
             });
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             var ga = window["gameanalytics"]["GameAnalytics"];
             if(this.enableInfoLog)
@@ -20939,7 +20939,7 @@ cr.plugins_.GameAnalytics = function(runtime)
                 cartType: cartType
             });
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["addBusinessEvent"](currency, amount, itemType, itemId, cartType);
         }
@@ -20961,7 +20961,7 @@ cr.plugins_.GameAnalytics = function(runtime)
                 itemId: itemId
             });
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["addResourceEvent"](flowType, currency, amount, itemType, itemId);
         }
@@ -20982,7 +20982,7 @@ cr.plugins_.GameAnalytics = function(runtime)
                 progression03: progression03
             });
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["addProgressionEvent"](progressionStatus, progression01, progression02, progression03);
         }
@@ -21004,7 +21004,7 @@ cr.plugins_.GameAnalytics = function(runtime)
                 score: score
             });
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["addProgressionEvent"](progressionStatus, progression01, progression02, progression03, score);
         }
@@ -21022,7 +21022,7 @@ cr.plugins_.GameAnalytics = function(runtime)
                 eventId: eventId
             });
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["addDesignEvent"](eventId);
         }
@@ -21041,7 +21041,7 @@ cr.plugins_.GameAnalytics = function(runtime)
                 value: value
             });
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["addDesignEvent"](eventId, value);
         }
@@ -21060,7 +21060,7 @@ cr.plugins_.GameAnalytics = function(runtime)
                 message: message
             });
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["addErrorEvent"](severity, message);
         }
@@ -21076,7 +21076,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.setEnabledManualSessionHandling(flag ? true : false);
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["setEnabledManualSessionHandling"](flag ? true : false);
         }
@@ -21092,7 +21092,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.setCustomDimension01(dimension);
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["setCustomDimension01"](dimension);
         }
@@ -21108,7 +21108,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.setCustomDimension02(dimension);
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["setCustomDimension02"](dimension);
         }
@@ -21124,7 +21124,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.setCustomDimension03(dimension);
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["setCustomDimension03"](dimension);
         }
@@ -21140,7 +21140,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.setFacebookId(facebookId);
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["setFacebookId"](facebookId);
         }
@@ -21156,7 +21156,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.setGender(gender);
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["setGender"](gender);
         }
@@ -21172,7 +21172,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.setBirthYear(birthYear);
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["setBirthYear"](birthYear);
         }
@@ -21188,7 +21188,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.startSession();
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["startSession"]();
         }
@@ -21204,7 +21204,7 @@ cr.plugins_.GameAnalytics = function(runtime)
         {
             GameAnalytics.endSession();
         }
-        else if(typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
+        else if(window["GameAnalytics"] && typeof window["gameanalytics"]["GameAnalytics"] != "undefined")
         {
             window["gameanalytics"]["GameAnalytics"]["endSession"]();
         }
