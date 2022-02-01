@@ -6681,7 +6681,7 @@ quat4.str=function(a){return"["+a[0]+", "+a[1]+", "+a[2]+", "+a[3]+"]"};
 	var triggerSheetIndex = -1;
 	Runtime.prototype.trigger = function (method, inst, value /* for fast triggers */)
 	{
-;
+
 		if (!this.running_layout)
 			return false;
 		var sheet = this.running_layout.event_sheet;
