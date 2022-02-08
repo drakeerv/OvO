@@ -29,7 +29,7 @@ a:active {
     cursor: pointer;
 }
 
-.ovo {
+.ovodisabled {
     animation: wiggle 30s ease-in-out 0s infinite normal forwards;
 }
 
