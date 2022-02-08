@@ -24,7 +24,3 @@ a:visited {
 a:active {
     color: lightgrey;
 }
-
-.list-group-flush, .list-group-flush.list-group-item {
-    background: transparent;
-}
