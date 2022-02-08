@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,7 +11,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
     </head>
-    <body>
+    <body class="bootstrap bg-dark text-light">
         <div class="bg-primary text-white p-5 text-center">
             <h1>OvO Mod Loader</h1>
             <p>Play OvO vanilla or with mods!</p>
@@ -18,116 +20,63 @@
             <div class="row">
                 <div class="col">
                     <br/>
-                    <h1 class="ovo">OvO</h1>
+                    <div class="d-inline-flex">
+                        <h1 class="ovo">OvO</h1>
+                    </div>
                     <p>The original OvO. The latest version is 1.4.4.</p>
                     <br/>
                     <h3>Versions</h3>
                     <ul class="list-group">
-                        <li href="/1.4.4/index.html" class="list-group-item list-group-item-action list-group-item-dark clickable-link">1.4.4</li>
-                        <li href="/CrashTestLevelEditor/index.html" class="list-group-item list-group-item-action list-group-item-dark clickable-link">Crash Test Level Editor</li>
+                        <li link="/1.4.4/index.html" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-link hover-pulse">1.4.4</li>
+                        <li link="/CrashTestLevelEditor/index.html" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-link hover-pulse">Crash Test Level Editor</li>
                     </ul>
                     <br/>
                     <h3>Mods</h3>
                     <small>Click to copy!</small>
                     <ul class="list-group">
-                        <li copy="multiplayer" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Multiplayer (multiplayer)</li>
-                        <li copy="savestate" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Savestate (savestate)</li>
-                        <li copy="flymod" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Fly Mod (flymod)</li>
-                        <li copy="oldflymod" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Old Fly Mod (oldflymod)</li>
-                        <li copy="explorer" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Explorer (explorer)</li>
-                        <li copy="hurricane" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Hurricane (hurricane)</li>
-                        <li copy="randomlevel" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Random Level (randomlevel)</li>
-                        <li copy="levelselector" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Level Selector (levelselector)</li>
-                        <li copy="tas" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">TAS (tas)</li>
-                        <li copy="chaos" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Chaos (chaos)</li>
+                        <li copy="multiplayer" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Multiplayer (multiplayer)</li>
+                        <li copy="savestate" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Savestate (savestate)</li>
+                        <li copy="flymod" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Fly Mod (flymod)</li>
+                        <li copy="oldflymod" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Old Fly Mod (oldflymod)</li>
+                        <li copy="explorer" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Explorer (explorer)</li>
+                        <li copy="hurricane" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Hurricane (hurricane)</li>
+                        <li copy="randomlevel" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Random Level (randomlevel)</li>
+                        <li copy="levelselector" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Level Selector (levelselector)</li>
+                        <li copy="tas" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">TAS (tas)</li>
+                        <li copy="chaos" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Chaos (chaos)</li>
                     </ul>
                 </div>
                 <div class="col">
                     <br/>
-                    <h1 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
-html, head, body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Ubuntu', Verdana, sans-serif;
-    background-color: black;
-    color: white;
-    height: 100%;
-    width: 100%;
-}
-
-a {
-    color: grey;
-}
-
-a:visited {
-    color: grey;
-}
-
-a:active {
-    color: lightgrey;
-}
-
-.list-group-item-action {
-    cursor: pointer;
-}
-
-.ovo {
-    animation: wiggle 30s ease-in-out 0s infinite normal forwards;
-}
-
-@keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(0deg);
-    transform-origin: 50% 50%;
-  }
-
-  10% {
-    transform: rotate(8deg);
-  }
-
-  20%,
-  40%,
-  60% {
-    transform: rotate(-10deg);
-  }
-
-  30%,
-  50%,
-  70% {
-    transform: rotate(10deg);
-  }
-
-  80% {
-    transform: rotate(-8deg);
-  }
-
-  90% {
-    transform: rotate(8deg);
-  }
-}>OvO 2</h1>
+                    <div class="d-inline-flex">
+                        <h1 class="ovo">OvO 2</h1>
+                    </div>
                     <p>The latest and greatest OvO. The latest version is 2.0.2alpha.</p>
                     <br/>
                     <h3>Versions</h3>
                     <ul class="list-group">
-                        <li href="/2.0.2alpha/index.html" class="list-group-item list-group-item-action list-group-item-dark clickable-link">2.0.2alpha</li>
+                        <li link="/2.0.2alpha/index.html" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-link hover-pulse">2.0.2alpha</li>
                     </ul>
                     <br/>
                     <h3>Mods</h3>
                     <small>Click to copy!</small>
                     <ul class="list-group">
-                        <li copy="resetbutton" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Reset Button (resetbutton)</li>
-                        <li copy="levelselector" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Level Selector (levelselector)</li>
-                        <li copy="chaos" class="list-group-item list-group-item-action list-group-item-dark clickable-copy">Chaos (chaos)</li>
+                        <li copy="resetbutton" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Reset Button (resetbutton)</li>
+                        <li copy="levelselector" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Level Selector (levelselector)</li>
+                        <li copy="chaos" class="bg-black text-light list-group-item list-group-item-action list-group-item-dark clickable-copy hover-pulse">Chaos (chaos)</li>
                     </ul>
                 </div>
             </div>
+            </br>
         </div>
+        <footer class="bg-dark text-center text-white">
+            <div class="text-center p-3" style="width: 100%; background-color: rgba(0, 0, 0, 0.2);">
+                Made by drakeerv with help from annihilazer, skymen, and the 
+                <a class="text-light" href="https://discord.com/invite/jfWkSfxXZ8">OvO Community</a>
+            </div>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="script.js"></script>
     </body>
 </html>
+

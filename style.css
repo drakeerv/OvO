@@ -7,8 +7,7 @@ html, head, body {
 
 body {
     font-family: 'Ubuntu', Verdana, sans-serif;
-    background-color: black;
-    color: white;
+
     height: 100%;
     width: 100%;
 }
@@ -29,8 +28,26 @@ a:active {
     cursor: pointer;
 }
 
-.ovodisabled {
+.hover-pulse-animation {
+    animation: pulse 500ms ease-in-out 0s 1 normal forwards;
+}
+
+.ovo {
     animation: wiggle 30s ease-in-out 0s infinite normal forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.015);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes wiggle {

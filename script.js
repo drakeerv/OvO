@@ -2,7 +2,13 @@ let links = document.getElementsByClassName("clickable-link");
 for (var i = 0; i < links.length; i++) {
     let link = links[i];
     link.addEventListener("click", () => {
-        window.open(link.getAttribute("href"), "_blank");
+        window.open(link.getAttribute("link"), "_blank");
+
+        let text = link.innerHTML;
+        link.innerHTML = "Opened!";
+        setTimeout(() => {
+            link.innerHTML = text;
+        }, 1000);
     });
 }
 
@@ -11,13 +17,25 @@ for (var i = 0; i < copies.length; i++) {
     let copy = copies[i];
     copy.addEventListener("click", () => {
         copyTextToClipboard(copy.getAttribute("copy"));
-        
+
         let text = copy.innerHTML;
         copy.innerHTML = "Copied!";
         setTimeout(() => {
-           copy.innerHTML = text;
+            copy.innerHTML = text;
         }, 1000);
     });
+}
+
+let hoverPulses = document.getElementsByClassName("hover-pulse");
+for (let i = 0; i <= hoverPulses.length; i++) {
+    let hoverPulse = hoverPulses[i];
+    hoverPulse.addEventListener("animationend", function(e) {
+        hoverPulse.classList.remove("hover-pulse-animation");
+    });
+
+    hoverPulse.addEventListener("mouseover", function(e) {
+        hoverPulse.classList.add("hover-pulse-animation")
+    })
 }
 
 function fallbackCopyTextToClipboard(text) {
