@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col">
                     <br/>
-                    <h1>OvO</h1>
+                    <h1 class="ovo">OvO</h1>
                     <p>The original OvO. The latest version is 1.4.4.</p>
                     <br/>
                     <h3>Versions</h3>
@@ -44,7 +44,72 @@
                 </div>
                 <div class="col">
                     <br/>
-                    <h1>OvO 2</h1>
+                    <h1 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+html, head, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    color: grey;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:active {
+    color: lightgrey;
+}
+
+.list-group-item-action {
+    cursor: pointer;
+}
+
+.ovo {
+    animation: wiggle 30s ease-in-out 0s infinite normal forwards;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
+}>OvO 2</h1>
                     <p>The latest and greatest OvO. The latest version is 2.0.2alpha.</p>
                     <br/>
                     <h3>Versions</h3>
