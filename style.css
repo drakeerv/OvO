@@ -24,3 +24,7 @@ a:visited {
 a:active {
     color: lightgrey;
 }
+
+.list-group-item-action {
+    cursor: pointer;
+}
