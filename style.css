@@ -24,7 +24,7 @@ a:active {
     color: lightgrey;
 }
 
-.list-group-item-action {
+.list-group-item-action, .clickable-link, .clickable-copy {
     cursor: pointer;
 }
 
