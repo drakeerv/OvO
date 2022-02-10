@@ -28,6 +28,11 @@ a:active {
     cursor: pointer;
 }
 
+.footer {
+    position: relative;
+    bottom: 0;
+}
+
 .hover-pulse-animation {
     animation: pulse 500ms ease-in-out 0s 1 normal forwards;
 }
