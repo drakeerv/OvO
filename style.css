@@ -12,8 +12,14 @@ html, body {
     width: 100%;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
     font-family: 'Ubuntu', Verdana, sans-serif;
+    margin-bottom: 60px;
 }
 
 a {
@@ -33,8 +39,11 @@ a:active {
 }
 
 .footer {
-    position: relative;
-    bottom: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
 }
 
 .hover-pulse-animation {
