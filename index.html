@@ -22,7 +22,18 @@
         <a href="/CrashTestLevelEditor/index.html"></a>
 
         <script async src="https://www.googletagmanager.com/gtag/js"></script>
-        <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date);const tags={"ovo.drakefletcher2.repl.co":"G-FYYGF5JH2F","ovo-modded.netlify.app":"G-VE92Z9GXT8","ovo.drakeerv.com":"G-ZSPL1SPBYM"},hostname=window.location.hostname.toLowerCase();tags[hostname]&&gtag("config",tags[hostname]);</script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag("js", new Date());
+            const tags = {"ovo.drakefletcher2.repl.co" : "G-FYYGF5JH2F", "ovo-modded.netlify.app": "G-VE92Z9GXT8", "ovo.drakeerv.com": "G-ZSPL1SPBYM"};
+            const hostname = window.location.hostname.toLowerCase();
+            console.log(hostname);
+            console.log(tags[hostname]);
+            if (!!tags[hostname]) {
+                gtag("config", tags[hostname]);
+            }
+        </script>
     </head>
     <body class="bootstrap bg-dark text-light pt-5">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
