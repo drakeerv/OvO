@@ -31,13 +31,16 @@ for (var i = 0; i < copies.length; i++) {
 let hoverPulses = document.getElementsByClassName("hover-pulse");
 for (let i = 0; i <= hoverPulses.length; i++) {
     let hoverPulse = hoverPulses[i];
-    hoverPulse.addEventListener("animationend", function(e) {
-        hoverPulse.classList.remove("hover-pulse-animation");
-    });
 
-    hoverPulse.addEventListener("mouseover", function(e) {
-        hoverPulse.classList.add("hover-pulse-animation")
-    })
+    if (hoverPulse) {
+        hoverPulse.addEventListener("animationend", function(e) {
+            hoverPulse.classList.remove("hover-pulse-animation");
+        });
+
+        hoverPulse.addEventListener("mouseover", function(e) {
+            hoverPulse.classList.add("hover-pulse-animation")
+        });
+    }
 }
 
 function fallbackCopyTextToClipboard(text) {
