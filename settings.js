@@ -13,7 +13,8 @@ if (window.localStorage) {
         }
 
         allowAnalytics.addEventListener("change", (event) => {
-            storage.setItem("allowAnalytics", event.currentTarget.checked)
+            alert(event.currentTarget.checked);
+            storage.setItem("allowAnalytics", event.currentTarget.checked);
         });
     }
 }
