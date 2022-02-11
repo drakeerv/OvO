@@ -9,7 +9,8 @@ if (window.localStorage) {
         if (alreadyAllowedAnalytics === null) {
             storage.setItem("allowAnalytics", true);
         } else {
-            allowAnalytics.checked = alreadyAllowedAnalytics;
+            alert(!!alreadyAllowedAnalytics);
+            allowAnalytics.checked = !!alreadyAllowedAnalytics;
         }
 
         allowAnalytics.addEventListener("change", (event) => {
