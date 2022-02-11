@@ -5,6 +5,7 @@ if (window.localStorage) {
     
     if (!!allowAnalytics) {
         let alreadyAllowedAnalytics = storage.getItem("allowAnalytics");
+        alert(alreadyAllowedAnalytics);
         
         if (alreadyAllowedAnalytics === null) {
             storage.setItem("allowAnalytics", true);
@@ -13,7 +14,6 @@ if (window.localStorage) {
         }
 
         allowAnalytics.addEventListener("change", (event) => {
-            alert(event.currentTarget.checked);
             storage.setItem("allowAnalytics", event.currentTarget.checked);
         });
     }
