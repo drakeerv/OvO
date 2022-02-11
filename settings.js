@@ -5,12 +5,13 @@ if (window.localStorage) {
     
     if (!!allowAnalytics) {
         let alreadyAllowedAnalytics = storage.getItem("allowAnalytics");
-        alert(alreadyAllowedAnalytics);
+
         if (alreadyAllowedAnalytics === null) {
             storage.setItem("allowAnalytics", true);
         } else {
-            alert(alreadyAllowedAnalytics);
-            allowAnalytics.checked = !!alreadyAllowedAnalytics;
+            setTimeout(() => {
+                allowAnalytics.checked = !!alreadyAllowedAnalytics;
+            }, 250);
         }
 
         allowAnalytics.addEventListener("change", (event) => {
