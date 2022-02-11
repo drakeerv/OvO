@@ -1,19 +1,19 @@
-let allowAnalytics = document.getElementById("allowAnalytics");
+let allowAnalyticsElement = document.getElementById("allowAnalytics");
 
 if (window.localStorage) {
     let storage = window.localStorage;
     
-    if (!!allowAnalytics) {
+    if (!!allowAnalyticsElement) {
         let alreadyAllowedAnalytics = storage.getItem("allowAnalytics");
 
         if (alreadyAllowedAnalytics === null) {
             storage.setItem("allowAnalytics", true);
-            allowAnalytics.checked = true;
+            allowAnalyticsElement.checked = true;
         } else {
-            allowAnalytics.checked = (alreadyAllowedAnalytics == "true");
+            allowAnalyticsElement.checked = (alreadyAllowedAnalytics === "true");
         }
 
-        allowAnalytics.addEventListener("change", (event) => {
+        allowAnalyticsElement.addEventListener("change", (event) => {
             storage.setItem("allowAnalytics", event.currentTarget.checked);
         });
     }
