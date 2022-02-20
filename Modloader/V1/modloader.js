@@ -83,7 +83,7 @@ const mods = {
             }
         }
 
-        if (validURL(mod)) {
+        if (validURL(mod) || mod.startsWith("/")) {
             loadModUrl(mod);
         } else {
             loadModJS(mod);
