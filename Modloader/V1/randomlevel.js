@@ -43,6 +43,7 @@
         stopCycle() {
             if (this.interval) {
                 clearInterval(this.interval);
+                this.interval = null;
             }
         }
     }
