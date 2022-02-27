@@ -1,4 +1,5 @@
 let allowAnalyticsElement = document.getElementById("allowAnalytics");
+let allowAdsElement = document.getElementById("allowAds");
 
 if (window.localStorage) {
     let storage = window.localStorage;
@@ -15,6 +16,21 @@ if (window.localStorage) {
 
         allowAnalyticsElement.addEventListener("change", (event) => {
             storage.setItem("allowAnalytics", event.currentTarget.checked);
+        });
+    }
+
+    if (!!allowAdsElement) {
+        let alreadyAllowedAds = storage.getItem("allowAds");
+
+        if (alreadyAllowedAds === null) {
+            storage.setItem("allowAds", true);
+            allowAdsElement.checked = true;
+        } else {
+            allowAdsElement.checked = (alreadyAllowedAds === "true");
+        }
+
+        allowAdsElement.addEventListener("change", (event) => {
+            storage.setItem("allowAds", event.currentTarget.checked);
         });
     }
 }
