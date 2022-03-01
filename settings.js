@@ -18,19 +18,4 @@ if (window.localStorage) {
             storage.setItem("allowAnalytics", event.currentTarget.checked);
         });
     }
-
-    if (!!allowAdsElement) {
-        let alreadyAllowedAds = storage.getItem("allowAds");
-
-        if (alreadyAllowedAds === null) {
-            storage.setItem("allowAds", true);
-            allowAdsElement.checked = true;
-        } else {
-            allowAdsElement.checked = (alreadyAllowedAds === "true");
-        }
-
-        allowAdsElement.addEventListener("change", (event) => {
-            storage.setItem("allowAds", event.currentTarget.checked);
-        });
-    }
 }
