@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color: #fff;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+table {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+th, td {
+  resize: both;
+  overflow: auto;
+}
+table td {
+  border-left: 5px solid #000;
+  border-right: 5px solid #000;
+}
+td {
+  height: 100%;
+}
+table td:first-child {
+  border-left: none;
+  width: 50%;
+}
+table td:last-child {
+  border-right: none;
+  width: 50%;
+}
+#blocklyOutput #code {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  overflow: scroll;
+}
