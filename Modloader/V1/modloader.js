@@ -1,4 +1,5 @@
 const mods = {
+  "ai": "/Modloader/V1/ai.js",
   "chaos": "/Modloader/V1/chaos.js",
   "explorer": "/Modloader/V1/explorer.js",
   "flymod": "/Modloader/V1/flymod.js",
