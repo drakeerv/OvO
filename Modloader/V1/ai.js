@@ -60,14 +60,19 @@
             this.prevInputs = {up: Math.random(), down: Math.random(), left: Math.random(), right: Math.random()};
             this.prevDistance = Infinity;
             this.failRandomness = 0.2;
+            this.correctRandomness = 0.1;
+            this.frameLimit = 500;
+            this.frame = 0;
 
             runtime.tickMe(this);
             
             notify("Mod loaded", "AI mod loaded");
             globalThis.ovoAi = this;
         },
+        resetLevel() {
+            c2_callFunction("Menu > Replay");
+        },
         playInputs(inputs) {
-            //if (inputs.restart > this.threshold) c2_callFunction("Menu > Replay");
             if (inputs.up > this.threshold) c2_callFunction("Controls > Buffer", ["Jump"]);
             if (inputs.down > this.threshold) c2_callFunction("Controls > Down");
             if (inputs.left > this.threshold) c2_callFunction("Controls > Left In");
@@ -85,6 +90,9 @@
         stop() {
             this.prevInputs = {up: Math.random(), down: Math.random(), left: Math.random(), right: Math.random()};
             this.prevDistance = Infinity;
+            this.frame = 0;
+            delete this.beginDistance;
+            delete this.endDistance;
             delete this.network;
             this.enabled = false;
         },
@@ -103,24 +111,30 @@
             let player = getPlayer();
             let flag = getFlag();
             let layout = runtime.running_layout;
-            
-            if (this.enabled && player && flag) {
-                let beginDistance = Math.sqrt((flag.x - player.x) ** 2, (flag.y - player.y) ** 2);
 
-                let pos = {playerx: player.x / layout.width, playery: player.y / layout.height, flagx: flag.x / layout.width, flagy: flag.y / layout.height}
+            if (this.enabled && player && flag && this.frame < 1) {
+                this.beginDistance = Math.sqrt((flag.x - player.x) ** 2, (flag.y - player.y) ** 2);
+            }
+            
+            if (this.enabled && player && flag && this.frame <= this.frameLimit) {
+                let pos = {playerx: player.x / layout.width, playery: player.y / layout.height, flagx: flag.x / layout.width, flagy: flag.y / layout.height};
                 let inputs = this.network.run({...this.prevInputs, ...pos});
                 this.playInputs(inputs);
                 this.prevInputs = inputs;
-                
+                this.frame++;
+            } else if (this.enabled && player && flag && this.frame > this.frameLimit) {
+                let pos = {playerx: player.x / layout.width, playery: player.y / layout.height, flagx: flag.x / layout.width, flagy: flag.y / layout.height};
                 let endDistance = Math.sqrt((flag.x - player.x) ** 2, (flag.y - player.y) ** 2);
-                
-                if (endDistance > beginDistance && endDistance < this.prevDistance) {
-                    this.network.train([{input: {...this.prevInputs, ...pos}, output: {...inputs}}]);
-                } else {
-                    this.network.train([{input: {...this.prevInputs, ...pos}, output: {...this.addRandom(inputs)}}]);
-                }
 
-                this.prevDistance = endDistance;
+                if (endDistance < this.beginDistance && endDistance <= this.prevDistance) {
+                    let inputs = this.network.run({...this.prevInputs, ...pos});
+                    this.network.train([{input: {...this.prevInputs, ...pos}, output: {...this.addRandom(inputs)}}]);
+                } else if (endDistance <= this.prevDistance) {
+                    this.prevDistance = endDistance;
+                }
+                
+                this.resetLevel();
+                this.frame = 0;
             }
         }
     };
