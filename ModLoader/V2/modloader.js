@@ -1,7 +1,7 @@
 const mods = {
-    "chaos": "/Modloader/V2/chaos.js",
-    "levelselector": "/Modloader/V2/levelselector.js",
-    "resetbutton": "/Modloader/V2/resetbutton.js"
+    "chaos": "/ModLoader/V2/chaos.js",
+    "levelselector": "/ModLoader/V2/levelselector.js",
+    "resetbutton": "/ModLoader/V2/resetbutton.js"
 };
 
 (function() {
