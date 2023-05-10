@@ -8,7 +8,7 @@ pattern = "**/*.html"
   [languages.html.languageServer]
   start = ["vscode-html-language-server", "--stdio"]
   [languages.html.languageServer.initializationOptions]
-  provideFormatter = true
+provideFormatter = true
   [languages.html.languageServer.configuration.html]
   customData = [ ]
   autoCreateQuotes = true
@@ -50,3 +50,9 @@ pattern = "**/*.html"
 pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.mjs,*.cjs}"
   [languages.javascript.languageServer]
   start = ["typescript-language-server", "--stdio"]
+
+[languages.css]
+pattern = "**/{*.less,*.scss,*.css}"
+
+[languages.css.languageServer]
+start = "vscode-css-language-server --stdio"

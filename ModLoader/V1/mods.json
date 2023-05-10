@@ -1,0 +1,100 @@
+{
+    "ai": {
+        "name": "AI",
+        "author": "drakeerv",
+        "description": "Basic AI that plays ovo.",
+        "advanced": true,
+        "url": "/ModLoader/V1/ai.js"
+    },
+    "chaos": {
+        "name": "Chaos",
+        "author": "drakeerv",
+        "description": "CHAOS!",
+        "advanced": false,
+        "url": "/ModLoader/V1/chaos.js"
+    },
+    "explorer": {
+        "name": "Explorer",
+        "author": "Toadi",
+        "description": "Explore OvO levels.",
+        "advanced": true,
+        "url": "/ModLoader/V1/explorer.js"
+    },
+    "flymod": {
+        "name": "Hurricane",
+        "author": "Toadi",
+        "description": "Creates a hurricane!",
+        "advanced": false,
+        "url": "/ModLoader/V1/hurricane.js"
+    },
+    "hurricane": {
+        "name": "Fly",
+        "author": "Toadi",
+        "description": "Fly around the level.",
+        "advanced": false,
+        "url": "/ModLoader/V1/flymod.js"
+    },
+    "levelselector": {
+        "name": "Level Selector",
+        "author": "drakeerv",
+        "description": "Load any level in the game.",
+        "advanced": false,
+        "url": "/ModLoader/V1/levelselector.js"
+    },
+    "modapi": {
+        "name": "Mod API",
+        "author": "drakeerv",
+        "description": "A basic mod API for other mods to use.",
+        "advanced": true,
+        "url": "/ModLoader/V1/modapi.js"
+    },
+    "multiplayer": {
+        "name": "Multiplayer",
+        "author": "Skymen",
+        "description": "Play multiplayer with your friends!",
+        "advanced": false,
+        "url": "/ModLoader/V1/multiplayer.js"
+    },
+    "randomlevel": {
+        "name": "Random Level",
+        "author": "drakeerv",
+        "description": "Hop into a random level.",
+        "advanced": false,
+        "url": "/ModLoader/V1/randomlevel.js"
+    },
+    "savestate": {
+        "name": "Save State",
+        "author": "Skymen",
+        "description": "Pause the game in place.",
+        "advanced": true,
+        "url": "/ModLoader/V1/savestate.js"
+    },
+    "tas": {
+        "name": "TAS",
+        "author": "Skymen",
+        "description": "TAS tools for OvO.",
+        "advanced": true,
+        "url": "/ModLoader/V1/tas.js"
+    },
+    "dark": {
+        "name": "Dark",
+        "author": "drakeerv",
+        "description": "Dark Mode for OvO!",
+        "advanced": false,
+        "url": "/ModLoader/V1/dark.js"
+    },
+    "keystrokes": {
+        "name": "Dark",
+        "author": "R3XFadeaway",
+        "description": "See you keystrokes.",
+        "advanced": false,
+        "url": "/ModLoader/V1/keystrokes.js"
+    },
+    "collision": {
+        "name": "Dark",
+        "author": "OvOPlant",
+        "description": "Enable or disable collisions",
+        "advanced": false,
+        "url": "/ModLoader/V1/collision.js"
+    }
+}

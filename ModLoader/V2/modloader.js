@@ -1,19 +1,14 @@
-const mods = {
-    "chaos": "/ModLoader/V2/chaos.js",
-    "levelselector": "/ModLoader/V2/levelselector.js",
-    "resetbutton": "/ModLoader/V2/resetbutton.js"
-};
-
-(function() {
+(async () => {
+    // Get mods
+    const mods = await fetch("/ModLoader/V2/mods.json").then(r => r.json());
+    
     // Get runtime
     var c3interface;
     var runtime;
-    var currentLayout;
     var notify;
 
     // Util stuff
-
-    let onFinishLoad = () => {
+    const onFinishLoad = () => {
         c3interface = c3_runtimeInterface;
         runtime = c3interface._GetLocalRuntime();
       
@@ -29,8 +24,8 @@ const mods = {
         }
     }
 
-    let validURL = (str) => {
-        var pattern = new RegExp('^(https?:\\/\\/)?' +
+    const validURL = (str) => {
+        const pattern = new RegExp('^(https?:\\/\\/)?' +
             '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' +
             '((\\d{1,3}\\.){3}\\d{1,3}))' +
             '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
@@ -39,36 +34,32 @@ const mods = {
         return !!pattern.test(str);
     }
 
-    let loadModUrl = (modURL) => {
-        let name = modloader.getURLName(modURL);
+    const loadModUrl = (modURL) => {
+        const name = modloader.getURLName(modURL);
       
         if (modloader.getIsScriptLoaded(name)) {
           notify("Mod already loaded", name);
           return;
         }
       
-        let js = document.createElement("script");
+        const js = document.createElement("script");
         js.type = "application/javascript";
         js.src = modURL;
         js.id = name;
         document.head.appendChild(js);
     }
 
-    let loadModJS = (modJS) => {
+    const loadModJS = (modJS) => {
         setTimeout(modJS, 0);
     }
 
-    let promptMod = () => {
-        var mod = prompt("Please enter a mod name/url");
+    const promptMod = () => {
+        let mod = prompt("Please enter a mod name/url");
         
-        if (!mod) {
-          return;
-        }
+        if (!mod) return;
 
         if (!validURL(mod)) {
-            if (mods[mod.toLowerCase()]) {
-                mod = mods[mod.toLowerCase()]
-            }
+            mod = mods[mod.toLowerCase()].url || mod;
         }
 
         if (validURL(mod) || mod.startsWith("/")) {
@@ -80,7 +71,7 @@ const mods = {
         notify("Code Ran/Added", "Please wait");
     }
 
-    let modloader = {
+    const modloader = {
         init() {
             document.addEventListener("keydown", (event) => {
                 if (event.code === "KeyL" && !this.removed) {
@@ -100,7 +91,7 @@ const mods = {
         },
       
         initDomUI() {
-            let style = document.createElement("style");
+            const style = document.createElement("style");
             style.type = "text/css";
             style.innerHTML = `
             .ovo-modloader-button {
@@ -127,11 +118,11 @@ const mods = {
             `
             document.head.appendChild(style);
 
-            let toggleButton = document.createElement("button");
+            const toggleButton = document.createElement("button");
             toggleButton.id = "ovo-modloader-toggle-button";
             toggleButton.innerText = "";
 
-            let loadIcon = document.createElement("img");
+            const loadIcon = document.createElement("img");
             loadIcon.src = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPg0KPGc+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsNTExLjAwMDAwMCkgc2NhbGUoMC4xMDAwMDAsLTAuMTAwMDAwKSI+PHBhdGggZD0iTTQ4ODIuOSw0NzQ5LjRjLTEwNy4zLTMyLjYtMjE2LjQtMTQzLjYtMjQ1LjItMjUwLjljLTE1LjMtNDkuOC0yMS4xLTExMDctMjEuMS0zMzc2LjZWLTIxODJMMzUwMi0xMDY3LjNDMjg4Ny4yLTQ1Ni4zLDIzNTYuNyw2MC44LDIzMjAuMyw3OGMtMTAxLjUsNTEuNy0yODMuNSwzMi42LTM3NS40LTM2LjRjLTEzNC4xLTEwMy40LTE4NS44LTI0OS0xNDMuNi00MDkuOWMyMy04NC4zLDEzMi4yLTE5Ny4zLDE0OTItMTU2MC45Yzk4Ni40LTk4OC4zLDE0OTItMTQ4Mi40LDE1NDUuNi0xNTA3LjNjOTEuOS00NiwyMTIuNi00OS44LDMxMC4zLTkuNmM5MiwzOC4zLDI5NTUuMywyODk0LDMwMTYuNiwzMDA3YzEyMC43LDIyNy45LTI0LjksNTE3LjEtMjcyLDU0MmMtMjE2LjQsMjEuMS0xMzIuMSw5MS45LTEzNzUuMi0xMTUxLjFMNTM4Mi44LTIxODJ2MzMwMy44YzAsMjI2OS42LTUuNywzMzI2LjgtMjEuMSwzMzc2LjZjLTMwLjcsMTExLjEtMTM3LjksMjE4LjMtMjUyLjgsMjUyLjhTNDk5Niw0Nzg1LjgsNDg4Mi45LDQ3NDkuNHoiLz48cGF0aCBkPSJNNDMxLjgtMTgzNy4yYy05LjYtMy44LTQyLjEtMTEuNS03Mi44LTE3LjJjLTc4LjUtMTcuMi0xOTkuMi0xMzYtMjM1LjYtMjMzLjdjLTU5LjQtMTU3LTEuOS01OTcuNiwxMjQuNS05NDQuMmMyNzkuNi03NjQuMiw5NjUuMy0xMzM0LjksMTc5Mi43LTE0OTJjMTU3LjEtMzAuNiw0MDkuOS0zMi42LDI5NTkuMS0zMi42YzI1NTYuOSwwLDI4MDAuMSwxLjksMjk2MSwzMi42YzEwNzQuNSwyMDQuOSwxODU3LjgsMTA4MC4yLDE5MzQuNCwyMTY2LjJjMTUuMywyMDYuOC0zLjgsMjg5LjItOTMuOCwzODguOGMtMTM3LjksMTU5LTM1Ni4zLDE3OC4xLTUxNS4yLDQ0Yy05Ny43LTc4LjUtMTMwLjItMTYyLjgtMTQ5LjQtMzk4LjRjLTExLjUtMTEzLTM2LjQtMjY2LjItNTkuNC0zMzljLTEzNi00NDQuMy00NDguMi04MDIuNS04NjUuNy05OTRjLTMxNC4xLTE0NS41LTU3LjUtMTM0LjEtMzIxMS45LTEzNC4xYy0yNjg1LjIsMC0yODMwLjgsMS45LTI5NDkuNSwzNC41Yy00OTYuMSwxNDEuNy04OTQuNCw0OTQuMS0xMDc4LjMsOTU1LjdjLTY3LDE2NC43LTEwOS4yLDM0Ni43LTEwOS4yLDQ2OS4zYzAsMTgzLjgtMzQuNSwyOTEuMS0xMjIuNiwzNzkuMkM2NTIuMS0xODY0LjEsNTA4LjUtMTgxMC40LDQzMS44LTE4MzcuMnoiLz48L2c+PC9nPg0KPC9zdmc+"
             loadIcon.style.width = "38px";
             loadIcon.style.height = "38px";
@@ -157,13 +148,13 @@ const mods = {
       
         getIsScriptLoaded(script) {
             if (validURL(script)) {
-                var scripts = document.getElementsByTagName('script');
-                for (var i = scripts.length; i--;) {
+                const scripts = document.getElementsByTagName("script");
+                for (let i = scripts.length; i--;) {
                   if (scripts[i].src == script) return true;
                 }
                 return false;
             }
-            let element = document.getElementById(script);
+            const element = document.getElementById(script);
             return (!!element && (element.tagName == "SCRIPT"));
         },
       
