@@ -84,14 +84,14 @@
         "url": "/ModLoader/V1/dark.js"
     },
     "keystrokes": {
-        "name": "Dark",
+        "name": "Keystrokes",
         "author": "R3XFadeaway",
         "description": "See you keystrokes.",
         "advanced": false,
         "url": "/ModLoader/V1/keystrokes.js"
     },
     "collision": {
-        "name": "Dark",
+        "name": "Collision",
         "author": "OvOPlant",
         "description": "Enable or disable collisions",
         "advanced": false,
