@@ -144,6 +144,23 @@ Blockly.Blocks["delta_time"] = {
   },
 };
 
+Blockly.JavaScript["game_size"] = function (block) {
+  const dropdownSize = block.getFieldValue("AXIS");
+
+  const code = `ovoModAPI.game.getGameSize().${dropdownSize}`;
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.Blocks["game_size"] = {
+  init: function () {
+    this.appendDummyInput().appendField("get game size").appendField(new Blockly.FieldDropdown([["width", "width"], ["height", "height"]]), "AXIS");
+    this.setOutput(true, "Number");
+    this.setColour(0);
+    this.setTooltip("Returns the current game size");
+    this.setHelpUrl("");
+  },
+};
+
 Blockly.JavaScript["notification"] = function (block) {
   const valueTitle = Blockly.JavaScript.valueToCode(
     block,

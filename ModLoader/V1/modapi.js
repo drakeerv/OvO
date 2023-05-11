@@ -50,6 +50,13 @@
                 return this.runtime.dt;
             },
 
+            getGameSize() {
+                return {
+                    width: this.runtime.width,
+                    height: this.runtime.height,
+                };
+            },
+
             notify(title, text, image = "./speedrunner.png") {
                 cr.plugins_.sirg_notifications.prototype.acts.AddSimpleNotification.call(
                     this.runtime.types_by_index.find(
