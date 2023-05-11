@@ -366,8 +366,165 @@
       ></category>
       <sep></sep>
       <category name="%{BKY_CATOVOMODAPI}" colour="%{BKY_OVOMODAPI_HUE}">
-        <block type="notification"></block>
+        <block type="deg_to_rad">
+          <value name="DEGREE">
+            <shadow type="math_number">
+              <field name="NUM">90</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="rad_to_deg">
+          <value name="RADIAN">
+            <shadow type="math_number">
+              <field name="NUM">3.14</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="on_start"></block>
+        <block type="on_tick"></block>
+        <block type="tick_count"></block>
+        <block type="notification">
+          <value name="TITLE">
+            <shadow type="text">
+              <field name="TEXT">Hello</field>
+            </shadow>
+          </value>
+          <value name="MESSAGE">
+            <shadow type="text">
+              <field name="TEXT">Hello, World!</field>
+            </shadow>
+          </value>
+          <value name="IMAGE">
+            <shadow type="text">
+              <field name="TEXT">./speedrunner.png</field>
+            </shadow>
+          </value>
+        </block>
         <block type="get_player"></block>
+        <block type="get_flag"></block>
+        <block type="get_coin"></block>
+        <block type="get_runtime"></block>
+        <block type="get_layout"></block>
+        <block type="set_layout"></block>
+        <block type="get_layer">
+          <value name="LAYER">
+            <shadow type="text">
+              <field name="TEXT">Layer 0</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="layer_scale">
+          <value name="SCALE">
+            <shadow type="math_number">
+              <field name="NUM">1.0</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="move_instance">
+          <value name="X">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="Y">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="rotate_instance">
+          <value name="ANGLE">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="resize_instance">
+          <value name="WIDTH">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="HEIGHT">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="instance_opacity">
+          <value name="OPACITY">
+            <shadow type="math_number">
+              <field name="NUM">50</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="instance_destroy"></block>
+        <block type="ignore_instance"></block>
+        <block type="create_solid">
+          <value name="X">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="Y">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="WIDTH">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+          <value name="HEIGHT">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+          <value name="ANGLE">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="create_sprite">
+          <value name="X">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="Y">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="WIDTH">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+          <value name="HEIGHT">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+          <value name="ANGLE">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="ANGLE">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="SPRITE_NAME">
+            <shadow type="text">
+              <field name="TEXT">spike</field>
+            </shadow>
+        </block>
+        <block type="is_in_level"></block>
+        <block type="is_paused"></block>
       </category>
     </xml>
 

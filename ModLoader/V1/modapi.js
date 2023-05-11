@@ -1,5 +1,5 @@
 (function() {
-    let modapi = {
+    const modapi = {
         init() {
             this.game.init();
             this.ui.init();
@@ -22,6 +22,20 @@
         game: {
             init() {
                 this.runtime = cr_getC2Runtime();
+            },
+
+            tick(functionToTick) {
+                const tick = {
+                    tick() {
+                        functionToTick();
+                    }
+                }
+
+                this.runtime.tickMe(tick);
+            },
+
+            tickCount() {
+                return this.runtime.tickcount;
             },
 
             notify(title, text, image = "./speedrunner.png") {
@@ -104,7 +118,7 @@
             },
 
             rotateInstance(instance, angle) {
-                instance.angle = (angle / 180) * Math.PI;
+                instance.angle = modapi.math.degreeToRadian(angle);
                 instance.set_bbox_changed();
                 return instance;
             },
@@ -125,11 +139,10 @@
                 this.runtime.DestroyInstance(instance);
             },
 
-            createSolid(x, y, width, height, angle, layerName = "Layer 0") {
-                let solidType = this.runtime.types_by_index.find(x => x.plugin instanceof cr.plugins_.TiledBg && x.texture_file && x.texture_file.includes("/solid.png") && x.behs_count === 2)
-                let layer = this.runtime.running_layout.layers.find(x => x.name === layerName)
+            createSolid(x, y, width, height, angle, layer) {
+                const solidType = this.runtime.types_by_index.find(x => x.plugin instanceof cr.plugins_.TiledBg && x.texture_file && x.texture_file.includes("/solid.png") && x.behs_count === 2)
 
-                let solid = this.runtime.createInstance(solidType, layer, x, y)
+                const solid = this.runtime.createInstance(solidType, layer, x, y)
                 solid.width = width || solid.width;
                 solid.height = height || solid.height;;
                 solid.angle = angle || solid.angle;
@@ -137,11 +150,10 @@
                 return solid;
             },
 
-            createSprite(x, y, width, height, angle, spriteName = "", layerName = "Layer 0") {
-                let spriteType = this.runtime.types_by_index.find(x => x.plugin instanceof cr.plugins_.Sprite && x.all_frames && x.all_frames[0].texture_file.includes(spriteName))
-                let layer = this.runtime.running_layout.layers.find(x => x.name === layerName)
+            createSprite(x, y, width, height, angle, spriteName, layer) {
+                const spriteType = this.runtime.types_by_index.find(x => x.plugin instanceof cr.plugins_.Sprite && x.all_frames && x.all_frames[0].texture_file.includes(spriteName))
 
-                let sprite = this.runtime.createInstance(spriteType, layer, x, y)
+                const sprite = this.runtime.createInstance(spriteType, layer, x, y)
                 sprite.width = width || sprite.width;
                 sprite.height = height || sprite.height;;
                 sprite.angle = angle || sprite.angle;
@@ -168,14 +180,11 @@
 
         keybind: {
             init() {
-                //this.events = [[name, callback, code, {"alt": event.altKey, "ctrl": event.ctrlKey, "meta": event.metaKey, "shift": event.shiftKey}]]
                 this.events = [];
-                //this.events.push({name: "Test", callback: () => {console.log("YEY");}, key: "G", modifiers: {shift: true}})
 
                 document.addEventListener("keydown", (event) => {
                     this.events.forEach((keybind) => {
                         if (event.key.toLowerCase() == keybind.key.toLowerCase() && !event.isComposing && (!!keybind.modifiers.alt == event.altKey && !!keybind.modifiers.ctrl == event.ctrlKey && !!keybind.modifiers.meta == event.metaKey && !!keybind.modifiers.shift == event.shiftKey)) {
-                            console.log("here1")
                             keybind.callback(event);
                         }
                     });
