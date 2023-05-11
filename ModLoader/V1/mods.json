@@ -20,14 +20,14 @@
         "advanced": true,
         "url": "/ModLoader/V1/explorer.js"
     },
-    "flymod": {
+    "hurricane": {
         "name": "Hurricane",
         "author": "Toadi",
         "description": "Creates a hurricane!",
         "advanced": false,
         "url": "/ModLoader/V1/hurricane.js"
     },
-    "hurricane": {
+    "flymod": {
         "name": "Fly",
         "author": "Toadi",
         "description": "Fly around the level.",
