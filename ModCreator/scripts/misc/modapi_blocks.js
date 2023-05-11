@@ -1,45 +1,23 @@
-Blockly.JavaScript["deg_to_rad"] = function (block) {
-  const valueDegree = Blockly.JavaScript.valueToCode(
+Blockly.JavaScript["convert_angle"] = function (block) {
+  const dropdownType = block.getFieldValue("TYPE");
+  const valueAngle = Blockly.JavaScript.valueToCode(
     block,
-    "DEGREE",
+    "ANGLE",
     Blockly.JavaScript.ORDER_ATOMIC
   );
 
-  const code = `ovoModAPI.math.degToRad(${valueDegree})`;
+  const code = `ovoModAPI.math.${dropdownType}(${valueAngle})`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 }
 
-Blockly.Blocks["deg_to_rad"] = {
+Blockly.Blocks["convert_angle"] = {
   init: function () {
-    this.appendValueInput("DEGREE").setCheck("Number").appendField("convert degree");
-    this.appendDummyInput().appendField("to radian");
+    this.appendValueInput("ANGLE").setCheck("Number").appendField("convert angle");
+    this.appendDummyInput().appendField("to").appendField(new Blockly.FieldDropdown([["degree", "radToDeg"], ["radian", "degToRad"]]), "TYPE");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
     this.setColour(0);
-    this.setTooltip("Converts degree to radian");
-    this.setHelpUrl("");
-  }
-}
-
-Blockly.JavaScript["rad_to_deg"] = function (block) {
-  const valueRadian = Blockly.JavaScript.valueToCode(
-    block,
-    "RADIAN",
-    Blockly.JavaScript.ORDER_ATOMIC
-  );
-
-  const code = `ovoModAPI.math.radToDeg(${valueRadian})`;
-  return [code, Blockly.JavaScript.ORDER_NONE];
-}
-
-Blockly.Blocks["rad_to_deg"] = {
-  init: function () {
-    this.appendValueInput("RADIAN").setCheck("Number").appendField("convert radian");
-    this.appendDummyInput().appendField("to degree");
-    this.setInputsInline(true);
-    this.setOutput(true, "Number");
-    this.setColour(0);
-    this.setTooltip("Converts radian to degree");
+    this.setTooltip("Converts angle to degree or radian");
     this.setHelpUrl("");
   }
 }
@@ -84,79 +62,19 @@ Blockly.Blocks["on_tick"] = {
   },
 };
 
-Blockly.JavaScript["tick_count"] = function (block) {
-  const code = `ovoModAPI.game.getTickCount()`;
+Blockly.JavaScript["game_value"] = function (block) {
+  const dropdownValue = block.getFieldValue("VALUE");
+
+  const code = `ovoModAPI.game.getGameValues().${dropdownValue}`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
-Blockly.Blocks["tick_count"] = {
+Blockly.Blocks["game_value"] = {
   init: function () {
-    this.appendDummyInput().appendField("get tick count");
+    this.appendDummyInput().appendField("get game value").appendField(new Blockly.FieldDropdown([["Tick Count", "tickCount"], ["FPS", "fps"], ["Frame Count", "frameCount"], ["Delta Time", "deltaTime"], ["Width", "width"], ["Height", "height"]]), "VALUE");
     this.setOutput(true, "Number");
     this.setColour(0);
-    this.setTooltip("Returns the current tick count");
-    this.setHelpUrl("");
-  },
-};
-
-Blockly.JavaScript["fps"] = function (block) {
-  const code = `ovoModAPI.game.getFps()`;
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.Blocks["fps"] = {
-  init: function () {
-    this.appendDummyInput().appendField("get fps");
-    this.setOutput(true, "Number");
-    this.setColour(0);
-    this.setTooltip("Returns the current fps");
-    this.setHelpUrl("");
-  },
-};
-
-Blockly.JavaScript["frame_count"] = function (block) {
-  const code = `ovoModAPI.game.getFrameCount()`;
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.Blocks["frame_count"] = {
-  init: function () {
-    this.appendDummyInput().appendField("get frame count");
-    this.setOutput(true, "Number");
-    this.setColour(0);
-    this.setTooltip("Returns the current frame count");
-    this.setHelpUrl("");
-  },
-};
-
-Blockly.JavaScript["delta_time"] = function (block) {
-  const code = `ovoModAPI.game.getDeltaTime()`;
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.Blocks["delta_time"] = {
-  init: function () {
-    this.appendDummyInput().appendField("get delta time");
-    this.setOutput(true, "Number");
-    this.setColour(0);
-    this.setTooltip("Returns the current delta time");
-    this.setHelpUrl("");
-  },
-};
-
-Blockly.JavaScript["game_size"] = function (block) {
-  const dropdownSize = block.getFieldValue("AXIS");
-
-  const code = `ovoModAPI.game.getGameSize().${dropdownSize}`;
-  return [code, Blockly.JavaScript.ORDER_NONE];
-};
-
-Blockly.Blocks["game_size"] = {
-  init: function () {
-    this.appendDummyInput().appendField("get game size").appendField(new Blockly.FieldDropdown([["width", "width"], ["height", "height"]]), "AXIS");
-    this.setOutput(true, "Number");
-    this.setColour(0);
-    this.setTooltip("Returns the current game size");
+    this.setTooltip("Returns the current game value for the selected value");
     this.setHelpUrl("");
   },
 };
@@ -195,63 +113,25 @@ Blockly.Blocks["notification"] = {
   }
 };
 
+Blockly.JavaScript["get_sprite_instance"] = function (block) {
+  const dropdownSprite = block.getFieldValue("SPRITE");
+  
+  const functions = {
+    "player": "getPlayer",
+    "flag": "getFlag",
+    "coin": "getCoin",
+  };
 
-Blockly.JavaScript["get_player"] = function (block) {
-  const code = "ovoModAPI.game.getPlayer()";
+  const code = `ovoModAPI.game.${functions[dropdownSprite]}()`;
   return [code, Blockly.JavaScript.ORDER_NONE];
-};
+}
 
-Blockly.Blocks["get_player"] = {
+Blockly.Blocks["get_sprite_instance"] = {
   init: function () {
-    this.appendDummyInput().appendField("get player");
+    this.appendDummyInput().appendField("get sprite instance").appendField(new Blockly.FieldDropdown([["Player", "player"], ["Flag", "flag"], ["Coin", "coin"]]), "SPRITE");
     this.setOutput(true, ["undefined", "Instance"]);
     this.setColour(0);
-    this.setTooltip("Gets the player collider");
-    this.setHelpUrl("");
-  },
-};
-
-Blockly.JavaScript["get_flag"] = function (block) {
-  const code = "ovoModAPI.game.getFlag()";
-  return [code, Blockly.JavaScript.ORDER_NONE];
-}
-
-Blockly.Blocks["get_flag"] = {
-  init: function () {
-    this.appendDummyInput().appendField("get flag");
-    this.setOutput(true, ["undefined", "Instance"]);
-    this.setColour(0);
-    this.setTooltip("Gets the flag");
-    this.setHelpUrl("");
-  }
-}
-
-Blockly.JavaScript["get_coin"] = function (block) {
-  const code = "ovoModAPI.game.getCoin()";
-  return [code, Blockly.JavaScript.ORDER_NONE];
-}
-
-Blockly.Blocks["get_coin"] = {
-  init: function () {
-    this.appendDummyInput().appendField("get coin");
-    this.setOutput(true, ["undefined", "Instance"]);
-    this.setColour(0);
-    this.setTooltip("Gets the coin");
-    this.setHelpUrl("");
-  }
-}
-
-Blockly.JavaScript["get_runtime"] = function (block) {
-  const code = "ovoModAPI.game.runtime";
-  return [code, Blockly.JavaScript.ORDER_NONE];
-}
-
-Blockly.Blocks["get_runtime"] = {
-  init: function () {
-    this.appendDummyInput().appendField("get runtime");
-    this.setOutput(true, ["undefined", "Runtime"]);
-    this.setColour(0);
-    this.setTooltip("Gets the runtime");
+    this.setTooltip("Gets the sprite instance");
     this.setHelpUrl("");
   }
 }
@@ -339,15 +219,6 @@ Blockly.Blocks["layer_scale"] = {
   }
 }
 
-// getInstanceLocation(instance) {
-//   return {
-//       x: instance.x,
-//       y: instance.y,
-//       z: instance.z,
-//       rot: instance.angle,
-//   };
-// },
-// one block with dropdown for x, y, z, rot
 Blockly.JavaScript["get_instance_location_property"] = function (block) {
   const valueInstance = Blockly.JavaScript.valueToCode(
     block,
@@ -362,7 +233,7 @@ Blockly.JavaScript["get_instance_location_property"] = function (block) {
 
 Blockly.Blocks["get_instance_location_property"] = {
   init: function () {
-    this.appendValueInput("INSTANCE").setCheck("Instance").appendField("get instance");
+    this.appendValueInput("INSTANCE").setCheck("Instance").appendField("get instance location");
     this.appendDummyInput().appendField(new Blockly.FieldDropdown([["X", "x"], ["Y", "y"], ["Z", "z"], ["Rot", "rot"]]), "PROPERTY");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
@@ -657,34 +528,20 @@ Blockly.Blocks["create_sprite"] = {
   }
 }
 
-Blockly.JavaScript["is_in_level"] = function (block) {
-  const code = `ovoModAPI.game.isInLevel()`;
+Blockly.JavaScript["get_game_states"] = function (block) {
+  const dropdownCondition = block.getFieldValue("CONDITION");
+
+  const code = `ovoModAPI.game.${dropdownCondition}()`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 }
 
-Blockly.Blocks["is_in_level"] = {
+Blockly.Blocks["get_game_states"] = {
   init: function () {
-    this.appendDummyInput().appendField("is in level");
+    this.appendDummyInput().appendField("Is").appendField(new Blockly.FieldDropdown([["In Level", "isInLevel"], ["Paused", "isPaused"]]), "CONDITION");
     this.setInputsInline(true);
     this.setOutput(true, "Boolean");
     this.setColour(0);
-    this.setTooltip("Checks if the instance is in the level");
-    this.setHelpUrl("");
-  }
-}
-
-Blockly.JavaScript["is_paused"] = function (block) {
-  const code = `ovoModAPI.game.isPaused()`;
-  return [code, Blockly.JavaScript.ORDER_NONE];
-}
-
-Blockly.Blocks["is_paused"] = {
-  init: function () {
-    this.appendDummyInput().appendField("is paused");
-    this.setInputsInline(true);
-    this.setOutput(true, "Boolean");
-    this.setColour(0);
-    this.setTooltip("Checks if the game is paused");
+    this.setTooltip("Checks game states");
     this.setHelpUrl("");
   }
 }

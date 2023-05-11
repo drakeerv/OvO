@@ -366,15 +366,8 @@
       ></category>
       <sep></sep>
       <category name="%{BKY_CATOVOMODAPI}" colour="%{BKY_OVOMODAPI_HUE}">
-        <block type="deg_to_rad">
-          <value name="DEGREE">
-            <shadow type="math_number">
-              <field name="NUM">90</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="rad_to_deg">
-          <value name="RADIAN">
+        <block type="convert_angle">
+          <value name="ANGLE">
             <shadow type="math_number">
               <field name="NUM">3.14</field>
             </shadow>
@@ -382,11 +375,7 @@
         </block>
         <block type="on_start"></block>
         <block type="on_tick"></block>
-        <block type="tick_count"></block>
-        <block type="fps"></block>
-        <block type="frame_count"></block>
-        <block type="delta_time"></block>
-        <block type="game_size"></block>
+        <block type="game_value"></block>
         <block type="notification">
           <value name="TITLE">
             <shadow type="text">
@@ -404,10 +393,7 @@
             </shadow>
           </value>
         </block>
-        <block type="get_player"></block>
-        <block type="get_flag"></block>
-        <block type="get_coin"></block>
-        <block type="get_runtime"></block>
+        <block type="get_sprite_instance"></block>
         <block type="get_layout"></block>
         <block type="set_layout"></block>
         <block type="get_layer">
@@ -528,8 +514,7 @@
               <field name="TEXT">spike</field>
             </shadow>
         </block>
-        <block type="is_in_level"></block>
-        <block type="is_paused"></block>
+        <block type="get_game_states"></block>
       </category>
     </xml>
 

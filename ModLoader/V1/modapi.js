@@ -34,24 +34,12 @@
                 this.runtime.tickMe(tick);
             },
 
-            getTickCount() {
-                return this.runtime.tickcount;
-            },
-
-            getFps() {
-                return this.runtime.fps;
-            },
-
-            getFrameCount() {
-                return this.runtime.framecount;
-            },
-
-            getDeltaTime() {
-                return this.runtime.dt;
-            },
-
-            getGameSize() {
+            getGameValues() {
                 return {
+                    tickCount: this.runtime.tickcount,
+                    fps: this.runtime.fps,
+                    frameCount: this.runtime.framecount,
+                    deltaTime: this.runtime.dt,
                     width: this.runtime.width,
                     height: this.runtime.height,
                 };
