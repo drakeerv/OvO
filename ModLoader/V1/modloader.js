@@ -1,3 +1,5 @@
+// we should probably re-write this...
+
 (async () => {
     // Get mods
     const mods = await fetch("/ModLoader/V1/mods.json").then(r => r.json());
@@ -160,6 +162,7 @@
         }
     }
 
+    // Uneeded?
     alert("This is a MODDED client. Press Shift+L to load mods. (url, script, or default mods on homepage)");
     setTimeout(onFinishLoad, 100);
 })();
