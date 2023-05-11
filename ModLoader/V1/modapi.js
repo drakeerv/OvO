@@ -122,6 +122,15 @@
             //    return platform;
             //},
 
+            getInstanceLocation(instance) {
+                return {
+                    x: instance.x,
+                    y: instance.y,
+                    z: instance.z,
+                    rot: modapi.math.radianToDegree(instance.angle),
+                };
+            },
+
             moveInstance(instance, x, y) {
                 instance.x = x;
                 instance.y = y;

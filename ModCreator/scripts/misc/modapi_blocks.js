@@ -322,6 +322,39 @@ Blockly.Blocks["layer_scale"] = {
   }
 }
 
+// getInstanceLocation(instance) {
+//   return {
+//       x: instance.x,
+//       y: instance.y,
+//       z: instance.z,
+//       rot: instance.angle,
+//   };
+// },
+// one block with dropdown for x, y, z, rot
+Blockly.JavaScript["get_instance_location_property"] = function (block) {
+  const valueInstance = Blockly.JavaScript.valueToCode(
+    block,
+    "INSTANCE",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  const dropdownProperty = block.getFieldValue("PROPERTY");
+
+  const code = `ovoModAPI.game.getInstanceLocation(${valueInstance}).${dropdownProperty}`;
+  return [code, Blockly.JavaScript.ORDER_NONE];
+}
+
+Blockly.Blocks["get_instance_location_property"] = {
+  init: function () {
+    this.appendValueInput("INSTANCE").setCheck("Instance").appendField("get instance");
+    this.appendDummyInput().appendField(new Blockly.FieldDropdown([["X", "x"], ["Y", "y"], ["Z", "z"], ["Rot", "rot"]]), "PROPERTY");
+    this.setInputsInline(true);
+    this.setOutput(true, "Number");
+    this.setColour(0);
+    this.setTooltip("Gets the instance location property");
+    this.setHelpUrl("");
+  }
+}
+
 Blockly.JavaScript["move_instance"] = function (block) {
   const valueInstance = Blockly.JavaScript.valueToCode(
     block,
@@ -543,7 +576,6 @@ Blockly.Blocks["create_solid"] = {
     this.appendValueInput("HEIGHT").setCheck("Number").appendField("height");
     this.appendValueInput("ANGLE").setCheck("Number").appendField("angle");
     this.appendValueInput("LAYER").setCheck("Layer").appendField("layer");
-    this.setInputsInline(true);
     this.setOutput(true, "Instance");
     this.setColour(0);
     this.setTooltip("Creates a solid");
@@ -601,7 +633,6 @@ Blockly.Blocks["create_sprite"] = {
     this.appendValueInput("ANGLE").setCheck("Number").appendField("angle");
     this.appendValueInput("SPRITE_NAME").setCheck("String").appendField("sprite name");
     this.appendValueInput("LAYER").setCheck("Layer").appendField("layer");
-    this.setInputsInline(true);
     this.setOutput(true, "Instance");
     this.setColour(0);
     this.setTooltip("Creates a sprite");
