@@ -34,8 +34,20 @@
                 this.runtime.tickMe(tick);
             },
 
-            tickCount() {
+            getTickCount() {
                 return this.runtime.tickcount;
+            },
+
+            getFps() {
+                return this.runtime.fps;
+            },
+
+            getFrameCount() {
+                return this.runtime.framecount;
+            },
+
+            getDeltaTime() {
+                return this.runtime.dt;
             },
 
             notify(title, text, image = "./speedrunner.png") {

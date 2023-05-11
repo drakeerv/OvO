@@ -85,16 +85,61 @@ Blockly.Blocks["on_tick"] = {
 };
 
 Blockly.JavaScript["tick_count"] = function (block) {
-  const code = `ovoModAPI.game.tickCount()`;
+  const code = `ovoModAPI.game.getTickCount()`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.Blocks["tick_count"] = {
   init: function () {
-    this.appendDummyInput().appendField("tick count");
+    this.appendDummyInput().appendField("get tick count");
     this.setOutput(true, "Number");
     this.setColour(0);
     this.setTooltip("Returns the current tick count");
+    this.setHelpUrl("");
+  },
+};
+
+Blockly.JavaScript["fps"] = function (block) {
+  const code = `ovoModAPI.game.getFps()`;
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.Blocks["fps"] = {
+  init: function () {
+    this.appendDummyInput().appendField("get fps");
+    this.setOutput(true, "Number");
+    this.setColour(0);
+    this.setTooltip("Returns the current fps");
+    this.setHelpUrl("");
+  },
+};
+
+Blockly.JavaScript["frame_count"] = function (block) {
+  const code = `ovoModAPI.game.getFrameCount()`;
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.Blocks["frame_count"] = {
+  init: function () {
+    this.appendDummyInput().appendField("get frame count");
+    this.setOutput(true, "Number");
+    this.setColour(0);
+    this.setTooltip("Returns the current frame count");
+    this.setHelpUrl("");
+  },
+};
+
+Blockly.JavaScript["delta_time"] = function (block) {
+  const code = `ovoModAPI.game.getDeltaTime()`;
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.Blocks["delta_time"] = {
+  init: function () {
+    this.appendDummyInput().appendField("get delta time");
+    this.setOutput(true, "Number");
+    this.setColour(0);
+    this.setTooltip("Returns the current delta time");
     this.setHelpUrl("");
   },
 };
