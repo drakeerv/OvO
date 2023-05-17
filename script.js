@@ -1,30 +1,32 @@
 (async () => {
-    const v1Mods = await fetch("/ModLoader/V1/mods.json").then(r => r.json());
-    const v2Mods = await fetch("/ModLoader/V2/mods.json").then(r => r.json());
-
     const v1ModsList = document.getElementById("v1-mods");
     const v2ModsList = document.getElementById("v2-mods");
 
-    const classes = ["bg-black", "text-light", "list-group-item", "list-group-item-action", "list-group-item-dark", "clickable-copy", "hover-pulse"]
+    if (v1ModsList && v2ModsList) {
+        const classes = ["bg-black", "text-light", "list-group-item", "list-group-item-action", "list-group-item-dark", "clickable-copy", "hover-pulse"];
 
-    for (let key in v1Mods) {
-        const mod = v1Mods[key];
+        const v1Mods = await fetch("modloader/mods/v1.json").then(r => r.json());
+        const v2Mods = await fetch("modloader/mods/v2.json").then(r => r.json());
 
-        const listEntry = document.createElement("li");
-        listEntry.classList.add(...classes);
-        listEntry.setAttribute("copy", key);
-        listEntry.innerHTML = `${mod.name} (${key})`
-        v1ModsList.appendChild(listEntry);
-    }
+        for (let key in v1Mods) {
+            const mod = v1Mods[key];
 
-    for (let key in v2Mods) {
-        const mod = v2Mods[key];
+            const listEntry = document.createElement("li");
+            listEntry.classList.add(...classes);
+            listEntry.setAttribute("copy", key);
+            listEntry.innerHTML = `${mod.name} (${key})`
+            v1ModsList.appendChild(listEntry);
+        }
 
-        const listEntry = document.createElement("li");
-        listEntry.classList.add(...classes);
-        listEntry.setAttribute("copy", key);
-        listEntry.innerHTML = `${mod.name} (${key})`
-        v2ModsList.appendChild(listEntry);
+        for (let key in v2Mods) {
+            const mod = v2Mods[key];
+
+            const listEntry = document.createElement("li");
+            listEntry.classList.add(...classes);
+            listEntry.setAttribute("copy", key);
+            listEntry.innerHTML = `${mod.name} (${key})`
+            v2ModsList.appendChild(listEntry);
+        }
     }
 
     const links = document.getElementsByClassName("clickable-link");

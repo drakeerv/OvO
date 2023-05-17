@@ -422,6 +422,7 @@ Blockly.Msg["PROCEDURES_HUE"] = "290";
 Blockly.Msg["COLOUR_HUE"] = "20";
 Blockly.Msg["VARIABLES_DYNAMIC_HUE"] = "310";
 Blockly.Msg["OVOMODAPI_HUE"] = "0";
+Blockly.Msg["OVOMODLOADER_HUE"] = "0";
 
 var MSG = {
     title: "Code",
@@ -440,6 +441,7 @@ var MSG = {
     catVariables: "Variables",
     catFunctions: "Functions",
     catOvOModApi: "OvO Mod API",
+    catOvOModLoader: "OvO Mod Loader",
     listVariable: "list",
     textVariable: "text",
     httpRequestError: "There was a problem with the request.",

@@ -6,14 +6,14 @@ Blockly.JavaScript["convert_angle"] = function (block) {
     Blockly.JavaScript.ORDER_ATOMIC
   );
 
-  const code = `ovoModAPI.math.${dropdownType}(${valueAngle})`;
+  const code = `${dropdownType}(${valueAngle})`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 }
 
 Blockly.Blocks["convert_angle"] = {
   init: function () {
     this.appendValueInput("ANGLE").setCheck("Number").appendField("convert angle");
-    this.appendDummyInput().appendField("to").appendField(new Blockly.FieldDropdown([["degree", "radToDeg"], ["radian", "degToRad"]]), "TYPE");
+    this.appendDummyInput().appendField("to").appendField(new Blockly.FieldDropdown([["degree", "cr.to_degrees"], ["radian", "cr.to_radians"]]), "TYPE");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
     this.setColour(0);
@@ -27,7 +27,8 @@ Blockly.JavaScript["on_start"] = function (block) {
 
   const code = `(function () {
 ${statementsDo}
-})();`
+})();
+`
   return code;
 };
 
@@ -45,17 +46,16 @@ Blockly.Blocks["on_start"] = {
 Blockly.JavaScript["on_tick"] = function (block) {
   const statementsDo = Blockly.JavaScript.statementToCode(block, "DO").replace(/\s+$/gm, '');
 
-  const code = `ovoModAPI.game.tick(() => {
+  const code = `ovoModAPI.game.tick(function () {
 ${statementsDo}
-});`
+});
+`
   return code;
 };
 
 Blockly.Blocks["on_tick"] = {
   init: function () {
     this.appendStatementInput("DO").appendField("on tick do");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
     this.setColour(0);
     this.setTooltip("Ticks a function");
     this.setHelpUrl("");
@@ -65,13 +65,13 @@ Blockly.Blocks["on_tick"] = {
 Blockly.JavaScript["game_value"] = function (block) {
   const dropdownValue = block.getFieldValue("VALUE");
 
-  const code = `ovoModAPI.game.getGameValues().${dropdownValue}`;
+  const code = `ovoModAPI.game.runtime.${dropdownValue}`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.Blocks["game_value"] = {
   init: function () {
-    this.appendDummyInput().appendField("get game value").appendField(new Blockly.FieldDropdown([["Tick Count", "tickCount"], ["FPS", "fps"], ["Frame Count", "frameCount"], ["Delta Time", "deltaTime"], ["Width", "width"], ["Height", "height"]]), "VALUE");
+    this.appendDummyInput().appendField("get game value").appendField(new Blockly.FieldDropdown([["Tick Count", "tickcount"], ["FPS", "fps"], ["Frame Count", "framecount"], ["Delta Time", "dt"], ["Width", "width"], ["Height", "height"]]), "VALUE");
     this.setOutput(true, "Number");
     this.setColour(0);
     this.setTooltip("Returns the current game value for the selected value");
@@ -219,7 +219,7 @@ Blockly.Blocks["layer_scale"] = {
   }
 }
 
-Blockly.JavaScript["get_instance_location_property"] = function (block) {
+Blockly.JavaScript["get_instance_property"] = function (block) {
   const valueInstance = Blockly.JavaScript.valueToCode(
     block,
     "INSTANCE",
@@ -227,14 +227,14 @@ Blockly.JavaScript["get_instance_location_property"] = function (block) {
   );
   const dropdownProperty = block.getFieldValue("PROPERTY");
 
-  const code = `ovoModAPI.game.getInstanceLocation(${valueInstance}).${dropdownProperty}`;
+  const code = `${valueInstance}.${dropdownProperty}`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 }
 
-Blockly.Blocks["get_instance_location_property"] = {
+Blockly.Blocks["get_instance_property"] = {
   init: function () {
     this.appendValueInput("INSTANCE").setCheck("Instance").appendField("get instance location");
-    this.appendDummyInput().appendField(new Blockly.FieldDropdown([["X", "x"], ["Y", "y"], ["Z", "z"], ["Rot", "rot"]]), "PROPERTY");
+    this.appendDummyInput().appendField(new Blockly.FieldDropdown([["X", "x"], ["Y", "y"], ["Z", "z"], ["Angle", "angle"], ["Width", "width"], ["Height", "height"], ["Depth", "depth"], ["Opacity", "opacity"], ["UID", "uid"], ["PUID", "puid"]]), "PROPERTY");
     this.setInputsInline(true);
     this.setOutput(true, "Number");
     this.setColour(0);
