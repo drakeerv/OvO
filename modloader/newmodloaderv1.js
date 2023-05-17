@@ -150,7 +150,6 @@
         }
 
         loadModJSON(key, json, notify = true) {
-            console.log(json);
             const url = this.getModDirectory() + "v1/" + json.url;
             const name = json.name;
 
