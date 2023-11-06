@@ -1,0 +1,22 @@
+[
+	{
+	"name": "Basics",
+	"levels": [1, 8]
+	},
+	{
+		"name": "Getting serious",
+		"levels": [9, 16]
+	},
+	{
+		"name": "Higher order",
+		"levels": [17, 24]
+	},
+	{
+		"name": "Mechanics",
+		"levels": [25, 32]
+	},
+	{
+		"name": "OvO Space Program",
+		"levels": [33, 40]
+	}
+]
