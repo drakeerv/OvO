@@ -28,6 +28,13 @@
         return sprite;
     }
 
+    const lerp2d = (x1, y1, x2, y2, t) => {
+        return {
+            x: x1 * (1 - t) + x2 * t,
+            y: y1 * (1 - t) + y2 * t
+        };
+    }
+
     const notify = (title, text, image = "./speedrunner.png") => {
         cr.plugins_.sirg_notifications.prototype.acts.AddSimpleNotification.call(
             runtime.types_by_index.find(
@@ -76,8 +83,9 @@
             }
 
             if (!this.activated && this.camera) {
-                this.camera.x = this.player.x;
-                this.camera.y = this.player.y;
+                const lerp = lerp2d(this.camera.x, this.camera.y, this.player.x, this.player.y, 0.25);
+                this.camera.x = lerp.x;
+                this.camera.y = lerp.y;
             }
         }
     };
