@@ -401,7 +401,7 @@ OvOTASGui uses the Creative Commons Zero v1\\.0 Universal license, for the full 
     }, 1)
     notify('TAS Mod by TullyYT (& Others) Loaded; To Start Recording, Press Q. Please Note That This is An Early Version Of The TAS GUI.')
     opengui = document.createElement("Button")
-    styleMenuText(opengui, "calc(100% - 23px)", "50%", "☰")
+    styleMenuText(opengui, "calc(100% - 23px)", "0%", "☰")
     opengui.setAttribute("id", "openGui");
     opengui.style.border = "1px solid black"
     opengui.onclick = () => {
