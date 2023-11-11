@@ -117,5 +117,12 @@
         "description": "Makes the game more painful.",
         "advanced": false,
         "url": "painful.js"
+    },
+    "tasgui": {
+        "name": "TAS GUI",
+        "author": "TullyDev",
+        "description": "A GUI for TAS.",
+        "advanced": false,
+        "url": "tasgui.js"
     }
 }
