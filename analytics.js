@@ -6,7 +6,7 @@ if (window.localStorage) {
         }
         window.dataLayer = window.dataLayer || [], gtag("js", new Date);
         const a = {
-                "ovo.drakefletcher2.repl.co": "G-FYYGF5JH2F",
+                "ovo-modded.drakefletcher2.repl.co": "G-FYYGF5JH2F",
                 "ovo-modded.netlify.app": "G-VE92Z9GXT8",
                 "ovo.drakeerv.com": "G-ZSPL1SPBYM",
                 "ovo-5yu.pages.dev": "G-CKWDTVZ685",
