@@ -111,11 +111,11 @@
         "advanced": false,
         "url": "freecam.js"
     },
-    "painful": {
-        "name": "Painful",
+    "painfull": {
+        "name": "Painfull",
         "author": "drakeerv",
-        "description": "Makes the game more painful.",
+        "description": "Makes the game more painfull.",
         "advanced": false,
-        "url": "painful.js"
+        "url": "painfull.js"
     }
 }
