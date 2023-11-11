@@ -59,15 +59,16 @@
         keyPress(event) {
             switch (event.key) {
                 case "Q": // q
+                    if (event.repeat) return;
                     this.activated = !this.activated;
                     if (this.activated) this.startActivation();
                     notify("Freecam Mod", `Camera Override ${this.activated ? "Enabled" : "Disabled"}`);
                     break;
                 case "+": // +
-                    getLayer().scale += 0.1;
+                    getLayer().scale *= 1.1;
                     break;
                 case "_": // -
-                    getLayer().scale -= 0.1;
+                    getLayer().scale *= 0.9;
                     break;
                 case ")": // 0
                     getLayer().scale = 1;
