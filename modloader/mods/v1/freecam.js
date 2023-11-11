@@ -52,17 +52,26 @@
             this.camera = null;
 
             document.addEventListener("keypress", (event) => { this.keyPress(event) });
-
             runtime.tickMe(this);
-
             globalThis.ovoFreecamMod = this;
         },
 
         keyPress(event) {
-            if (event.key == "Q") {
-                this.activated = !this.activated;
-                if (this.activated) this.startActivation();
-                notify("Freecam Mod", `Camera Override ${this.activated ? "Enabled" : "Disabled"}`);
+            switch (event.key) {
+                case "Q": // q
+                    this.activated = !this.activated;
+                    if (this.activated) this.startActivation();
+                    notify("Freecam Mod", `Camera Override ${this.activated ? "Enabled" : "Disabled"}`);
+                    break;
+                case "+": // +
+                    getLayer().scale += 0.1;
+                    break;
+                case "_": // -
+                    getLayer().scale -= 0.1;
+                    break;
+                case ")": // 0
+                    getLayer().scale = 1;
+                    break;
             }
         },
 
@@ -75,9 +84,7 @@
         },
 
         tick() {
-            const layer = getLayer();
-
-            if (!layer.instances.includes(this.camera)) {
+            if (!getLayer().instances.includes(this.camera)) {
                 this.camera = null;
                 this.activated = false;
             }

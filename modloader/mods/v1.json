@@ -110,5 +110,12 @@
         "description": "Move the camera around freely.",
         "advanced": false,
         "url": "freecam.js"
+    },
+    "painful": {
+        "name": "Painful",
+        "author": "drakeerv",
+        "description": "Makes the game more painful.",
+        "advanced": false,
+        "url": "painful.js"
     }
 }
