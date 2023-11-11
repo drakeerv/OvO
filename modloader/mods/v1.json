@@ -103,5 +103,12 @@
         "description": "Loads a image from your computer and loads it into the game",
         "advanced": false,
         "url": "picture.js"
+    },
+    "freecam": {
+        "name": "Freecam",
+        "author": "drakeerv",
+        "description": "Move the camera around freely.",
+        "advanced": false,
+        "url": "freecam.js"
     }
 }

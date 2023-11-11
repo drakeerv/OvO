@@ -1,3 +1,8 @@
+// this.runtime = cr_getC2Runtime();
+// this.camera = ovoModAPI.game.createSprite(445, 275, null, null, 0, "camera", ovoModAPI.game.getLayer());
+// this.layer = this.runtime.running_layout.layers.find(x => x.name === "Layer 0")
+// this.layer.instances.includes(this.camera);
+
 (function () {
     const old = globalThis.sdk_runtime;
     c2_callFunction("execCode", ["globalThis.sdk_runtime = this.runtime"]);
@@ -16,6 +21,18 @@
             )[0];
     }
 
+    const getLayer = () => {
+        return runtime.running_layout.layers.find(x => x.name === "Layer 0");
+    }
+
+    const createCamera = (x, y) => {
+        const spriteType = runtime.types_by_index.find(x => x.plugin instanceof cr.plugins_.Sprite && x.all_frames && x.all_frames[0].texture_file.includes("camera"));
+
+        const sprite = runtime.createInstance(spriteType, getLayer(), x, y);
+        sprite.set_bbox_changed();
+        return sprite;
+    }
+
     const notify = (title, text, image = "./speedrunner.png") => {
         cr.plugins_.sirg_notifications.prototype.acts.AddSimpleNotification.call(
             runtime.types_by_index.find(
@@ -27,27 +44,28 @@
         );
     };
 
-    const flyMod = {
+    const freecamMod = {
         init() {
             this.movementKeys = [false, false, false, false];
             this.activatorKeyHeld = false;
             this.activated = false;
-            this.speed = { x: 10, y: 10 };
-            this.stored = [1500, true];
             this.override = false;
+            this.retach = false;
+            this.camera = null;
 
             document.addEventListener("keydown", (event) => { this.keyDown(event) });
             document.addEventListener("keyup", (event) => { this.keyUp(event) });
+            document.addEventListener("keypress", (event) => { this.keyPress(event) });
 
             runtime.tickMe(this);
 
-            globalThis.ovoFlyMod = this;
+            globalThis.ovoFreecamMod = this;
         },
 
         keyDown(event) {
             const key = event.key.toLowerCase();
 
-            if (key == "control" && !this.override) {
+            if (key == "shift" && !this.override) {
                 this.activatorKeyHeld = true;
             } else if (event.keyCode >= 37 && event.keyCode <= 40 && this.activatorKeyHeld) {
                 if (!this.activated) {
@@ -62,7 +80,7 @@
         keyUp(event) {
             const key = event.key.toLowerCase();
 
-            if (key == "control" && this.activatorKeyHeld) {
+            if (key == "shift" && this.activatorKeyHeld) {
                 this.activatorKeyHeld = false;
 
                 if (this.activated) {
@@ -75,64 +93,45 @@
             }
         },
 
-        startActivation() {
-            const player = getPlayer();
+        keyPress(event) {
+            const key = event.key.toLowerCase();
 
-            if (player) {
-                this.stored = [player.behavior_insts[0].g, player.collisionsEnabled];
-            } else {
-                this.stored = [1500, true];
+            if (key == "q" && this.activatorKeyHeld) {
+                this.retach = !this.retach;
+                notify("Freecam Mod", `Camera Retach ${this.retach ? "Enabled" : "Disabled"}`);
+            }
+        },
+
+        startActivation() {
+            this.player = getPlayer();
+
+            if (!this.camera) {
+                this.camera = createCamera(this.player.x, this.player.y);
             }
 
-            notify("Fly Mod", "Fly Enabled");
+            notify("Freecam Mod", "Freecam Enabled");
         },
 
         endActivation() {
-            const player = getPlayer();
-
-            if (player) {
-                player.behavior_insts[0].g = this.stored[0];
-                player.collisionsEnabled = this.stored[1];
-            }
-
-            notify("Fly Mod", "Fly Disabled");
-        },
-
-        speedX(speed) {
-            this.speed.x = speed;
-        },
-
-        speedY(speed) {
-            this.speed.y = speed;
-        },
-
-        setSpeed(speed) {
-            this.speed.x = speed;
-            this.speed.y = speed;
-        },
-
-        setOverride(value) {
-            this.override = !!value;
+            notify("Freecam Mod", "Freecam Disabled");
         },
 
         tick() {
-            if (this.activated) {
-                const player = getPlayer();
+            const layer = getLayer();
 
-                if (player) {
-                    if (!!player.behavior_insts[0].g || player.collisionsEnabled) {
-                        player.behavior_insts[0].g = 0;
-                        player.collisionsEnabled = false
-                    }
+            if (!layer.instances.includes(this.camera)) {
+                this.camera = null;
+                this.activated = false;
+            }
 
-                    let moveX = this.movementKeys[2] - this.movementKeys[0];
-                    let moveY = this.movementKeys[3] - this.movementKeys[1];
-                    player.x += moveX * this.speed.x;
-                    player.y += moveY * this.speed.y;
+            if (!this.activated) {
+                if (this.camera && this.retach) {
+                    this.camera.x = this.player.x;
+                    this.camera.y = this.player.y;
                 }
             }
         }
     };
 
-    flyMod.init();
+    freecamMod.init();
 })();
