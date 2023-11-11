@@ -1,8 +1,3 @@
-// this.runtime = cr_getC2Runtime();
-// this.camera = ovoModAPI.game.createSprite(445, 275, null, null, 0, "camera", ovoModAPI.game.getLayer());
-// this.layer = this.runtime.running_layout.layers.find(x => x.name === "Layer 0")
-// this.layer.instances.includes(this.camera);
-
 (function () {
     const old = globalThis.sdk_runtime;
     c2_callFunction("execCode", ["globalThis.sdk_runtime = this.runtime"]);
@@ -46,15 +41,9 @@
 
     const freecamMod = {
         init() {
-            this.movementKeys = [false, false, false, false];
-            this.activatorKeyHeld = false;
             this.activated = false;
-            this.override = false;
-            this.retach = false;
             this.camera = null;
 
-            document.addEventListener("keydown", (event) => { this.keyDown(event) });
-            document.addEventListener("keyup", (event) => { this.keyUp(event) });
             document.addEventListener("keypress", (event) => { this.keyPress(event) });
 
             runtime.tickMe(this);
@@ -62,43 +51,11 @@
             globalThis.ovoFreecamMod = this;
         },
 
-        keyDown(event) {
-            const key = event.key.toLowerCase();
-
-            if (key == "shift" && !this.override) {
-                this.activatorKeyHeld = true;
-            } else if (event.keyCode >= 37 && event.keyCode <= 40 && this.activatorKeyHeld) {
-                if (!this.activated) {
-                    this.startActivation();
-                    this.activated = true;
-                }
-
-                this.movementKeys[event.keyCode - 37] = true;
-            }
-        },
-
-        keyUp(event) {
-            const key = event.key.toLowerCase();
-
-            if (key == "shift" && this.activatorKeyHeld) {
-                this.activatorKeyHeld = false;
-
-                if (this.activated) {
-                    this.movementKeys = [false, false, false, false];
-                    this.activated = false;
-                    this.endActivation();
-                }
-            } else if (event.keyCode >= 37 && event.keyCode <= 40 && this.activatorKeyHeld) {
-                this.movementKeys[event.keyCode - 37] = false;
-            }
-        },
-
         keyPress(event) {
-            const key = event.key.toLowerCase();
-
-            if (key == "q" && this.activatorKeyHeld) {
-                this.retach = !this.retach;
-                notify("Freecam Mod", `Camera Retach ${this.retach ? "Enabled" : "Disabled"}`);
+            if (event.key == "Q") {
+                this.activated = !this.activated;
+                if (this.activated) this.startActivation();
+                notify("Freecam Mod", `Camera Override ${this.activated ? "Enabled" : "Disabled"}`);
             }
         },
 
@@ -108,12 +65,6 @@
             if (!this.camera) {
                 this.camera = createCamera(this.player.x, this.player.y);
             }
-
-            notify("Freecam Mod", "Freecam Enabled");
-        },
-
-        endActivation() {
-            notify("Freecam Mod", "Freecam Disabled");
         },
 
         tick() {
@@ -124,11 +75,9 @@
                 this.activated = false;
             }
 
-            if (!this.activated) {
-                if (this.camera && this.retach) {
-                    this.camera.x = this.player.x;
-                    this.camera.y = this.player.y;
-                }
+            if (!this.activated && this.camera) {
+                this.camera.x = this.player.x;
+                this.camera.y = this.player.y;
             }
         }
     };
