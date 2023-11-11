@@ -173,9 +173,8 @@
 
         promptMod() {
             const input = prompt("Enter mod URL, ID, or JS code");
+            if (input === null) return;
             const key = input.toLocaleLowerCase();
-
-            if (!input) return;
 
             if (this.mods[key]) {
                 this.loadModJSON(key, this.mods[key], true);
@@ -190,9 +189,11 @@
     }
 
     if (typeof window.ovoModLoader === "undefined") {
-        if (typeof window.cr_getC2Runtime !== "undefined" && typeof window.cr_getC2Runtime() !== "undefined" && window.cr_getC2Runtime().isloading === false) {
-            new ModLoader(cr_getC2Runtime());
+        if (typeof window.cr_getC2Runtime !== "undefined" && window.cr_getC2Runtime() != null && typeof window.cr_getC2Runtime() !== "undefined" && window.cr_getC2Runtime().isloading === false) {
+            console.log("Modloader: C2 runtime already loaded, hooking into it");
+            new ModLoader(window.cr_getC2Runtime());
         } else {
+            console.log("Modloader: C2 runtime not loaded yet, hooking into createRuntime");
             const createCommand = window.cr_createRuntime;
             const hookCommand = (canvasId) => {
                 new ModLoader(createCommand(canvasId));
