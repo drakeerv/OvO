@@ -56,3 +56,10 @@ pattern = "**/{*.less,*.scss,*.css}"
 
 [languages.css.languageServer]
 start = "vscode-css-language-server --stdio"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", ".config"]
+
+[deployment]
+publicDir = "/"
+deploymentTarget = "static"
