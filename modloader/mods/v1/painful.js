@@ -12,14 +12,14 @@
         return runtime.running_layout.name.startsWith("Level")
     }
 
-    const painfullMod = {
+    const painfulMod = {
         init() {
             this.activated = false;
             this.camera = null;
             this.scale = -3;
             
             runtime.tickMe(this);
-            globalThis.ovoPainfull = this;
+            globalThis.ovoPainful = this;
         },
 
         tick() {
@@ -29,5 +29,5 @@
         }
     };
 
-    painfullMod.init();
+    painfulMod.init();
 })();
