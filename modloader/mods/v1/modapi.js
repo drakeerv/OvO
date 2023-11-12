@@ -163,13 +163,14 @@
             },
 
             isInLevel() {
-                return this.runtime.running_layout.name.startsWith("Level")
+                return runtime.running_layout.sheetname == "Levels";
             },
 
             isPaused() {
                 if (this.isInLevel()) return this.runtime.running_layout.layers.find(function (a) {
                     return "Pause" === a.name
                 }).visible
+                return false;
             },
         },
 

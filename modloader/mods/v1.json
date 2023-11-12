@@ -124,5 +124,33 @@
         "description": "A GUI for TAS.",
         "advanced": false,
         "url": "tasgui.js"
+    },
+    "rotovo": {
+        "name": "Rotovo",
+        "author": "drakeerv",
+        "description": "Rotates the level.",
+        "advanced": false,
+        "url": "rotovo.js"
+    },
+    "record": {
+        "name": "Record",
+        "author": "drakeerv",
+        "description": "Record your gameplay.",
+        "advanced": false,
+        "url": "record.js"
+    },
+    "bighead": {
+        "name": "Big Head",
+        "author": "drakeerv",
+        "description": "Big Head Mode.",
+        "advanced": false,
+        "url": "bighead.js"
+    },
+    "dvd": {
+        "name": "DVD",
+        "author": "drakeerv",
+        "description": "DVD logo.",
+        "advanced": false,
+        "url": "dvd.js"
     }
 }

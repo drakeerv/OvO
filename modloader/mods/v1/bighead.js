@@ -8,24 +8,32 @@
         return runtime.running_layout.layers.find(x => x.name === "Layer 0");
     }
 
+    const getHead = () => {
+        return getLayer().instances.find(x => x.type.name === "t33");
+    }
+
     const isInLevel = () => {
         return runtime.running_layout.sheetname == "Levels";
     }
 
-    const painfulMod = {
+    const bigheadMod = {
         init() {
-            this.scale = -3;
+            this.scale = 2;
+            this.width = 32 * this.scale;
+            this.height = 32 * this.scale;
             
             runtime.tickMe(this);
-            globalThis.ovoPainful = this;
+            globalThis.ovoBighead = this;
         },
 
         tick() {
             if (isInLevel()) {
-                getLayer().scale = this.scale;
+                const head = getHead();
+                head.width = this.width;
+                head.height = this.height;
             }
         }
     };
 
-    painfulMod.init();
+    bigheadMod.init();
 })();
