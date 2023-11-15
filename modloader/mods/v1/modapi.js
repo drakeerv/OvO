@@ -143,6 +143,11 @@
             createSolid(x, y, width, height, angle, layer) {
                 const solidType = this.runtime.types_by_index.find(x => x.plugin instanceof cr.plugins_.TiledBg && x.texture_file && x.texture_file.includes("/solid.png") && x.behs_count === 2);
 
+                if (typeof layer === "string") {
+                    layer = this.getLayer(layer);
+                    console.warn("modapi.game.createSolid: layer is a string, please use modapi.game.getLayer(layerName) instead. This will be removed in the future.");
+                }
+
                 const solid = this.runtime.createInstance(solidType, layer, x, y);
                 solid.width = width || solid.width;
                 solid.height = height || solid.height;;
@@ -153,6 +158,11 @@
 
             createSprite(x, y, width, height, angle, spriteName, layer) {
                 const spriteType = this.runtime.types_by_index.find(x => x.plugin instanceof cr.plugins_.Sprite && x.all_frames && x.all_frames[0].texture_file.includes(spriteName));
+
+                if (typeof layer === "string") {
+                    layer = this.getLayer(layer);
+                    console.warn("modapi.game.createSprite: layer is a string, please use modapi.game.getLayer(layerName) instead. This will be removed in the future.");
+                }
 
                 const sprite = this.runtime.createInstance(spriteType, layer, x, y);
                 sprite.width = width || sprite.width;
