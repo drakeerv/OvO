@@ -71,7 +71,7 @@
     },
     "tas": {
         "name": "TAS",
-        "author": "Skymen",
+        "author": "Skymen, Awesomeguy, R3XFadeaway",
         "description": "TAS tools for OvO.",
         "advanced": true,
         "url": "tas.js"
@@ -152,5 +152,12 @@
         "description": "DVD logo.",
         "advanced": false,
         "url": "dvd.js"
+    },
+    "behaviors": {
+        "name": "Behaviors",
+        "author": "OvOPlant",
+        "description": "Change the behaviors of the game.",
+        "advanced": false,
+        "url": "behaviors.js"
     }
 }
