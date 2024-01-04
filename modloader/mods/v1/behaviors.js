@@ -1,4 +1,4 @@
-(function() {
+(function () {
     let old = globalThis.sdk_runtime;
     c2_callFunction("execCode", ["globalThis.sdk_runtime = this.runtime"]);
     let runtime = globalThis.sdk_runtime;
@@ -19,7 +19,6 @@
     var downy;
     var scale;
     var dead;
-    var sborder = null;
     var dborder = null;
     var bordercheck = null;
     let notify = (title, text, image = "https://ovoplant.github.io/ovo/versions/reverse/electric.png") => {
@@ -34,7 +33,7 @@
     };
     let behaviors = {
         init() {
-            runtime.tickMe(showPosition);
+            runtime.tickMe(showProperties);
             document.addEventListener("keydown", (event) => {
                 if (event.code === "KeyY") {
                     if (event.shiftKey) {
@@ -88,66 +87,97 @@
             toggleButton.onclick = this.loadPrompt.bind(this);
             document.body.appendChild(toggleButton);
         },
-        
+
 
         loadPrompt() {
             let bh = prompt('Choose one: "teleport", "gravity", "jumpstrength", "timescale", "angle", "speed", "fallspeed", "acceleration", "deceleration", "size", "downx", "downy", "zoom", "dead", or type "reset"');
-            if (bh === "reset") {this.loadReset();
-            }else if (bh === "teleport") {this.tp();
-            }else if (bh === "gravity") {this.gravity();
-            }else if (bh === "jumpstrength") {this.jumpstrength();
-            }else if (bh === "timescale") {this.timescale();
-            }else if (bh === "angle") {this.angle();
-            }else if (bh === "speed") {this.maxspeed();
-            }else if (bh === "fallspeed") {this.fallspeed();
-            }else if (bh === "acceleration") {this.acceleration();
-            }else if (bh === "deceleration") {this.deceleration();
-            }else if (bh === "size") {this.size();
-            }else if (bh === "downx") {this.downx();
-            }else if (bh === "downy") {this.downy();
-            }else if (bh === "zoom") {this.zoom();
-            }else if (bh === "dead") {this.dead();
-            }else {alert("Please choose from the list")}
+            if (bh === "reset") {
+                this.loadReset();
+            } else if (bh === "teleport") {
+                this.tp();
+            } else if (bh === "gravity") {
+                this.gravity();
+            } else if (bh === "jumpstrength") {
+                this.jumpstrength();
+            } else if (bh === "timescale") {
+                this.timescale();
+            } else if (bh === "angle") {
+                this.angle();
+            } else if (bh === "speed") {
+                this.maxspeed();
+            } else if (bh === "fallspeed") {
+                this.fallspeed();
+            } else if (bh === "acceleration") {
+                this.acceleration();
+            } else if (bh === "deceleration") {
+                this.deceleration();
+            } else if (bh === "size") {
+                this.size();
+            } else if (bh === "downx") {
+                this.downx();
+            } else if (bh === "downy") {
+                this.downy();
+            } else if (bh === "zoom") {
+                this.zoom();
+            } else if (bh === "dead") {
+                this.dead();
+            } else { alert("Please choose from the list") }
         },
 
         loadReset() {
             let bhreset = prompt('Choose what to reset: "gravity", "jumpstrength", "timescale", "angle", "speed", "fallspeed", "acceleration", "deceleration", "size", "downx", "downy", "zoom"');
-            if (bhreset === "gravity") {grav = 1500;
-            }else if (bhreset === "jumpstrength") {js = 650;
-            }else if (bhreset === "timescale"){
+            if (bhreset === "gravity") {
+                grav = 1500;
+            } else if (bhreset === "jumpstrength") {
+                js = 650;
+            } else if (bhreset === "timescale") {
                 tsreset = prompt('"player", "moveareas", or "both"?')
-                if (tsreset === "player") {ts = -1
-                }else if (tsreset === "moveareas") {mts = -1;
-                }else if (tsreset === "both") {ts = -1, mts = -1;
-                }else {alert("Please choose from the list")}
-            }else if (bhreset === "angle") {pangle = 0;
-            }else if (bhreset === "speed") {clearInterval(speed);
-            }else if (bhreset === "fallspeed") {mf = 3000;
-            }else if (bhreset === "acceleration") {acc = 1500;
-            }else if (bhreset === "deceleration") {clearInterval(dec);
-            }else if (bhreset === "size") {
+                if (tsreset === "player") {
+                    ts = -1
+                } else if (tsreset === "moveareas") {
+                    mts = -1;
+                } else if (tsreset === "both") {
+                    ts = -1, mts = -1;
+                } else { alert("Please choose from the list") }
+            } else if (bhreset === "angle") {
+                pangle = 0;
+            } else if (bhreset === "speed") {
+                clearInterval(speed);
+            } else if (bhreset === "fallspeed") {
+                mf = 3000;
+            } else if (bhreset === "acceleration") {
+                acc = 1500;
+            } else if (bhreset === "deceleration") {
+                clearInterval(dec);
+            } else if (bhreset === "size") {
                 sreset = prompt('"width", "height", or "both"?')
-                if (sreset === "width") {width = 32;
-                }else if (sreset === "height") {height = 64;
-                }else if (sreset === "both") {width = 32, height = 64; runtime.untickMe(lsize);
-                }else {alert("Please choose from the list")}
-            }else if (bhreset === "downx") {downx = 0;
-            }else if (bhreset === "downy") {downy = 1;
-            }else if (bhreset === "zoom") {scale = 1, this.Layer0().scale = 1;
-            }else {alert("Please choose from the list")}
+                if (sreset === "width") {
+                    width = 32;
+                } else if (sreset === "height") {
+                    height = 64;
+                } else if (sreset === "both") {
+                    width = 32, height = 64; runtime.untickMe(lsize);
+                } else { alert("Please choose from the list") }
+            } else if (bhreset === "downx") {
+                downx = 0;
+            } else if (bhreset === "downy") {
+                downy = 1;
+            } else if (bhreset === "zoom") {
+                scale = 1, this.Layer0().scale = 1;
+            } else { alert("Please choose from the list") }
         },
 
         tp() {
             px = prompt('Change your x coordinate to whatever you want, leave blank to not change');
             py = prompt('Change your y coordinate to whatever you want, leave blank to not change');
-            if (px === null || px === "" || isNaN(px)){
+            if (px === null || px === "" || isNaN(px)) {
                 px = ovoBehaviors.getPlayer().x
-            }else{
+            } else {
                 ovoBehaviors.getPlayer().x = parseFloat(px)
             }
-            if (py === null || py === "" || isNaN(py)){
+            if (py === null || py === "" || isNaN(py)) {
                 py = ovoBehaviors.getPlayer().y
-            }else{
+            } else {
                 ovoBehaviors.getPlayer().y = parseFloat(py)
             }
             return;
@@ -155,115 +185,117 @@
 
         gravity() {
             grav = prompt('Change your gravity to whatever you want');
-            if (grav === null || grav === "" || isNaN(grav)){
+            if (grav === null || grav === "" || isNaN(grav)) {
                 alert("Must be a number, gravity reset")
                 grav = 1500;
                 this.getPlayer().behavior_insts[0].maxFall = parseFloat(grav) * 2
                 return;
             }
             this.getPlayer().behavior_insts[0].maxFall = parseFloat(grav) * 2
-            setInterval(function() {ovoBehaviors.getPlayer().behavior_insts[0].g = parseFloat(grav)}, 0);
+            setInterval(function () { ovoBehaviors.getPlayer().behavior_insts[0].g = parseFloat(grav) }, 0);
             return;
         },
 
         jumpstrength() {
             js = prompt('Change your jump strength to whatever you want');
-            if (js === null || js === "" || isNaN(js)){
+            if (js === null || js === "" || isNaN(js)) {
                 alert("Must be a number, jump strength reset")
                 js = 650
                 return;
             }
-            setInterval(function() {ovoBehaviors.getPlayer().behavior_insts[0].jumpStrength = parseFloat(js);}, 0);
+            setInterval(function () { ovoBehaviors.getPlayer().behavior_insts[0].jumpStrength = parseFloat(js); }, 0);
             return;
         },
 
         timescale() {
             wts = prompt('"player" or "moveareas"?')
-            if (wts === "player"){
-            ts = prompt('Change your timescale to whatever you want');
-            if (ts === null || ts === "" || isNaN(ts)){
-                alert("Must be a number, timescale reset")
-                ts = -1
-                return;
-            }
-            setInterval(function() {
-                if (ovoBehaviors.runtime.timescale === 0 && (ovoBehaviors.getPlayer().my_timescale < 1 || ovoBehaviors.getPlayer().my_timescale > 1)){
-                    ovoBehaviors.getPlayer().my_timescale = -1
-                }else(
-                ovoBehaviors.getPlayer().my_timescale = ts), 0});
-            if (ts < 0 && (this.getPlayer().behavior_insts[0].jumpStrength > 0 || this.getPlayer().behavior_insts[0].acc > 0 || this.getPlayer().behavior_insts[0].dec > 0)){
-                alert("To make this function properly, please change the following into negatives: jumpstrength, acceleration, deceleration")
-                return;
-            }
+            if (wts === "player") {
+                ts = prompt('Change your timescale to whatever you want');
+                if (ts === null || ts === "" || isNaN(ts)) {
+                    alert("Must be a number, timescale reset")
+                    ts = -1
+                    return;
                 }
-                if (wts === "moveareas"){
+                setInterval(function () {
+                    if (ovoBehaviors.runtime.timescale === 0 && (ovoBehaviors.getPlayer().my_timescale < 1 || ovoBehaviors.getPlayer().my_timescale > 1)) {
+                        ovoBehaviors.getPlayer().my_timescale = -1
+                    } else (
+                        ovoBehaviors.getPlayer().my_timescale = ts), 0
+                });
+                if (ts < 0 && (this.getPlayer().behavior_insts[0].jumpStrength > 0 || this.getPlayer().behavior_insts[0].acc > 0 || this.getPlayer().behavior_insts[0].dec > 0)) {
+                    alert("To make this function properly, please change the following into negatives: jumpstrength, acceleration, deceleration")
+                    return;
+                }
+            }
+            if (wts === "moveareas") {
                 mts = prompt('Change movearea timescale to whatever you want');
-            if (mts === null || mts === "" || isNaN(mts)){
-                alert("Must be a number, timescale reset")
-                mts = -1
-                return;
-            }
-            obj = this.getMovearea();
-            sol = obj.getCurrentSol();
-            instancess = sol.getObjects();
-            i = 0, len = instancess.length;
-            
-            
-                setInterval(function() {
-                    for (i = 0, len = instancess.length; i < len; i++)
-                    {
-                    if (ovoBehaviors.runtime.timescale === 0 && (ovoBehaviors.getMovearea().instances[i].my_timescale < 1 || ovoBehaviors.getMovearea().instances[i].my_timescale > 1)){
-                        ovoBehaviors.getMovearea().instances[i].my_timescale = -1
-                    }else(
-                    instancess[i].my_timescale = mts), 0}});
-            
+                if (mts === null || mts === "" || isNaN(mts)) {
+                    alert("Must be a number, timescale reset")
+                    mts = -1
+                    return;
                 }
+                obj = this.getMovearea();
+                sol = obj.getCurrentSol();
+                instancess = sol.getObjects();
+                i = 0, len = instancess.length;
+
+
+                setInterval(function () {
+                    for (i = 0, len = instancess.length; i < len; i++) {
+                        if (ovoBehaviors.runtime.timescale === 0 && (ovoBehaviors.getMovearea().instances[i].my_timescale < 1 || ovoBehaviors.getMovearea().instances[i].my_timescale > 1)) {
+                            ovoBehaviors.getMovearea().instances[i].my_timescale = -1
+                        } else (
+                            instancess[i].my_timescale = mts), 0
+                    }
+                });
+
+            }
         },
 
         angle() {
             pangle = prompt('Change your angle to a number between 1 and 360');
-            if (pangle === null || pangle === "" || isNaN(pangle)){
+            if (pangle === null || pangle === "" || isNaN(pangle)) {
                 alert("Must be a number between 1 and 360, angle reset")
                 pangle = 0
                 return;
             }
-            if (pangle >= 0 && pangle <= 360){
-                setInterval(function() {ovoBehaviors.getPlayer().angle = pangle * (Math.PI / 180);}, 0);
+            if (pangle >= 0 && pangle <= 360) {
+                setInterval(function () { ovoBehaviors.getPlayer().angle = pangle * (Math.PI / 180); }, 0);
                 return;
-            }else{
+            } else {
                 alert("Must be a number between 1 and 360, angle reset")
                 pangle = 0
             }
             return;
         },
-        
+
         maxspeed() {
             ms = prompt('Change your speed to whatever you want (Warning: this is kind of buggy)');
             clearInterval(speed)
-            if (ms === null || ms === "" || isNaN(ms)){
+            if (ms === null || ms === "" || isNaN(ms)) {
                 alert("Must be a number, speed reset")
                 clearInterval(speed)
                 return;
             }
-            speed = setInterval(function() {
-                if (ms === 660){
+            speed = setInterval(function () {
+                if (ms === 660) {
                     ms = 660.000000001
-                }else if (ms === 700){
+                } else if (ms === 700) {
                     ms = 700.000000001
-                }else if (ms === 450){
+                } else if (ms === 450) {
                     ms = 450.000000001
-                }else if (ms === 380){
+                } else if (ms === 380) {
                     ms = 380.000000001
                 }
-                if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 330){
+                if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 330) {
                     ovoBehaviors.getPlayer().behavior_insts[0].maxspeed = ms
-                }else if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 660){
+                } else if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 660) {
                     ovoBehaviors.getPlayer().behavior_insts[0].maxspeed = ms * 2
-                }else if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 700){
+                } else if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 700) {
                     ovoBehaviors.getPlayer().behavior_insts[0].maxspeed = ms * 2.121212123
-                }else if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 450){
+                } else if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 450) {
                     ovoBehaviors.getPlayer().behavior_insts[0].maxspeed = ms * 1.363636364
-                }else if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 380){
+                } else if (ovoBehaviors.getPlayer().behavior_insts[0].maxspeed === 380) {
                     ovoBehaviors.getPlayer().behavior_insts[0].maxspeed = ms * 1.151515156
                 }
             }, 0);
@@ -273,147 +305,149 @@
         fallspeed() {
             mf = prompt('Change your fallspeed to whatever you want');
             clearInterval(fall)
-            if (mf === null || mf === "" || isNaN(mf)){
+            if (mf === null || mf === "" || isNaN(mf)) {
                 alert("Must be a number, speed reset")
                 clearInterval(fall)
                 return;
             }
-            fall = setInterval(function() {ovoBehaviors.getPlayer().behavior_insts[0].maxFall = parseFloat(mf);}, 0);
+            fall = setInterval(function () { ovoBehaviors.getPlayer().behavior_insts[0].maxFall = parseFloat(mf); }, 0);
             return;
         },
 
 
         acceleration() {
             acc = prompt('Change your acceleration to whatever you want');
-            if (acc === null || acc === "" || isNaN(acc)){
+            if (acc === null || acc === "" || isNaN(acc)) {
                 alert("Must be a number, acceleration reset")
                 acc = 1500
                 return;
             }
-            setInterval(function() {ovoBehaviors.getPlayer().behavior_insts[0].acc = parseFloat(acc);}, 0);
+            setInterval(function () { ovoBehaviors.getPlayer().behavior_insts[0].acc = parseFloat(acc); }, 0);
             return;
         },
 
         deceleration() {
             dc = prompt('Change your deceleration to whatever you want')
             clearInterval(dec)
-            if (dc === null || dc === "" || isNaN(dc)){
+            if (dc === null || dc === "" || isNaN(dc)) {
                 alert("Must be a number, deceleration reset")
                 clearInterval(dec)
                 return;
             }
-            dec = setInterval(function() {ovoBehaviors.getPlayer().behavior_insts[0].dec = parseFloat(dc);}, 0);
+            dec = setInterval(function () { ovoBehaviors.getPlayer().behavior_insts[0].dec = parseFloat(dc); }, 0);
             return;
         },
 
         size() {
-            width = prompt("Change your width to whatever you want (Show hitboxes to see the change(This is a bit broken for now, if you exit a level please change your size back to normal.))")
-            if (width === null || width === "" || isNaN(width)){
+            width = prompt("Change your width to whatever you want (Show hitboxes to see the change)")
+            if (width === null || width === "" || isNaN(width)) {
                 alert("Must be a number, width reset");
                 width = 32;
             }
-            if (width < 0){
-                width = parseFloat(width)-parseFloat(width)*2
+            if (width < 0) {
+                width = parseFloat(width) - parseFloat(width) * 2
             }
-            if (parseFloat(width) === 16){
+            if (parseFloat(width) === 16) {
                 width = 16.00000000000001
             }
-            height = prompt("Change your height to whatever you want (Show hitboxes to see the change (This is a bit broken for now, if you exit a level please change your size back to normal.))")
-            if (height === null || height === "" || isNaN(height)){
+            height = prompt("Change your height to whatever you want (Show hitboxes to see the change)")
+            if (height === null || height === "" || isNaN(height)) {
                 alert("Must be a number, height reset");
                 height = 64
             }
-            if (parseFloat(width) === 32 && parseFloat(height) === 64){
+            if (parseFloat(width) === 32 && parseFloat(height) === 64) {
                 runtime.untickMe(lsize)
-            }else{
+            } else {
                 runtime.tickMe(lsize)
             }
-            if (this.getPlayer().instance_vars[0] === "plunge" || this.getPlayer().instance_vars[0] === "slide"){
+            if (this.getPlayer().instance_vars[0] === "plunge" || this.getPlayer().instance_vars[0] === "slide") {
                 this.getPlayer().width = parseFloat(width) * 2
                 this.getPlayer().height = parseFloat(height) / 2
-            }else {
-            this.getPlayer().width = parseFloat(width)
-            this.getPlayer().height = parseFloat(height)}
+            } else {
+                this.getPlayer().width = parseFloat(width)
+                this.getPlayer().height = parseFloat(height)
+            }
         },
 
         downx() {
             downx = prompt("Change your downX to whatever you want (I'm sorry but not even I know what this is)")
-            if (downx === null || downx === "" || isNaN(downx)){
+            if (downx === null || downx === "" || isNaN(downx)) {
                 alert("Must be a number, downX reset");
                 downx = 0;
             }
-            setInterval(function() {
+            setInterval(function () {
                 ovoBehaviors.getPlayer().behavior_insts[0].downx = parseFloat(downx)
             })
         },
 
         downy() {
             downy = prompt("Change your downY to whatever you want (I'm sorry but not even I know what this is)")
-            if (downy === null || downy === "" || isNaN(downy)){
+            if (downy === null || downy === "" || isNaN(downy)) {
                 alert("Must be a number, downY reset");
                 downy = 1;
             }
-            setInterval(function() {
+            setInterval(function () {
                 ovoBehaviors.getPlayer().behavior_insts[0].downy = parseFloat(downy)
-            }) 
+            })
         },
 
         zoom() {
-                scale = prompt('To start a cycle or continue your current cycle, type "yes". To change it only once and/or stop your current cycle, type "no".')
-                if (scale === "yes"){
-                    scale = prompt("Zoom the camera in or out")
-                    if (scale === null || scale === "" || isNaN(scale)){
-                        alert("Must be a number, scale reset, cycle continuing")
-                        scale = 1
-                    }else{
-                        clearInterval(zoom)
-                        zoom = setInterval(function() {
-                            ovoBehaviors.Layer0().scale = parseFloat(scale)
-                        }, 0)
-                    }
-                }else if (scale === "no"){
+            scale = prompt('To start a cycle or continue your current cycle, type "yes". To change it only once and/or stop your current cycle, type "no".')
+            if (scale === "yes") {
+                scale = prompt("Zoom the camera in or out")
+                if (scale === null || scale === "" || isNaN(scale)) {
+                    alert("Must be a number, scale reset, cycle continuing")
+                    scale = 1
+                } else {
                     clearInterval(zoom)
-                    scale = prompt("Zoom the camera in or out")
-                    if (scale === null || scale === "" || isNaN(scale)){
-                        alert("Must be a number, scale reset")
-                        this.Layer0().scale = 1
-                    }else{
-                        this.Layer0().scale = parseFloat(scale)
-                    }
-                }else{
-                    alert("Please choose from the list")
+                    zoom = setInterval(function () {
+                        ovoBehaviors.Layer0().scale = parseFloat(scale)
+                    }, 0)
                 }
+            } else if (scale === "no") {
+                clearInterval(zoom)
+                scale = prompt("Zoom the camera in or out")
+                if (scale === null || scale === "" || isNaN(scale)) {
+                    alert("Must be a number, scale reset")
+                    this.Layer0().scale = 1
+                } else {
+                    this.Layer0().scale = parseFloat(scale)
+                }
+            } else {
+                alert("Please choose from the list")
+            }
         },
 
         dead() {
             dead = prompt("This will put you in death state, meaning you can't die. Unlike when you do this with replays, groundpounding or double/triple jumping do not make you exit death state. Type 'yes' to do this, or type 'stop' to stop it. (This is a bit broken for now, if you exit a level please stop this.)")
-            if (dead === "yes"){
-            clearInterval(state)
-            clearInterval(bordercheck)
-            runtime.tickMe(deadstate)
-            bordercheck = setInterval(function() {
-            if (ovoBehaviors.getPlayer().y <= ovoBehaviors.runtime.running_layout.height - 1){
-                clearInterval(dborder)
-                dborder = setInterval(function() {
-                    if (dead === "stop"){
+            if (dead === "yes") {
+                clearInterval(state)
+                clearInterval(bordercheck)
+                runtime.tickMe(deadstate)
+                bordercheck = setInterval(function () {
+                    if (ovoBehaviors.getPlayer().y <= ovoBehaviors.runtime.running_layout.height - 1) {
                         clearInterval(dborder)
-                    }else if (ovoBehaviors.getPlayer().y >= ovoBehaviors.runtime.running_layout.height){
-                        notify("Welp", "There is ONE way to die..."),
-                        clearInterval(dborder)
+                        dborder = setInterval(function () {
+                            if (dead === "stop") {
+                                clearInterval(dborder)
+                            } else if (ovoBehaviors.getPlayer().y >= ovoBehaviors.runtime.running_layout.height) {
+                                notify("Welp", "There is ONE way to die..."),
+                                    clearInterval(dborder)
+                            }
+                        })
                     }
                 })
-            }})
-            return;
-            }else if (dead === "stop"){
-            runtime.untickMe(deadstate)
-            clearInterval(bordercheck)
-            this.getPlayer().instance_vars[0] = ""
-            return;
-            }else if (dead === null || dead === "" || isNaN(dead)){
-            return alert("Please choose from the two options");
+                return;
+            } else if (dead === "stop") {
+                runtime.untickMe(deadstate)
+                clearInterval(bordercheck)
+                this.getPlayer().instance_vars[0] = ""
+                return;
+            } else if (dead === null || dead === "" || isNaN(dead)) {
+                return alert("Please choose from the two options");
             }
-    },
-        
+        },
+
         getPlayer() {
             return this.runtime.types_by_index
                 .filter(
@@ -424,7 +458,7 @@
                 .instances.filter(
                     (x) => x.instance_vars[17] === "")[0]
         },
-        
+
         getMovearea() {
             return runtime.types_by_index.find(x => x.plugin instanceof cr.plugins_.Sprite && x.all_frames && x.all_frames[0].texture_file.includes("movearea"))
         },
@@ -434,42 +468,46 @@
         },
 
         isInLevel() {
-            return runtime.running_layout.sheetname == "Levels";
+            return runtime.running_layout.sheetname === "Levels" || runtime.running_layout.name.startsWith("Skin");
         }
 
     }
-    
+
     let lsize = {
         tick() {
-            let sib = ovoBehaviors.getPlayer().siblings
-            if (ovoBehaviors.getPlayer().width <= 0){
-                sib[0].width = parseFloat(-width) / 8, sib[0].height = parseFloat(height) / 8, sib[1].width = parseFloat(-width) / 8, sib[1].height = parseFloat(height) / 8, sib[2].width = parseFloat(-width) / 8, sib[2].height = parseFloat(height) / 8, sib[3].width = parseFloat(-width), sib[3].height = parseFloat(height) / 2, sib[4].width = parseFloat(-width) / 8, sib[4].height = parseFloat(height) / 8, sib[5].width = parseFloat(-width) / 8, sib[5].height = parseFloat(height) / 8, sib[6].width = parseFloat(-width) / 8, sib[6].height = parseFloat(height) / 8, sib[7].width = parseFloat(-width) / 4, sib[7].height = parseFloat(height) / 4, sib[8].width = parseFloat(-width) / 8, sib[8].height = parseFloat(height) / 8, sib[9].width = parseFloat(-width) / 8, sib[9].height = parseFloat(height) / 8
-            }else {
-                sib[0].width = parseFloat(width) / 8, sib[0].height = parseFloat(height) / 8, sib[1].width = parseFloat(width) / 8, sib[1].height = parseFloat(height) / 8, sib[2].width = parseFloat(width) / 8, sib[2].height = parseFloat(height) / 8, sib[3].width = parseFloat(width), sib[3].height = parseFloat(height) / 2, sib[4].width = parseFloat(width) / 8, sib[4].height = parseFloat(height) / 8, sib[5].width = parseFloat(width) / 8, sib[5].height = parseFloat(height) / 8, sib[6].width = parseFloat(width) / 8, sib[6].height = parseFloat(height) / 8, sib[7].width = parseFloat(width) / 4, sib[7].height = parseFloat(height) / 4, sib[8].width = parseFloat(width) / 8, sib[8].height = parseFloat(height) / 8, sib[9].width = parseFloat(width) / 8, sib[9].height = parseFloat(height) / 8
-            }
-            if (ovoBehaviors.getPlayer().width === parseFloat(width) * 2){
-                ovoBehaviors.getPlayer().width = parseFloat(width) * 2
-                ovoBehaviors.getPlayer().height = parseFloat(height) / 2
-            }else if (ovoBehaviors.getPlayer().width === parseFloat(-width)){
-                ovoBehaviors.getPlayer().width = parseFloat(-width)
-                ovoBehaviors.getPlayer().height = parseFloat(height)
-            }else if (ovoBehaviors.getPlayer().width === parseFloat(-width) * 2){
-                ovoBehaviors.getPlayer().width = parseFloat(-width) * 2
-                ovoBehaviors.getPlayer().height = parseFloat(height) / 2
-            }else{
-                ovoBehaviors.getPlayer().width = parseFloat(width)
-                ovoBehaviors.getPlayer().height = parseFloat(height)
+            if (ovoBehaviors.isInLevel()) {
+                let sib = ovoBehaviors.getPlayer().siblings
+                if (ovoBehaviors.getPlayer().width <= 0) {
+                    sib[0].width = parseFloat(-width) / 8, sib[0].height = parseFloat(height) / 8, sib[1].width = parseFloat(-width) / 8, sib[1].height = parseFloat(height) / 8, sib[2].width = parseFloat(-width) / 8, sib[2].height = parseFloat(height) / 8, sib[3].width = parseFloat(-width), sib[3].height = parseFloat(height) / 2, sib[4].width = parseFloat(-width) / 8, sib[4].height = parseFloat(height) / 8, sib[5].width = parseFloat(-width) / 8, sib[5].height = parseFloat(height) / 8, sib[6].width = parseFloat(-width) / 8, sib[6].height = parseFloat(height) / 8, sib[7].width = parseFloat(-width) / 4, sib[7].height = parseFloat(height) / 4, sib[8].width = parseFloat(-width) / 8, sib[8].height = parseFloat(height) / 8, sib[9].width = parseFloat(-width) / 8, sib[9].height = parseFloat(height) / 8
+                } else {
+                    sib[0].width = parseFloat(width) / 8, sib[0].height = parseFloat(height) / 8, sib[1].width = parseFloat(width) / 8, sib[1].height = parseFloat(height) / 8, sib[2].width = parseFloat(width) / 8, sib[2].height = parseFloat(height) / 8, sib[3].width = parseFloat(width), sib[3].height = parseFloat(height) / 2, sib[4].width = parseFloat(width) / 8, sib[4].height = parseFloat(height) / 8, sib[5].width = parseFloat(width) / 8, sib[5].height = parseFloat(height) / 8, sib[6].width = parseFloat(width) / 8, sib[6].height = parseFloat(height) / 8, sib[7].width = parseFloat(width) / 4, sib[7].height = parseFloat(height) / 4, sib[8].width = parseFloat(width) / 8, sib[8].height = parseFloat(height) / 8, sib[9].width = parseFloat(width) / 8, sib[9].height = parseFloat(height) / 8
+                }
+                if (ovoBehaviors.getPlayer().width === parseFloat(width) * 2) {
+                    ovoBehaviors.getPlayer().width = parseFloat(width) * 2
+                    ovoBehaviors.getPlayer().height = parseFloat(height) / 2
+                } else if (ovoBehaviors.getPlayer().width === parseFloat(-width)) {
+                    ovoBehaviors.getPlayer().width = parseFloat(-width)
+                    ovoBehaviors.getPlayer().height = parseFloat(height)
+                } else if (ovoBehaviors.getPlayer().width === parseFloat(-width) * 2) {
+                    ovoBehaviors.getPlayer().width = parseFloat(-width) * 2
+                    ovoBehaviors.getPlayer().height = parseFloat(height) / 2
+                } else {
+                    ovoBehaviors.getPlayer().width = parseFloat(width)
+                    ovoBehaviors.getPlayer().height = parseFloat(height)
+                }
             }
         }
     }
+
+
 
     let deadstate = {
         tick() {
-            ovoBehaviors.getPlayer().instance_vars[0] = "dead"
+            if (ovoBehaviors.isInLevel()) { ovoBehaviors.getPlayer().instance_vars[0] = "dead" }
         }
     }
-    
-    let showPosition = {
+
+    let showProperties = {
         tick() {
             let playerInstances = runtime.types_by_index
                 .filter(
@@ -501,20 +539,24 @@
                 document.getElementById("js").innerHTML =
                     "Jump strength: " + ovoBehaviors.getPlayer().behavior_insts[0].jumpStrength
             } catch (err) { }
-            try { if(ovoBehaviors.getPlayer().my_timescale === -1){
-                document.getElementById("ts").innerHTML = 
-                "Player Timescale: Normal"
-            }else{
-                document.getElementById("ts").innerHTML =
-                    "Player Timescale: " + ovoBehaviors.getPlayer().my_timescale
-            }} catch (err) { }
-            try { if(ovoBehaviors.getMovearea().instances[0].my_timescale === -1){
-                document.getElementById("mts").innerHTML = 
-                "Movearea Timescale: Normal"
-            }else{
-                document.getElementById("mts").innerHTML =
-                    "Movearea Timescale: " + ovoBehaviors.getMovearea().instances[0].my_timescale
-            }} catch (err) { }
+            try {
+                if (ovoBehaviors.getPlayer().my_timescale === -1) {
+                    document.getElementById("ts").innerHTML =
+                        "Player Timescale: Normal"
+                } else {
+                    document.getElementById("ts").innerHTML =
+                        "Player Timescale: " + ovoBehaviors.getPlayer().my_timescale
+                }
+            } catch (err) { }
+            try {
+                if (ovoBehaviors.getMovearea().instances[0].my_timescale === -1) {
+                    document.getElementById("mts").innerHTML =
+                        "Movearea Timescale: Normal"
+                } else {
+                    document.getElementById("mts").innerHTML =
+                        "Movearea Timescale: " + ovoBehaviors.getMovearea().instances[0].my_timescale
+                }
+            } catch (err) { }
             try {
                 document.getElementById("angle").innerHTML =
                     "Angle: " + Math.round(ovoBehaviors.getPlayer().angle / (Math.PI / 180))
@@ -535,22 +577,23 @@
                 document.getElementById("dec").innerHTML =
                     "Deceleration: " + ovoBehaviors.getPlayer().behavior_insts[0].dec
             } catch (err) { }
-            try { if (ovoBehaviors.getPlayer().width === 16.00000000000001){
-                document.getElementById("size").innerHTML =
-                "Size: " + 16 + ", " + ovoBehaviors.getPlayer().height
-            }else if (ovoBehaviors.getPlayer().width === -16.00000000000001){
-                document.getElementById("size").innerHTML =
-                "Size: " + -16 + ", " + ovoBehaviors.getPlayer().height
-            }else if (ovoBehaviors.getPlayer().width === -32.00000000000002){
-                document.getElementById("size").innerHTML =
-                "Size: " + -32 + ", " + ovoBehaviors.getPlayer().height
-            }else if (ovoBehaviors.getPlayer().width === 32.00000000000002){
-                document.getElementById("size").innerHTML =
-                "Size: " + 32 + ", " + ovoBehaviors.getPlayer().height
-            }else{
-                document.getElementById("size").innerHTML =
-                    "Size: " + ovoBehaviors.getPlayer().width + ", " + ovoBehaviors.getPlayer().height
-            }
+            try {
+                if (ovoBehaviors.getPlayer().width === 16.00000000000001) {
+                    document.getElementById("size").innerHTML =
+                        "Size: " + 16 + ", " + ovoBehaviors.getPlayer().height
+                } else if (ovoBehaviors.getPlayer().width === -16.00000000000001) {
+                    document.getElementById("size").innerHTML =
+                        "Size: " + -16 + ", " + ovoBehaviors.getPlayer().height
+                } else if (ovoBehaviors.getPlayer().width === -32.00000000000002) {
+                    document.getElementById("size").innerHTML =
+                        "Size: " + -32 + ", " + ovoBehaviors.getPlayer().height
+                } else if (ovoBehaviors.getPlayer().width === 32.00000000000002) {
+                    document.getElementById("size").innerHTML =
+                        "Size: " + 32 + ", " + ovoBehaviors.getPlayer().height
+                } else {
+                    document.getElementById("size").innerHTML =
+                        "Size: " + ovoBehaviors.getPlayer().width + ", " + ovoBehaviors.getPlayer().height
+                }
             } catch (err) { }
             try {
                 document.getElementById("dx").innerHTML =
@@ -571,7 +614,7 @@
         },
     };
 
-    
+
 
     var bcoords = document.createElement("div"),
         ccoords = {
@@ -622,7 +665,7 @@
     bx.appendChild(newContentx);
 
     document.body.appendChild(bx);
-    
+
     var bg = document.createElement("div"),
         cg = {
             backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -647,7 +690,7 @@
     bg.appendChild(newContentg);
 
     document.body.appendChild(bg);
-    
+
     var bjs = document.createElement("div"),
         cjs = {
             backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -722,7 +765,7 @@
     bmts.appendChild(newContentmts);
 
     document.body.appendChild(bmts);
-    
+
     var ba = document.createElement("div"),
         ca = {
             backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -990,7 +1033,7 @@
     Object.keys(cstate).forEach(function (a) {
         bstate.style[a] = cstate[a];
     });
-    bstate.id = "state";  
+    bstate.id = "state";
     const newContentstate = document.createTextNode("State: N/A");
 
     // add the text node to the newly created div
