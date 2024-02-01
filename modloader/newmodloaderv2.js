@@ -1,6 +1,6 @@
 (function () {
     const modDirectory = "/mods/";
-    const version = "v1";
+    const version = "v2";
 
     class ModLoader {
         constructor(runtime) {
@@ -71,14 +71,7 @@
         }
 
         notify(title, text, image = "./speedrunner.png") {
-            cr.plugins_.sirg_notifications.prototype.acts.AddSimpleNotification.call(
-                this.runtime.types_by_index.find(
-                    (type) => type.plugin instanceof cr.plugins_.sirg_notifications
-                ).instances[0],
-                title,
-                text,
-                image
-            );
+            console.log(title, text);
         }
 
         getModDirectory() {
@@ -189,16 +182,12 @@
     }
 
     if (typeof window.ovoModLoader === "undefined") {
-        if (typeof window.cr_getC2Runtime !== "undefined" && window.cr_getC2Runtime() != null && typeof window.cr_getC2Runtime() !== "undefined" && window.cr_getC2Runtime().isloading === false) {
-            console.log("Modloader: C2 runtime already loaded, hooking into it");
-            new ModLoader(window.cr_getC2Runtime());
-        } else {
-            console.log("Modloader: C2 runtime not loaded yet, hooking into createRuntime");
-            const createCommand = window.cr_createRuntime;
-            const hookCommand = (canvasId) => {
-                new ModLoader(createCommand(canvasId));
+        const startInterval = setInterval(() => {
+            if (typeof window.c3_runtimeInterface !== "undefined" && window.c3_runtimeInterface._GetLocalRuntime() != null) {
+                console.log("Modloader: C3 runtime already loaded, hooking into it");
+                clearInterval(startInterval);
+                new ModLoader(c3_runtimeInterface._GetLocalRuntime());
             }
-            window.cr_createRuntime = hookCommand;
-        }
+        }, 100);
     }
 })();
