@@ -13,8 +13,8 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: delete versions/reverse
-      run: rm -rf versions/reverse
+    - name: delete versions/betaphysics
+      run: rm -rf versions/betaphysics
 
     - name: unzip into versions/reverse
       run: |
@@ -29,5 +29,5 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
         git add versions/reverse
-        git diff --cached --quiet || git commit -m "adding ovo beta physics mod [3/4]"
+        git diff --cached --quiet || git commit -m "adding ovo beta physics mod [3b/4]"
         git push
