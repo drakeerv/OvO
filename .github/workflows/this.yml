@@ -18,8 +18,8 @@ jobs:
 
     - name: unzip into versions/reverse
       run: |
-        mkdir -p versions/reverse
-        unzip -o resources.zip -d versions/reverse
+        mkdir -p versions/betaphysics
+        unzip -o resources.zip -d versions/betaphysics
 
     - name: commit and push changes
       env:
@@ -29,5 +29,5 @@ jobs:
         git config user.email "github-actions[bot]@users.noreply.github.com"
 
         git add versions/reverse
-        git diff --cached --quiet || git commit -m "update versions/reverse from resources.zip"
+        git diff --cached --quiet || git commit -m "adding ovo beta physics mod [3/4]"
         git push
