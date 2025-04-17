@@ -209,10 +209,6 @@
         "text": "Brazilian",
         "extra": [""]
       },
-      "cmg": {
-        "text": "Cool Math Games",
-        "extra": [""]
-      },
       "shyguy": {
         "text": "ShyGuy",
         "extra": [""]
@@ -1045,38 +1041,6 @@
         "text": "Andromeda",
         "extra": [""]
       },
-      "level53": {
-        "text": "Welcome to Spikeland !",
-        "extra": [""]
-      },
-      "level54": {
-        "text": "The Rocket",
-        "extra": [""]
-      },
-      "level55": {
-        "text": "Deadly Contraption III",
-        "extra": [""]
-      },
-      "level56": {
-        "text": "Alternating Sequence",
-        "extra": [""]
-      },
-      "level57": {
-        "text": "Motion Blur",
-        "extra": [""]
-      },
-      "level58": {
-        "text": "Spikeland",
-        "extra": [""]
-      },
-      "level59": {
-        "text": "The Spiral of Death",
-        "extra": [""]
-      },
-      "level60": {
-        "text": "TOWER OF PAIN",
-        "extra": [""]
-      },
       "yourfinaltime": {
         "text": "Your Final Time",
         "extra": [""]
@@ -1292,19 +1256,15 @@
         "extra": [""]
       },
       "english": {
-        "text": "Anglais",
+        "text": "",
         "extra": [""]
       },
       "spanish": {
-        "text": "Espagnol",
+        "text": "",
         "extra": [""]
       },
       "brazilian": {
-        "text": "Brésilien",
-        "extra": [""]
-      },
-      "cmg": {
-        "text": "Cool Math Games",
+        "text": "",
         "extra": [""]
       },
       "shyguy": {
@@ -2148,38 +2108,6 @@
         "text": "Andromède",
         "extra": [""]
       },
-      "level53": {
-        "text": "Bienvenue à Spikeland !",
-        "extra": [""]
-      },
-      "level54": {
-        "text": "Le missile",
-        "extra": [""]
-      },
-      "level55": {
-        "text": "Piège mortel III",
-        "extra": [""]
-      },
-      "level56": {
-        "text": "Séquence alternée",
-        "extra": [""]
-      },
-      "level57": {
-        "text": "Flou animé",
-        "extra": [""]
-      },
-      "level58": {
-        "text": "Spikeland",
-        "extra": [""]
-      },
-      "level59": {
-        "text": "La spirale de la mort",
-        "extra": [""]
-      },
-      "level60": {
-        "text": "TOUR DE LA DOULEUR",
-        "extra": [""]
-      },
       "yourfinaltime": {
         "text": "Temps final",
         "extra": [""]
@@ -2389,23 +2317,19 @@
         "extra": [""]
       },
       "french": {
-        "text": "Francês",
+        "text": "",
         "extra": [""]
       },
       "english": {
-        "text": "Inglês",
+        "text": "",
         "extra": [""]
       },
       "spanish": {
-        "text": "Espanhol",
+        "text": "",
         "extra": [""]
       },
       "brazilian": {
-        "text": "Brasileiro",
-        "extra": [""]
-      },
-      "cmg": {
-        "text": "Cool Math Games",
+        "text": "",
         "extra": [""]
       },
       "shyguy": {
@@ -3249,38 +3173,6 @@
         "text": "Andrômeda",
         "extra": [""]
       },
-      "level53": {
-        "text": "Bem-vindos a Spikeland !",
-        "extra": [""]
-      },
-      "level54": {
-        "text": "O foguete",
-        "extra": [""]
-      },
-      "level55": {
-        "text": "Engenhoca Mortal III",
-        "extra": [""]
-      },
-      "level56": {
-        "text": "Sequência alternada",
-        "extra": [""]
-      },
-      "level57": {
-        "text": "Borrão de movimento",
-        "extra": [""]
-      },
-      "level58": {
-        "text": "Spikeland",
-        "extra": [""]
-      },
-      "level59": {
-        "text": "Espiral da morte",
-        "extra": [""]
-      },
-      "level60": {
-        "text": "TORRE DE DOR",
-        "extra": [""]
-      },
       "yourfinaltime": {
         "text": "Seu tempo final:",
         "extra": [""]
@@ -3490,23 +3382,19 @@
         "extra": [""]
       },
       "french": {
-        "text": "Francés",
+        "text": "",
         "extra": [""]
       },
       "english": {
-        "text": "Inglés",
+        "text": "",
         "extra": [""]
       },
       "spanish": {
-        "text": "Español",
+        "text": "",
         "extra": [""]
       },
       "brazilian": {
-        "text": "Brasileño",
-        "extra": [""]
-      },
-      "cmg": {
-        "text": "Cool Math Games",
+        "text": "",
         "extra": [""]
       },
       "shyguy": {
@@ -4353,38 +4241,6 @@
         "text": "Andrómeda",
         "extra": [""]
       },
-      "level53": {
-        "text": "Bienvenido a Spikeland",
-        "extra": [""]
-      },
-      "level54": {
-        "text": "El choete",
-        "extra": [""]
-      },
-      "level55": {
-        "text": "Artilugio mortal III",
-        "extra": [""]
-      },
-      "level56": {
-        "text": "Secuencia Alterna",
-        "extra": [""]
-      },
-      "level57": {
-        "text": "Desenfoque de movimento",
-        "extra": [""]
-      },
-      "level58": {
-        "text": "Spikeland",
-        "extra": [""]
-      },
-      "level59": {
-        "text": "Espiral de la muerte",
-        "extra": [""]
-      },
-      "level60": {
-        "text": "TORRE DEL DOLOR",
-        "extra": [""]
-      },
       "yourfinaltime": {
         "text": "Tu tiempo final:",
         "extra": [""]
@@ -4409,124 +4265,114 @@
       },
       "resume": {
         "text": "RIPRENDI",
-        "extra": [],
-        "size": 12,
-        "alignY": 62
+        "extra": [""]
       },
       "restart": {
         "text": "RICOMINCIA",
-        "extra": [],
-        "size": 12,
-        "alignY": 62
+        "extra": [""]
       },
       "levels": {
         "text": "LIVELLI",
-        "extra": [],
-        "size": 12,
-        "alignY": 62
+        "extra": [""]
       },
       "credits": {
         "text": "CREDITI",
-        "extra": [],
-        "size": 12,
-        "alignY": 62
+        "extra": [""]
       },
       "removemidrollads": {
-        "text": "Riumuovi pubblicità",
+        "text": "rimuovi pubblicità tra i livelli",
         "extra": [""]
       },
       "randomskin": {
         "text": "SKIN CASUALE",
-        "extra": [],
-        "size": 10,
-        "alignX": 82
+        "extra": [""]
       },
       "adblocktitle": {
-        "text": "ADBLOCK RILEVATO",
+        "text": "ADLOCK RILEVATO",
         "extra": [""]
       },
       "adblockdescription": {
-        "text": "Disabilita adblock e riprova",
+        "text": "disabilità adblock e riprova",
         "extra": [""]
       },
       "offlineready": {
-        "text": "Modalità offline pronta!",
+        "text": "gioco offline pronto!",
         "extra": [""]
       },
       "offlinereadydesc": {
-        "text": "Ora puoi giocare offline!",
+        "text": "ora puoi giocare offline!",
         "extra": [""]
       },
       "updatefound": {
-        "text": "Aggiornamento rilevato!",
+        "text": "aggiornamento rilevato!",
         "extra": [""]
       },
       "updatefounddesc": {
-        "text": "Un nuovo aggiornamento è stato rilevato e si sta scaricando nel background",
+        "text": "un nuovo aggiornamento è stato rilevato e si sta scaricando nel background",
         "extra": [""]
       },
       "updateready": {
-        "text": "Aggiornamento completato!",
+        "text": "aggiornamento terminato!",
         "extra": [""]
       },
       "updatereadydesc": {
-        "text": "Un nuovo aggiornamento è stato scaricato! ricarica il gioco o clicca QUI per caricare la nuova versione ",
+        "text": "un nuovo aggiornamento è stato scaricato! ricarica il gioco o clicca QUI per caricare la nuova versione ",
         "extra": [""]
       },
       "tip1": {
-        "text": "Sapevi che puoi giocare ad OvO anche su mobile ?",
+        "text": "sapevi che puoi giocare ad OvO anche su mobile ?",
         "extra": [""]
       },
       "tip2": {
-        "text": "============== Vuoi diventare uno speedrunner di ovo? ============== Unisciti alla nostra community su discord.gg/ hTNX225Njt",
+        "text": "vuoi diventare uno speedrunner di ovo? unisciti alla nostra community su discord.gg/hTNX225Njt",
         "extra": [""]
       },
       "tip3": {
-        "text": "Premi R per ricominciare il livello, premi Ctrl + R per ricominciare la partita in modalità Gioca",
+        "text": "premi R per ricominciare il livello, premi Ctrl + R per ricominciare la partita in modalità Gioca",
         "extra": [""]
       },
       "tip4": {
-        "text": "Attiva la modalità esperta se ne hai il coraggio",
+        "text": "attiva la modalità esperto se sei un giocatore esperto",
         "extra": [""]
       },
       "tip5": {
-        "text": "Attiva la modalità avanzata per scaricare i replay dei livelli",
+        "text": "attiva la modalità moderna per scaricare i replay dei livelli ",
         "extra": [""]
       },
       "tip6": {
-        "text": "In modalità avanzata puoi attivare il debug nel menu di pausa o usando F2",
+        "text": "in modalità moderna puoi attivare il debug nel menu di pausa o usando F2",
         "extra": [""]
       },
       "selectlang": {
-        "text": "Seleziona la lingua ",
+        "text": "seleziona la lingua ",
         "extra": [""]
       },
       "ad1": {
-        "text": "Nessuna pubblicità disponibile",
+        "text": "nessuna pubblicità disponibile",
         "extra": [""]
       },
       "ad2": {
-        "text": "Niente più pubblicità tra i livelli",
+        "text": "nientepiù pubblicità tra i livelli",
         "extra": [""]
       },
       "ad3": {
-        "text": "Le pubblicità non appariranno più tra i livelli",
+        "text": "le pubblicità non appariranno più tra i livelli",
         "extra": [""]
       },
       "tip7": {
-        "text": "Sul desktop puoi configurare i comandi che preferisci dalle opzioni ",
+        "text": "sul desktopo puoi configurare i comandi che preferisci dalle opzioni ",
         "extra": [""]
       },
       "default": {
-        "text": "Classica",
+        "text": "classica",
         "extra": [""]
       },
       "electrical": {
-        "text": "Elettrica",
+        "text": "elettrica",
         "extra": [""]
       },
       "pole": {
-        "text": "Poligono ",
+        "text": "poligono ",
         "extra": [""]
       },
       "pinkguy": {
@@ -4538,23 +4384,23 @@
         "extra": [""]
       },
       "knight": {
-        "text": "Cavaliere",
+        "text": "cavaliere",
         "extra": [""]
       },
       "dknight": {
-        "text": "Cavaliere oscuro",
+        "text": "cavaliere oscuro",
         "extra": [""]
       },
       "lknight": {
-        "text": "Cavaliere della luce",
+        "text": "cavaliere della luce",
         "extra": [""]
       },
       "astronaut": {
-        "text": "Astronauta",
+        "text": "astronauta",
         "extra": [""]
       },
       "alien": {
-        "text": "Alieno",
+        "text": "alieno",
         "extra": [""]
       },
       "erigato": {
@@ -4570,15 +4416,15 @@
         "extra": [""]
       },
       "fallen": {
-        "text": "Ancestrale",
+        "text": "il caduto",
         "extra": [""]
       },
       "pulse": {
-        "text": "Pulsante ",
+        "text": "pulsante ",
         "extra": [""]
       },
       "materwelon": {
-        "text": "Cocomero",
+        "text": "cocomero",
         "extra": [""]
       },
       "flickd": {
@@ -4590,27 +4436,23 @@
         "extra": [""]
       },
       "amogus": {
-        "text": "Amogus ",
+        "text": "amogus ",
         "extra": [""]
       },
       "french": {
-        "text": "Francese",
+        "text": "",
         "extra": [""]
       },
       "english": {
-        "text": "Inglese",
+        "text": "",
         "extra": [""]
       },
       "spanish": {
-        "text": "Spagnolo",
+        "text": "",
         "extra": [""]
       },
       "brazilian": {
-        "text": "Brasiliano",
-        "extra": [""]
-      },
-      "cmg": {
-        "text": "Cool Math Games",
+        "text": "",
         "extra": [""]
       },
       "shyguy": {
@@ -4622,15 +4464,15 @@
         "extra": [""]
       },
       "choose": {
-        "text": "Seleziona ",
+        "text": "seleziona ",
         "extra": [""]
       },
       "chosen": {
-        "text": "Prescelto",
+        "text": "selezionato",
         "extra": [""]
       },
       "price": {
-        "text": "Prezzo: {0}",
+        "text": "prezzo: {0}",
         "extra": [""]
       },
       "achievement": {
@@ -4638,11 +4480,11 @@
         "extra": [""]
       },
       "buy": {
-        "text": "Compra ",
+        "text": "compra ",
         "extra": [""]
       },
       "acquired": {
-        "text": "Ottenuto",
+        "text": "ottenuto",
         "extra": [""]
       },
       "back": {
@@ -4658,15 +4500,15 @@
         "extra": [""]
       },
       "a2t": {
-        "text": "Oh no la mia testa",
+        "text": "oh no la mia testa",
         "extra": [""]
       },
       "a2d": {
-        "text": "Smettila per favore!",
+        "text": "smettila per favore!",
         "extra": [""]
       },
       "a3t": {
-        "text": "Mi fai male alla testa",
+        "text": "mi fai male alla testa",
         "extra": [""]
       },
       "a3d": {
@@ -4678,55 +4520,55 @@
         "extra": [""]
       },
       "a4d": {
-        "text": "Finisci la sezione tutorial",
+        "text": "finisci la sezione tutorial",
         "extra": [""]
       },
       "a5t": {
-        "text": "La cosa si fa seria",
+        "text": "la cosa si fa seria",
         "extra": [""]
       },
       "a5d": {
-        "text": "Finisci la sezione seria",
+        "text": "finisci la sezione seria",
         "extra": [""]
       },
       "a6t": {
-        "text": "Meccaniche",
+        "text": "meccaniche",
         "extra": [""]
       },
       "a6d": {
-        "text": "Finisci la sezione meccaniche",
+        "text": "finisci la sezione meccaniche",
         "extra": [""]
       },
       "a7t": {
-        "text": "Ordine superiore",
+        "text": "ordine superiore",
         "extra": [""]
       },
       "a7d": {
-        "text": "Finisci la sezione ordine superiore",
+        "text": "finisci la sezione ordine superiore",
         "extra": [""]
       },
       "a8t": {
-        "text": "Spazio ai programmatori di OvO",
+        "text": "spazio ai programmatori di OvO",
         "extra": [""]
       },
       "a8d": {
-        "text": "Finisci la sezione spazio ai programmatori",
+        "text": "finisci la sezione spazio ai programmatori",
         "extra": [""]
       },
       "a9t": {
-        "text": "Avventura mistica",
+        "text": "avventura mistica",
         "extra": [""]
       },
       "a9d": {
-        "text": "Finisci l'avventura attraverso il portale",
+        "text": "finisci l'avventura attraverso il portale",
         "extra": [""]
       },
       "a10t": {
-        "text": "Lavoro della community",
+        "text": "lavoro della community",
         "extra": [""]
       },
       "a10d": {
-        "text": "Finisci i livelli della community",
+        "text": "finisci i livelli della community",
         "extra": [""]
       },
       "a11t": {
@@ -4734,288 +4576,276 @@
         "extra": [""]
       },
       "a11d": {
-        "text": "Finisci ogni livello",
+        "text": "finisci ogni livello",
         "extra": [""]
       },
       "a12t": {
-        "text": "Monete !",
+        "text": "monete !",
         "extra": [""]
       },
       "a12d": {
-        "text": "Collezziona una moneta",
+        "text": "collezziona una moneta",
         "extra": [""]
       },
       "a13t": {
-        "text": "Entusiasmo da denaro",
+        "text": "entusiasmo da denaro",
         "extra": [""]
       },
       "a13d": {
-        "text": "Collezziona 5 monete",
+        "text": "collezziona 5 monete",
         "extra": [""]
       },
       "a14t": {
-        "text": "Denaro-sauro",
+        "text": "denaro-sauro",
         "extra": [""]
       },
       "a14d": {
-        "text": "Collezziona 10 monete",
+        "text": "collezziona 10 monete",
         "extra": [""]
       },
       "a15t": {
-        "text": "Cacciatore di risparmi",
+        "text": "cacciatore di risparmi",
         "extra": [""]
       },
       "a15d": {
-        "text": "Collezziona 30 monete",
+        "text": "collezziona 30 monete",
         "extra": [""]
       },
       "a16t": {
-        "text": "Dio denaro",
+        "text": "dio denaro",
         "extra": [""]
       },
       "a16d": {
-        "text": "Collezziona 40 monete",
+        "text": "collezziona 40 monete",
         "extra": [""]
       },
       "a17t": {
-        "text": "Moneta segreta",
+        "text": "moneta segreta",
         "extra": [""]
       },
       "a17d": {
-        "text": "Collezziona la moneta segreta",
+        "text": "collezziona la moneta segreta",
         "extra": [""]
       },
       "a18t": {
-        "text": "Corridore",
+        "text": "corridore",
         "extra": [""]
       },
       "a18d": {
-        "text": "Finisci il gioco in meno di 30 minuti",
+        "text": "finisci il gioco in meno di 30 minuti",
         "extra": [""]
       },
       "a19t": {
-        "text": "Speedrunner",
+        "text": "speedrunner",
         "extra": [""]
       },
       "a19d": {
-        "text": "Finisci il gioco in meno di 20 minuti",
+        "text": "finisci il gioco in meno di 20 minuti",
         "extra": [""]
       },
       "a20t": {
-        "text": "Maestro dello scatto",
+        "text": "maestro dello scatto",
         "extra": [""]
       },
       "a20d": {
-        "text": "Finisci il gioco in meno di 15 minuti",
+        "text": "finisci il gioco in meno di 15 minuti",
         "extra": [""]
       },
       "a21t": {
-        "text": "Migliori corridori ",
+        "text": "migliori corridori ",
         "extra": [""]
       },
       "a21d": {
-        "text": "Finisci il gioco in meno di 12 minuti",
+        "text": "finisci il gioco in meno di 12 minuti",
         "extra": [""]
       },
       "a22t": {
-        "text": "Velocità della luce",
+        "text": "velocità della luce",
         "extra": [""]
       },
       "a22d": {
-        "text": "Finisci il gioco in meno di 10 minuti",
+        "text": "finisci il gioco in meno di 10 minuti",
         "extra": [""]
       },
       "likemagic": {
-        "text": "Magia!",
+        "text": "magia!",
         "extra": [""]
       },
       "unlockall": {
-        "text": "Hai sbloccatp ogni livello!",
+        "text": "hai sbloccatp ogni livello!",
         "extra": [""]
       },
       "achievementunlocked": {
-        "text": "Obbiettivo sbloccato!",
+        "text": "obbiettivo sbloccato!",
         "extra": [""]
       },
       "skinunlocked": {
-        "text": "Skin sbloccata!",
+        "text": "skin sbloccata!",
         "extra": [""]
       },
       "goldearned": {
-        "text": "Oro ottenuto!",
+        "text": "oro ottenuto!",
         "extra": [""]
       },
       "xgoldearned": {
-        "text": "Hai ottenuto {0} di oro",
+        "text": "hai ottenuto {0} di oro",
         "extra": [""]
       },
       "locked": {
-        "text": "Bloccato",
+        "text": "bloccato",
         "extra": [""]
       },
       "music": {
-        "text": "Musica",
+        "text": "musica",
         "extra": [""]
       },
       "sounds": {
-        "text": "Suoni",
+        "text": "suoni",
         "extra": [""]
       },
       "hard": {
-        "text": "Modalità difficile",
+        "text": "modalità difficile",
         "extra": [""]
       },
       "advanced": {
-        "text": "Modalità avanzata",
+        "text": "modalità moderna",
         "extra": [""]
       },
       "inputs": {
-        "text": "Comandi",
-        "extra": [],
-        "size": 18
+        "text": "comandi",
+        "extra": [""]
       },
       "savedata": {
-        "text": "Salvataggio",
-        "extra": [],
-        "size": 18
+        "text": "salvataggio",
+        "extra": [""]
       },
       "savedatatext": {
-        "text": "Salva progressi",
+        "text": "salva progressi",
         "extra": [""]
       },
       "mobilemode": {
-        "text": "Dispositivo",
-        "extra": [],
-        "size": 18
+        "text": "dispositivo",
+        "extra": [""]
       },
       "up": {
-        "text": "Su",
+        "text": "su",
         "extra": [""]
       },
       "down": {
-        "text": "Giù",
+        "text": "giù",
         "extra": [""]
       },
       "left": {
-        "text": "Sinistra",
+        "text": "sinistra",
         "extra": [""]
       },
       "right": {
-        "text": "Destra",
+        "text": "destra",
         "extra": [""]
       },
       "setkey": {
-        "text": "Cambia un comando",
+        "text": "cambia un comando",
         "extra": [""]
       },
       "collectedcoins": {
-        "text": "Monete collezionate",
+        "text": "monet collezzionate",
         "extra": [""]
       },
       "clearsave": {
-        "text": "Cancella salvataggio",
-        "extra": [],
-        "size": 10,
-        "alignY": 65
+        "text": "cancella salvataggio",
+        "extra": [""]
       },
       "clearcoins": {
-        "text": "Resetta le monete",
-        "extra": [],
-        "size": 10,
-        "alignY": 65
+        "text": "resetta le monete",
+        "extra": [""]
       },
       "autodetectinput": {
-        "text": "Auto rilevazione",
+        "text": "auto rilevazione",
         "extra": [""]
       },
       "forcemobile": {
-        "text": "Forza mobile",
+        "text": "forza mobile",
         "extra": [""]
       },
       "forcedesktop": {
-        "text": "Forza il desktop",
+        "text": "forza il desktop",
         "extra": [""]
       },
       "whatdeviceinput": {
-        "text": "Che dispositivo stai usando?",
+        "text": "che dispositivo stai usando?",
         "extra": [""]
       },
       "madebydedra": {
-        "text": "Creato da Dedra",
+        "text": "creato da Dedra",
         "extra": [""]
       },
       "poweredby": {
-        "text": "Offerto da construct 2",
+        "text": "offerto da construct 2",
         "extra": [""]
       },
       "runsection": {
-        "text": "Sezione partita",
+        "text": "sezione partita",
         "extra": [""]
       },
       "basics": {
-        "text": "Le basi",
+        "text": "le basi",
         "extra": [""]
       },
       "gettingserious": {
-        "text": "La cosa si fa seria",
+        "text": "la cosa si fa seria",
         "extra": [""]
       },
       "higherorder": {
-        "text": "Ordine superiore",
+        "text": "ordine superiore",
         "extra": [""]
       },
       "mechanicis": {
-        "text": "Meccaniche",
+        "text": "meccaniche",
         "extra": [""]
       },
       "ovospaceprogram": {
-        "text": "Spazio ai programmatori di OvO",
+        "text": "spazio ai programmatori di OvO",
         "extra": [""]
       },
       "jttp": {
-        "text": "Avventura attraverso il portale",
+        "text": "avventura attraverso il portale",
         "extra": [""]
       },
       "community": {
-        "text": "Livelli della community",
+        "text": "livelli della community",
         "extra": [""]
       },
       "besttime": {
-        "text": "Tempo migliore:",
+        "text": "tempo migliore:",
         "extra": [""]
       },
       "individuallevels": {
-        "text": "Livelli individuali",
+        "text": "livelli individuali",
         "extra": [""]
       },
       "loadreplay": {
-        "text": "Carica replay",
-        "extra": [],
-        "size": 12
+        "text": "carica replay",
+        "extra": [""]
       },
       "adplaying": {
-        "text": "Una pubblicità dovrebbe essere in corso",
+        "text": "una pubblicità dovrebbe essere in corso",
         "extra": [""]
       },
       "toggledebug": {
-        "text": "Attiva il debug",
-        "extra": [],
-        "size": 12
+        "text": "attiva il debug",
+        "extra": [""]
       },
       "downloadreplay": {
-        "text": "Scarica replay",
-        "extra": [],
-        "size": 20
+        "text": "scarica replay",
+        "extra": [""]
       },
       "next": {
         "text": "PROSSIMO",
-        "extra": [],
-        "size": 18
+        "extra": [""]
       },
       "replay": {
         "text": "REPLAY",
-        "extra": [],
-        "size": 22
+        "extra": [""]
       },
       "pause": {
         "text": "PAUSA",
@@ -5030,15 +4860,15 @@
         "extra": [""]
       },
       "lvltxt1-2": {
-        "text": "Usa le frecce per muoverti!",
+        "text": "usa le frecce per muoverti!",
         "extra": [""]
       },
       "lvltxt1-3": {
-        "text": "Premi la freccia SU per saltare ",
+        "text": "premi la freccia SU per saltare ",
         "extra": [""]
       },
       "lvltxt1-4": {
-        "text": "Questa è la fine del livello",
+        "text": "questa è la fine del livello",
         "extra": [""]
       },
       "lvltxt2-1": {
@@ -5046,91 +4876,91 @@
         "extra": [""]
       },
       "lvltxt2-2": {
-        "text": "Vai vicino al muro",
+        "text": "vai vicino al muro",
         "extra": [""]
       },
       "lvltxt2-3": {
-        "text": "E salta più in alto",
+        "text": "e salta più in alto",
         "extra": [""]
       },
       "lvltxt2-4": {
-        "text": "Fai uno schianto a terra premendo giù mentre sei in volo",
+        "text": "fai uno schianto a terra premendo giù mentre sei in volo",
         "extra": [""]
       },
       "lvltxt2-5": {
-        "text": "(Puoi rompere questo)",
+        "text": "(puoi rompere questo)",
         "extra": [""]
       },
       "lvltxt2-6": {
-        "text": "Salta dopo uno schianto",
+        "text": "salta dopo uno schianto",
         "extra": [""]
       },
       "lvltxt2-7": {
-        "text": "Per saltare più in alto",
+        "text": "per saltare più in alto",
         "extra": [""]
       },
       "lvltxt3-1": {
-        "text": "Puoi scivolare lungo i muri",
+        "text": "puoi scivolare lungo i muri",
         "extra": [""]
       },
       "lvltxt3-2": {
-        "text": "Salta mentre scivoli per fare un salto a parete",
+        "text": "salta mentre scivoli per fare un salto a parete",
         "extra": [""]
       },
       "lvltxt4-1": {
-        "text": "Puoi anche scivolare!",
+        "text": "puoi anche scivolare!",
         "extra": [""]
       },
       "lvltxt4-2": {
-        "text": "Premi la freccia giù",
+        "text": "premi la freccia giù",
         "extra": [""]
       },
       "lvltxt4-3": {
-        "text": "Salta mentre scivoli per fare un tuffo nell'aria",
+        "text": "salta mentre scivoli per fare un tuffo nell'aria",
         "extra": [""]
       },
       "lvltxt4-4": {
-        "text": "Stai attento a non sbattere la testa",
+        "text": "stai attento a non sbattere la testa",
         "extra": [""]
       },
       "lvltxt5-1": {
-        "text": "Questi sono dei cattivoni",
+        "text": "quest sono dei ragazzacci",
         "extra": [""]
       },
       "lvltxt5-2": {
-        "text": "Prova a fare uno schianto poco prima di fare un tuffo",
+        "text": "prova a fare uno schianto poco prima di fare un tuffo",
         "extra": [""]
       },
       "lvltxt6-1": {
-        "text": "Fai un altro tuffo",
+        "text": "fai un altro tuffo",
         "extra": [""]
       },
       "lvltxt6-2": {
-        "text": "E salta",
+        "text": "e salta",
         "extra": [""]
       },
       "lvltxt6-3": {
-        "text": "Questi sono bravi ragazzi",
+        "text": "questi sono bravi ragazzi",
         "extra": [""]
       },
       "lvltxt7-2": {
-        "text": "Se fai uno schianto sui trampolini non verranno attivati",
+        "text": "se fai uno schianto sui trampolini non verranno attivati",
         "extra": [""]
       },
       "lvltxt8-1": {
-        "text": "Salta",
+        "text": "salta",
         "extra": [""]
       },
       "lvltxt8-2": {
-        "text": "Tuffo",
+        "text": "tuffo",
         "extra": [""]
       },
       "lvltxt8-3": {
-        "text": "Ri-salta",
+        "text": "ri-salta",
         "extra": [""]
       },
       "lvltxt9-1": {
-        "text": "Hey questo è...",
+        "text": "hey questo è...",
         "extra": [""]
       },
       "lvltxt9-2": {
@@ -5154,7 +4984,7 @@
         "extra": [""]
       },
       "lvltct10-4": {
-        "text": "(Scivolare aumenta la velocità)",
+        "text": "(scivolare aumenta la velocità)",
         "extra": [""]
       },
       "lvltxt10-4": {
@@ -5170,15 +5000,15 @@
         "extra": [""]
       },
       "lvltxt19-1": {
-        "text": "Premi su e giù",
+        "text": "premi su e giù",
         "extra": [""]
       },
       "lvltxt23-1": {
-        "text": "Fidati e tuffati",
+        "text": "fidati e tuffati",
         "extra": [""]
       },
       "lvltxt28-1": {
-        "text": "Psto sbagliato :)",
+        "text": "psto sbagliato :)",
         "extra": [""]
       },
       "lvltxt25-1": {
@@ -5186,7 +5016,7 @@
         "extra": [""]
       },
       "lvltxt25-2": {
-        "text": "Si può aprire in qualche modo....",
+        "text": "si può aprire in qualche modo....",
         "extra": [""]
       },
       "lvltxt51-1": {
@@ -5198,11 +5028,11 @@
         "extra": [""]
       },
       "lvltxt33-2": {
-        "text": "Da questa parte ---->",
+        "text": "da questa parte ---->",
         "extra": [""]
       },
       "lvltxt33-3": {
-        "text": "Il primo passo è...",
+        "text": "il primo passo è...",
         "extra": [""]
       },
       "lvltxt33-4": {
@@ -5246,246 +5076,214 @@
         "extra": [""]
       },
       "lvltxt40-1": {
-        "text": "<--- Tuffo",
+        "text": "<--- tuffo",
         "extra": [""]
       },
       "level1": {
-        "text": "Inizia",
+        "text": "inizia",
         "extra": [""]
       },
       "level2": {
-        "text": "Difficile",
+        "text": "difficile",
         "extra": [""]
       },
       "level3": {
-        "text": "Più difficile",
+        "text": "più difficile",
         "extra": [""]
       },
       "level4": {
-        "text": "Il più difficile",
+        "text": "il più difficile",
         "extra": [""]
       },
       "level5": {
-        "text": "Infernale",
+        "text": "infernale",
         "extra": [""]
       },
       "level6": {
-        "text": "Impossiile",
+        "text": "impossiile",
         "extra": [""]
       },
       "level7": {
-        "text": "Celestiale",
+        "text": "celestiale",
         "extra": [""]
       },
       "level8": {
-        "text": "Salto & tuffo",
+        "text": "salto & tuffo",
         "extra": [""]
       },
       "level9": {
-        "text": "Una decisione saggia",
+        "text": "una decisione saggia",
         "extra": [""]
       },
       "level10": {
-        "text": "Questione di forza",
+        "text": "questione di forza",
         "extra": [""]
       },
       "level11": {
-        "text": "Reattività",
+        "text": "reattività",
         "extra": [""]
       },
       "level12": {
-        "text": "Un piccolo labirinto",
+        "text": "un piccolo labirinto",
         "extra": [""]
       },
       "level13": {
-        "text": "Questione di velocità",
+        "text": "questione di velocità",
         "extra": [""]
       },
       "level14": {
-        "text": "Tempismo",
+        "text": "tempismo",
         "extra": [""]
       },
       "level15": {
-        "text": "Aggeggio mortale 1",
+        "text": "aggeggio mortale 1",
         "extra": [""]
       },
       "level16": {
-        "text": "Una via giù",
+        "text": "una via giù",
         "extra": [""]
       },
       "level17": {
-        "text": "Con calma",
+        "text": "con calma",
         "extra": [""]
       },
       "level18": {
-        "text": "Stanza specchiata 1",
+        "text": "stanza specchiata 1",
         "extra": [""]
       },
       "level19": {
-        "text": "Piccola casa spinosa",
+        "text": "piccola casa spinosa",
         "extra": [""]
       },
       "level20": {
-        "text": "Aggeggio dormiente",
+        "text": "aggeggio dormiente",
         "extra": [""]
       },
       "level21": {
-        "text": "Una via SU",
+        "text": "una via SU",
         "extra": [""]
       },
       "level22": {
-        "text": "Iterazioni",
+        "text": "iterazioni",
         "extra": [""]
       },
       "level23": {
-        "text": "Salto della fede",
+        "text": "salto della fede",
         "extra": [""]
       },
       "level24": {
-        "text": "Vortice",
+        "text": "vortice",
         "extra": [""]
       },
       "level25": {
-        "text": "Semplici meccaniche",
+        "text": "semplici meccaniche",
         "extra": [""]
       },
       "level26": {
-        "text": "Tre porte",
+        "text": "tre porte",
         "extra": [""]
       },
       "level27": {
-        "text": "Aggeggio risevegliato",
+        "text": "aggeggio risevegliato",
         "extra": [""]
       },
       "level28": {
-        "text": "Aggeggio mortale 2",
+        "text": "aggeggio mortale 2",
         "extra": [""]
       },
       "level29": {
-        "text": "Piccola piattaforma amichevole 1",
+        "text": "piccola piattaforma amichevole 1",
         "extra": [""]
       },
       "level30": {
-        "text": "Piccola piattaforma amichevole 2",
+        "text": "piccola piattaforma amichevole 2",
         "extra": [""]
       },
       "level31": {
-        "text": "Quadrilatero buffo",
+        "text": "quadrilatero buffo",
         "extra": [""]
       },
       "level32": {
-        "text": "Corri se vuoi vivere",
+        "text": "corri se vuoi vivere",
         "extra": [""]
       },
       "level33": {
-        "text": "Esame di selezione",
+        "text": "esame di selezione",
         "extra": [""]
       },
       "level34": {
-        "text": "Test di intelligenza",
+        "text": "test di intelligenza",
         "extra": [""]
       },
       "level35": {
-        "text": "Test di istinto",
+        "text": "test di istinto",
         "extra": [""]
       },
       "level36": {
-        "text": "Test di velocità",
+        "text": "test di velocità",
         "extra": [""]
       },
       "level37": {
-        "text": "Test di accuratezza",
+        "text": "test di accuratezza",
         "extra": [""]
       },
       "level38": {
-        "text": "Test di adattazzione",
+        "text": "test di adattazzione",
         "extra": [""]
       },
       "level39": {
-        "text": "Sfumature?",
+        "text": "sfumature?",
         "extra": [""]
       },
       "level40": {
-        "text": "Esame finale",
+        "text": "esame finale",
         "extra": [""]
       },
       "level41": {
-        "text": "Inizializzazione",
+        "text": "inizializzazione",
         "extra": [""]
       },
       "level42": {
-        "text": "Procedurale",
+        "text": "procedurale",
         "extra": [""]
       },
       "level43": {
-        "text": "Quadrilatero isterico",
+        "text": "quadrilatero isterico",
         "extra": [""]
       },
       "level44": {
-        "text": "Propagazione all'indietro",
+        "text": "propagazione all'indietro",
         "extra": [""]
       },
       "level45": {
-        "text": "Aritmetica",
+        "text": "aritmetica",
         "extra": [""]
       },
       "level46": {
-        "text": "Ricorsione",
+        "text": "ricorsione",
         "extra": [""]
       },
       "level47": {
-        "text": "Scienza dei razzi",
+        "text": "scenza dei razzi",
         "extra": [""]
       },
       "level48": {
-        "text": "Binario",
+        "text": "binario",
         "extra": [""]
       },
       "level49": {
-        "text": "La sirena d'acciaio",
+        "text": "la sirena d'acciaio",
         "extra": [""]
       },
       "level50": {
-        "text": "Infilare l'ago",
+        "text": "infilare l'ago",
         "extra": [""]
       },
       "level51": {
-        "text": "Le torri gemelle",
+        "text": "le torri gemelle",
         "extra": [""]
       },
       "level52": {
-        "text": "Andromeda",
-        "extra": [""]
-      },
-      "level53": {
-        "text": "",
-        "extra": [""]
-      },
-      "level54": {
-        "text": "",
-        "extra": [""]
-      },
-      "level55": {
-        "text": "",
-        "extra": [""]
-      },
-      "level56": {
-        "text": "",
-        "extra": [""]
-      },
-      "level57": {
-        "text": "",
-        "extra": [""]
-      },
-      "level58": {
-        "text": "",
-        "extra": [""]
-      },
-      "level59": {
-        "text": "",
-        "extra": [""]
-      },
-      "level60": {
         "text": "Andromeda",
         "extra": [""]
       },
@@ -5498,7 +5296,7 @@
         "extra": [""]
       },
       "tryagainhardmode": {
-        "text": "Ora prova in modalità difficile!",
+        "text": "ora prova in modalità difficile!",
         "extra": [""]
       }
     }
