@@ -119,7 +119,7 @@
             },
 
             rotateInstance(instance, angle) {
-                instance.angle = modapi.math.degreeToRadian(angle);
+                instance.angle = (angle * Math.PI) / 180;
                 instance.set_bbox_changed();
                 return instance;
             },

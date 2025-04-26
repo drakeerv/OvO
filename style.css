@@ -1,15 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
-head {
-    width: 0%;
-    height: 0%;
-}
-
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
 }
 
 body {
@@ -17,15 +10,20 @@ body {
 }
 
 a {
-    color: grey;
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dee2e6;
 }
 
 a:visited {
-    color: grey;
+    color: #adb5bd;
 }
 
 a:active {
-    color: lightgrey;
+    color: #f8f9fa;
 }
 
 .navbar-special-ukraine {
