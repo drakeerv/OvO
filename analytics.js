@@ -1,10 +1,18 @@
 if (window.localStorage) {
-    var allowAnalytics = window.localStorage.getItem("allowAnalytics");
-    if (null === allowAnalytics && (allowAnalytics = "true"), "true" === allowAnalytics) {
+    const storage = window.localStorage;
+    let allowAnalytics = storage.getItem("allowAnalytics");
+
+    if (allowAnalytics === null) {
+        allowAnalytics = "true";
+        storage.setItem("allowAnalytics", allowAnalytics);
+    }
+
+    if (allowAnalytics === "true") {
+        window.dataLayer = window.dataLayer || [];
         function gtag() {
-            dataLayer.push(arguments)
+            dataLayer.push(arguments);
         }
-        window.dataLayer = window.dataLayer || [], gtag("js", new Date);
-        gtag("config", "G-ZSPL1SPBYM")
+        gtag("js", new Date);
+        gtag("config", "G-ZSPL1SPBYM");
     }
 }
