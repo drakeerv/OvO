@@ -10,17 +10,16 @@ import os
 
 chromedriver_autoinstaller.install()
 
-URL = urllib.parse.urlparse("https://dedragames.com/games/ovo/CrashTest1.4.4b/")
-OUTPUT_DIR = "versions/1.4.4b/"
+URL = urllib.parse.urlparse("https://ovo-145.netlify.app/")
+OUTPUT_DIR = "versions/1.4.5/"
 
 driver = webdriver.Chrome()
 driver.get(URL.geturl())
 
 timings = []
 
-if os.path.exists(OUTPUT_DIR):
-    shutil.rmtree(OUTPUT_DIR)
-os.mkdir(OUTPUT_DIR)
+if not os.path.exists(OUTPUT_DIR):
+    os.mkdir(OUTPUT_DIR)
 
 def download_file_process(url, path):
     print("Downloading", url, "to", path)
