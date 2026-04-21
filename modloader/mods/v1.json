@@ -29,7 +29,7 @@
     },
     "flymod": {
         "name": "Fly",
-        "author": "Toadi",
+        "author": "drakeerv",
         "description": "Fly around the level.",
         "advanced": false,
         "url": "flymod.js"
