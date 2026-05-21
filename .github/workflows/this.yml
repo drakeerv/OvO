@@ -1,0 +1,33 @@
+name: unzip + push to repo
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  unzip-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout repo with write access
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: delete versions/betaphysics
+      run: rm -rf versions/betaphysics
+
+    - name: unzip into versions/reverse
+      run: |
+        mkdir -p versions/betaphysics
+        unzip -o resources.zip -d versions/betaphysics
+
+    - name: commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        git add versions/betaphysics
+        git diff --cached --quiet || git commit -m "adding ovo beta physics mod [3b_again/4]"
+        git push

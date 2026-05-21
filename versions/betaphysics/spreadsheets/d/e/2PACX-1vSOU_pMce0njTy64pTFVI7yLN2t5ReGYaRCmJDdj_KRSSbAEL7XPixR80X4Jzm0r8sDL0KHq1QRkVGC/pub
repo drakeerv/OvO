@@ -1,0 +1,275 @@
+1.4.4			 										
+				English (US)		Français		Português (BR)		Español		Italiano	
+Category	Subcategory	id	Context	en-us	metadata	fr-fr	metadata	pt-br	metadata	es-es	metadata	it-it	metadata
+Old menus	Main menu	play	self explanatory	PLAY		JOUER		JOGAR		JUGAR		GIOCA	
+		playlevelmenu	self explanatory	PLAY		JOUER		JOGAR		JUGAR		GIOCA	
+		resume	self explanatory	RESUME		CONTINUER	{"size": 12, "alignY": 62}	CONTINUAR	{"size": 12, "alignY": 62}	SEGUIR	{"size": 14, "alignX": 48}	RIPRENDI	{"size": 12, "alignY": 62}
+		restart	self explanatory	RESTART		RECOMMENCER	{"size": 10, "alignY": 62}	REINICIAR	{"size": 12, "alignY": 62}	REINICIAR	{"size": 12, "alignX": 48}	RICOMINCIA	{"size": 12, "alignY": 62}
+		levels	self explanatory	LEVELS		NIVEAUX	{"size": 12, "alignY": 62}	NÍVEIS	{"size": 12, "alignY": 62}	NIVELES	{"size": 14, "alignX": 48}	LIVELLI	{"size": 12, "alignY": 62}
+		credits	self explanatory	CREDITS		CREDITS	{"size": 12, "alignY": 62}	CRÉDITOS	{"size": 12, "alignY": 62}	CREDITOS	{"size": 14, "alignX": 48}	CREDITI	{"size": 12, "alignY": 62}
+		removemidrollads	self explanatory	REMOVE MIDROLL ADS		RETIRER PUB MID-ROLL	{"size": 9, "alignX": 85}	REMOVER ANÚNCIOS		ELIMINAR ANUNCIOS		Riumuovi pubblicità	
+		randomskin	self explanatory	RANDOM SKIN		SKIN ALEATOIRE	{"size": 10, "alignX": 82}	SKIN ALEATÓRIA	{"size": 10, "alignX": 82}	SKIN ALEATORIA	{"size": 10, "alignX": 82}	SKIN CASUALE	{"size": 10, "alignX": 82}
+		adblocktitle	ads text	Adblock detected		Adblock détecté		Adblock detectado		Adblock detectado		ADBLOCK RILEVATO	
+		adblockdescription	ads text	Disable adblock and try again		Désactivez l'adblock et réessayez		Desative seu adblock e tente denovo		Deshabilite su adblock y vuelva a intentarlo		Disabilita adblock e riprova	
+		offlineready	update manager	Offline ready !		Mode hors-ligne prêt !		Modo Offline pronto!		¡Modo Offline listo!		Modalità offline pronta!	
+		offlinereadydesc	update manager	You can now play the game offline !		Vous pouvez désormais jouer en mode hors-ligne !		Você agora pode jogar offline!		¡Ahora puedes jugar Offline!		Ora puoi giocare offline!	
+		updatefound	update manager	Update found !		Mise à jour détectée !		Atualização encontrada!		¡Actualizacion encontrada!		Aggiornamento rilevato!	
+		updatefounddesc	update manager	A new update has been found, and is getting downloaded in the background		Une mise à jour est en cours d'installation		Uma nova atualização foi encontrada e está sendo baixada em segundo plano		Se ha encontrado una nueva actualización y se está descargando en segundo plano		Un nuovo aggiornamento è stato rilevato e si sta scaricando nel background	
+		updateready	update manager	Update ready !		Mise à jour terminée !		Atualização pronta!		¡Actualización lista!		Aggiornamento completato!	
+		updatereadydesc	update manager	A new update has been downloaded ! Reload or click here to load the new version		Une mise à jour a été téléchargée ! Rechargez la page ou cliquez ici.		Uma nova atualização foi baixada! Recarrege ou clique aqui para carregar a nova versão.		¡Se ha descargado una nueva actualización! Vuelva a cargar o haga clic aquí para cargar la nueva versión.		Un nuovo aggiornamento è stato scaricato! ricarica il gioco o clicca QUI per caricare la nuova versione 	
+		tip1	tips menu	Did you know you can play this game on mobile ?		Le saviez-vous? Vous pouvez jouer à OvO sur mobile !		Você sabia que é possível jogar também pelo seu celular?		¿Sabías que es posible jugar también en tu teléfono móvil?		Sapevi che puoi giocare ad OvO anche su mobile ?	
+		tip2	tips menu	============== Want to speedrun this game? ============== Join the  community at discord.gg/ hTNX225Njt		============== Tu veux speedrunner OvO? ============== Rejoins la communauté ici discord.gg/ hTNX225Njt		============== Você quer fazer um speedrun desse jogo? ============== Entre para a nossa comunidade em discord.gg/ hTNX225Njt		============== ¿Haces speedrun? ============== Únase a nuestra comunidad en discord.gg/ hTNX225Njt		============== Vuoi diventare uno speedrunner di ovo? ============== Unisciti alla nostra community su discord.gg/ hTNX225Njt	
+		tip3	tips menu	Pressing R restarts the level. Ctrl + R resets the whole run in Play mode		Appuyer sur R recommence le niveau. Ctrl+R recommence toute une partie en mode jouer		A tecla R reinicia o nível, enquanto que Ctrl + R reinicia toda a run ao jogar		La tecla R reinicia el nivel, mientras que Ctrl + R reinicia todo el juego mientras se juega		Premi R per ricominciare il livello, premi Ctrl + R per ricominciare la partita in modalità Gioca	
+		tip4	tips menu	Activate hard mode in the options if you're a tough player		Active le mode difficile dans les options si tu en es capable !		Ative o modo difícil nas opções se você já é um expert		Activa el modo difícil en las opciones si ya eres un experto		Attiva la modalità esperta se ne hai il coraggio	
+		tip5	tips menu	Activate advanced mode in the options to get level replays		Active le mode avancé dans les options pour générer les replays des niveaux		Ative o modo avançado nas opções para ter replays de níveis		Activar el modo avanzado en las opciones para tener repeticiones de nivel		Attiva la modalità avanzata per scaricare i replay dei livelli	
+		tip6	tips menu	In advanced mode, you can toggle debug mode in the pause menu or using F2		En mode Avancé, active le mode Debug depuis le menu pause ou en appuyant sur F2		No modo avançado, você pode ativar o modo debug no menu de pausa ou pressionando F2		En el modo avanzado, puede activar el modo de depuración en el menú de pausa o presionando F2		In modalità avanzata puoi attivare il debug nel menu di pausa o usando F2	
+		selectlang	language menu	Select language		Choisir la langue		Selecione o idioma		Seleccione el idioma		Seleziona la lingua 	
+		ad1	ads text	No ad available		Pas de pub disponible		Nenhum anúncio disponível		No hay anuncios disponibles		Nessuna pubblicità disponibile	
+		ad2	ads text	Midrolls are no more		les pubs sont vaincues		Sem mais anúncios no meio do jogo		No más anuncios en medio del juego		Niente più pubblicità tra i livelli	
+		ad3	ads text	Midrolls ads will no longer appear in the game		les pubs n'apparaîtront plus en jeu		Os anúncios não irão mais aparecer no meio do jogo		Los anuncios ya no aparecerán en medio del juego		Le pubblicità non appariranno più tra i livelli	
+		tip7	tips menu	On desktop you can change the keys you wish to use for movement in the options		Sur PC, tu peux changer les touches de déplacement dans les options.		Você pode mudar a qualquer hora os controles de movimento nas opções, caso esteja jogando pelo computador		Puede cambiar los controles de movimiento en las opciones en cualquier momento		Sul desktop puoi configurare i comandi che preferisci dalle opzioni 	
+	Skin menu	default	skin name	Default		Defaut		Padrão		Estándar		Classica	
+		electrical	skin name	Electrical		Electrique		Elétrico		Eléctrico		Elettrica	
+		pole	skin name	Pole		Pole		Pólo		Polo		Poligono 	
+		pinkguy	skin name	Pink guy		Pink guy		Pink Guy		Pink Guy		Pink Guy	
+		ovoplus	skin name	OvO+		OvO+		OvO+		OvO+		OvO+	
+		knight	skin name	Knight		Chevalier		Cavaleiro		Caballero		Cavaliere	
+		dknight	skin name	Dark Knight		Chevalier sombre		Cavaleiro das Trevas		Caballero Oscuro		Cavaliere oscuro	
+		lknight	skin name	Light Knight		Chevalier lumineux		Cavaleiro da Luz		Caballero de la Luz		Cavaliere della luce	
+		astronaut	skin name	Astronaut		Astronaute		Astronauta		Astronauta		Astronauta	
+		alien	skin name	Alien		Alien		Alien		Alien		Alieno	
+		erigato	skin name	Erigato		Erigato		Erigato		Erigato		Erigato	
+		batter	skin name	Batter		Batteur		Batter		Bateador		Battitore	
+		adalich	skin name	Adalich		Adalich		Adalich		Adalich		Adalich	
+		fallen	skin name	Fallen		Déchu		Ancestral		Ancestral		Ancestrale	
+		pulse	skin name	Pulse		Pulse		Pulse		Pulse		Pulsante 	
+		materwelon	skin name	MaterWelon		MaterWelon		MaterWelon		MaterWelon		Cocomero	
+		flickd	skin name	Fl1ckd		Fl1ckd		Fl1ckd		Fl1ckd		Fl1ckd	
+		theliljoker	skin name	TheLil Joker		TheLilJoker		TheLilJoker		TheLilJoker		TheLil Joker	
+		amogus	skin name	Among us		PARMI NOUS		amungokkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk		AMUNGO		Amogus 	
+		french	skin name	French		Français		Francês		Francés		Francese	
+		english	skin name	English		Anglais		Inglês		Inglés		Inglese	
+		spanish	skin name	Spanish		Espagnol		Espanhol		Español		Spagnolo	
+		brazilian	skin name	Brazilian		Brésilien		Brasileiro		Brasileño		Brasiliano	
+		cmg	skin name	Cool Math Games		Cool Math Games		Cool Math Games		Cool Math Games		Cool Math Games	
+		shyguy	skin name	ShyGuy		ShyGuy		ShyGuy		ShyGuy		ShyGuy	
+		hidden	menu ui	Hidden		Caché		Secreto		Secreto		Nascosto	
+		choose	menu ui	Choose		Choisir		Escolher		Escoger		Seleziona 	
+		chosen	menu ui	Chosen		Séléctionné		Selecionado		Seleccionado		Prescelto	
+		price	menu ui	Price: {0}		Prix: {0}		Preço: {0}		Precio: {0}		Prezzo: {0}	
+		achievement	menu ui	Achievement: {0}		Succès: {0}		Conquista: {0}		Logro: {0}		Obbiettivi: {0}	
+		buy	menu ui	Buy		Acheter		Comprar		Compra		Compra 	
+		acquired	menu ui	Acquired		Obtenu		Obtido		Adquirido		Ottenuto	
+		back	menu ui	BACK		RETOUR		VOLTAR		VUELVE		INDIETRO	
+	Achievement menu	a1t	Achievements	OvO		OvO		OvO		OvO		OvO	
+		a1d	Achievements	What's this?		Qu'est-ce que…?		Que isso?		¿Que es eso?		Cos'è questo?	
+		a2t	Achievements	Hittin da head		Toucher la tête		Paulada na cabeça		Paulada en la cabeza		Oh no la mia testa	
+		a2d	Achievements	Stop it please		Arrête ca !		Pare com isso, por favor		Detente, porfavor		Smettila per favore!	
+		a3t	Achievements	Hurting da head		Frapper la tête		Dor de cabeça		Dolor de cabeza		Mi fai male alla testa	
+		a3d	Achievements	:(		:(		:(		:(		:(	
+		a4t	Achievements	Tutorials		Tutoriel		Tutorial		Tutorial		Tutorial	
+		a4d	Achievements	Finish the tutorial section		Terminer la section tutoriel		Termine o Tutorial		Termina el tutorial		Finisci la sezione tutorial	
+		a5t	Achievements	Getting serious		Les choses sérieuses		Ficando Tenso		Ponerse tenso		La cosa si fa seria	
+		a5d	Achievements	Finish the Getting serious section		Terminer la section les choses sérieuses		Termine a seção "Ficando Tenso"		Termina la sección "Ponerse tenso"		Finisci la sezione seria	
+		a6t	Achievements	Mechanics		Méchaniques		Mecânicas		Mecánica		Meccaniche	
+		a6d	Achievements	Finish the Mechanics section		Terminer la section méchaniques		Termine a seção "Mecânicas"		Termina la sección "Mecánica"		Finisci la sezione meccaniche	
+		a7t	Achievements	Higher Order		Ordre supérieur		A Grande Ordem		La Gran Orden		Ordine superiore	
+		a7d	Achievements	Finish the higher order section		Terminer la section order supérieur		Termine a seção "A Grande Ordem"		Termina la sección "La Gran Orden"		Finisci la sezione ordine superiore	
+		a8t	Achievements	OvO Space Program		Programme Spatial OvO		Programa Espacial OvO		Programa espacial OvO		Spazio ai programmatori di OvO	
+		a8d	Achievements	Finish the OvO Space Program section		Terminer la section Programme spatial OvO		Termine a seção "Programa Espacial OvO"		Termina la sección "Programa espacial OvO"		Finisci la sezione spazio ai programmatori	
+		a9t	Achievements	A mystical Journey		Un voyage mystique		Uma Jornada Mística		Un viaje místico		Avventura mistica	
+		a9d	Achievements	Finish the journey through the portal section		Terminer la section Le Voyage au travers du portail		Termine a seção "Uma Jornada Mística"		Termina la sección "Un viaje místico"		Finisci l'avventura attraverso il portale	
+		a10t	Achievements	Community work		Travaux communautaires		Níveis da Comunidade		Niveles comunitarios		Lavoro della community	
+		a10d	Achievements	Finish the community levels		Terminer les niveaux de la communauté		Termine os Níveis da Comunidade		Termina los niveles de la comunidad		Finisci i livelli della community	
+		a11t	Achievements	Purified		Purifié		Purificado		Purificado		Purificato	
+		a11d	Achievements	Finish every level		Terminer tous les niveaux		Termine todos os níveis		Termina todos los niveles		Finisci ogni livello	
+		a12t	Achievements	Coins !		Des pièces !		Moedas!		¡Monedas!		Monete !	
+		a12d	Achievements	Collect a coin		Collecter une pièce		Pegue uma moeda		Toma una moneda		Collezziona una moneta	
+		a13t	Achievements	Coin Enthusiast		Amateur de pièces		Entusiasta de Moedas		Entusiasta de las monedas		Entusiasmo da denaro	
+		a13d	Achievements	Collect 5 coins		Collecter 5 pièces		Pegue 5 moedas		Toma 5 monedas		Collezziona 5 monete	
+		a14t	Achievements	Coin Connoiseur		Connaisseur de pièces		Apreciador de Moedas		Tasador de monedas		Denaro-sauro	
+		a14d	Achievements	Collect 10 coins		Collecter 10 pièces		Pegue 10 moedas		Toma 10 monedas		Collezziona 10 monete	
+		a15t	Achievements	Coin Hunter		Chasseur de pièces		Caçador de Moedas		Cazador de monedas		Cacciatore di risparmi	
+		a15d	Achievements	Collect 30 coins		Collecter 30 pièces		Pegue 30 moedas		Toma 30 monedas		Collezziona 30 monete	
+		a16t	Achievements	Coin God		Dieu de la pièce		Deus da Moeda		Dios de las monedas		Dio denaro	
+		a16d	Achievements	Collect 4O coins		Collecter 40 pièces		Pegue 40 moedas		Toma 30 monedas		Collezziona 40 monete	
+		a17t	Achievements	Secret coin		Pièce secrète		Moeda Secreta?		¿Moneda secreta?		Moneta segreta	
+		a17d	Achievements	Collect the secret coin		Trouver la pièce secrète		Pegue a moeda secreta		Toma la moneda secreta		Collezziona la moneta segreta	
+		a18t	Achievements	Runner		Runner		Corredor		corredor		Corridore	
+		a18d	Achievements	Finish the game in less than 30mn		Terminer le jeu en moins de 30mn		Termine o jogo em menos de 30 minutos		Termina el juego en menos de 30 minutos		Finisci il gioco in meno di 30 minuti	
+		a19t	Achievements	Speedrunner		Speedrunner		Speedrunner		Speedrunner		Speedrunner	
+		a19d	Achievements	Finish the game in less than 20mn		Terminer le jeu en moins de 20mn		Termine o jogo em menos de 20 minutos		Termina el juego en menos de 20 minutos		Finisci il gioco in meno di 20 minuti	
+		a20t	Achievements	Velocity Master		Maitrise de la vitesse		Mestre da velocidade		Maestro de la velocidad		Maestro dello scatto	
+		a20d	Achievements	Finish the game in less than 15mn		Terminer le jeu en moins de 15mn		Termine o jogo em menos de 15 minutos		Termina el juego en menos de 15 minutos		Finisci il gioco in meno di 15 minuti	
+		a21t	Achievements	Top Charts		Le podium		Top 10 Melhores		Top 10 mejores		Migliori corridori 	
+		a21d	Achievements	Finish the game in less than 12mn		Terminer le jeu en moins de 12mn		Termine o jogo em menos de 12 minutos		Termina el juego en menos de 12 minutos		Finisci il gioco in meno di 12 minuti	
+		a22t	Achievements	Light Speed		Vitesse lumière		Velocidade da Luz		Velocidad de la luz		Velocità della luce	
+		a22d	Achievements	Finish the game in less than 10mn		Terminer le jeu en moins de 10mn		Termine o jogo em menos de 10 minutos		Termina el juego en menos de 10 minutos		Finisci il gioco in meno di 10 minuti	
+		likemagic	Tag line when unlocking every level	Like magic		Comme par magie !		Como mágica!		¡Como magia!		Magia!	
+		unlockall	Message when unlocking every level	You unlocked every level!		Tu as débloqué tous les niveaux !		Você desbloqueou todos os níveis!		¡Has desbloqueado todos los niveles!		Hai sbloccatp ogni livello!	
+		achievementunlocked		Achievement unlocked !		Succès débloqué !		Conquista desbloqueada!		Los anuncios no aparecerán en medio del juego		Obbiettivo sbloccato!	
+		skinunlocked	Tag line when unlocking a skin	Skin Unlocked !		Costume débloqué !		Nova skin desbloqueada!		¡Nueva skin desbloqueada!		Skin sbloccata!	
+		goldearned	Tag line when collecting a coin	Gold earned !		Pièce obtenue		Ganhou umas moedas!		¡Ganaste algunas monedas!		Oro ottenuto!	
+		xgoldearned	Tag line when earnign gold	{0} Gold earned		{0} Pièces obtenues		{0} Dinheiro ganho		{0} Dinero ganado		Hai ottenuto {0} di oro	
+		locked	Locked (skin or achievement)	Locked		Verrouillé		Bloqueado		Obstruido		Bloccato	
+	Settings menu	music	self explanatory	Music		Musique		Música		Canción		Musica	
+		sounds	self explanatory	Sounds		Sons		Sons		Sonidos		Suoni	
+		hard	self explanatory	Hard mode		Mode difficile		Modo difícil		Modo difícil		Modalità difficile	
+		advanced	self explanatory	Advanced mode		Mode avancé		Modo avançado		Modo avanzado		Modalità avanzata	
+		inputs	self explanatory	Inputs		Touches	{"size": 22}	Entradas	{"size": 21}	Aperitivo	{"size": 18}	Comandi	{"size": 18}
+		savedata	self explanatory	Data		Données	{"size": 22}	Dados	{"size": 21}	Datos	{"size": 18}	Salvataggio	{"size": 18}
+		savedatatext	as in "the data of the save", in the sentence "my save data"	Save Data		Données de sauvegarde		Salvar Dados		Guardar datos		Salva progressi	
+		mobilemode	self explanatory	Device		Appareil	{"size": 22}	Aparelho	{"size": 21}	Dispositivo	{"size": 18}	Dispositivo	{"size": 18}
+		up	Input	Up		Haut		Cima		Arriba		Su	
+		down	Input	Down		Bas		Baixo		Bajo		Giù	
+		left	Input	Left		Gauche		Esquerda		Izquierda		Sinistra	
+		right	Input	Right		Droite		Direita		Derecha		Destra	
+		setkey	Input	Set a key…		Choisis…		Pressione uma tecla...		Presione una tecla ...		Cambia un comando	
+		collectedcoins	self explanatory	Collected Coins		Pièces collectées		Moedas Coletadas		Monedas colectadas		Monete collezionate	
+		clearsave	Needs to be short	Clear Save		Suppr. données	{"size": 10, "alignY": 65}	Deletar Dados Salvos	{"size": 10, "alignY": 65}	Borrar datos	{"size": 10, "alignY": 65}	Cancella salvataggio	{"size": 10, "alignY": 65}
+		clearcoins	Needs to be short	Clear Coins		Suppr. pièces	{"size": 10, "alignY": 65}	Deletar Moedas	{"size": 10, "alignY": 65}	Borrar monedas	{"size": 10, "alignY": 65}	Resetta le monete	{"size": 10, "alignY": 65}
+		autodetectinput	Input mode	Auto detect		Automatique		Auto-Detectar		Detección automática		Auto rilevazione	
+		forcemobile	Input mode	Force mobile		Mobile		Dispositivo Móvel		Móvil		Forza mobile	
+		forcedesktop	Input mode	Force desktop		Ordinateur		Computador		Ordenador		Forza il desktop	
+		whatdeviceinput	Input mode	What is your device?		Quel est ton appareil?		Qual é o seu aparelho?		¿Cuál es tu dispositivo?		Che dispositivo stai usando?	
+	Credits menu	madebydedra	credits	Made by Dedra		Créé par Dedra		Criado por Dedra		Creado por Dedra		Creato da Dedra	
+		poweredby	credits	Powered by Construct 2		Fait avec Construct 2		Feito no Construct 2		Hecho en Construct 2		Offerto da construct 2	
+		runsection	Sections menu	Run Section		Jouer la section		Sessões da Run		Sesiones del Run		Sezione partita	
+	Level Menu	basics	Section name	Basics		Tutoriel		Tutorial		Tutorial		Le basi	
+		gettingserious	Section name	Getting serious		Les choses sérieuses		Ficando Tenso		Ponerse tenso		La cosa si fa seria	
+		higherorder	Section name	Higher Order		Ordre supérieur		A Grande Ordem		La Gran Orden		Ordine superiore	
+		mechanicis	Section name	Mechanics		Méchaniques		Mecânicas		Mecánica		Meccaniche	
+		ovospaceprogram	Section name	OvO Space Program		Programme Spatial OvO		Programa Espacial OvO		Programa espacial OvO		Spazio ai programmatori di OvO	
+		jttp	Section name	Journey Through the portal		Le Voyage au travers du portail		Uma Jornada Mística Por Portais		Un viaje místico a través de portales		Avventura attraverso il portale	
+		community	Section name	Community levels		Niveaux de la communauté		Níveis da Comunidade		Niveles comunitarios		Livelli della community	
+		besttime	Section name	Best time		Meilleur temps		Melhor tempo		Mejor tiempo		Tempo migliore:	
+		individuallevels	Section name	Individual levels		Niveaux individuels		Níveis Individuais		Niveles individuales		Livelli individuali	
+In-game	Pause Menu	loadreplay	Load a player replay file	Load Replay		Charger un replay	{"size": 12}	Carregar um Replay	{"size": 12}	Subir una repetición	{"size": 12}	Carica replay	{"size": 12}
+		adplaying	Ad display	An ad should be playing right now		Une pub devrait être affichée		Um anúncio irá ser reproduzido		Se reproducirá un anuncio		Una pubblicità dovrebbe essere in corso	
+		toggledebug	Toggle the debug mode	Toggle debug		Mode debug		Modo Debug		Modo de depuración	{"size": 12}	Attiva il debug	{"size": 12}
+		downloadreplay		Download Replay		Télécharger le replay	{"size": 17}	Baixar Replay		Descargar Replay	{"size": 20}	Scarica replay	{"size": 20}
+		next		NEXT		SUIVANT		PRÓXIMO		SIGUIENTE	{"size": 18}	PROSSIMO	{"size": 18}
+		replay		REPLAY		REPLAY		REPLAY		REPETIR	{"size": 22}	REPLAY	{"size": 22}
+		pause	self explanatory	PAUSE		PAUSE		PAUSA		PAUSA		PAUSA	
+		quit	self explanatory	QUIT		QUITTER		SAIR		SALIR		ESCI	
+	In-game Texts	lvltxt1-1	Tutorial text	Hello, and welcome to OvO		Bienvenue dans OvO		Olá! Bem-vindo à OvO		¡Hola! Bienvenido a OvO		Ciao, e benvento su OvO	
+		lvltxt1-2	Tutorial text	Use arrow keys to move		Utilise les flèches pour te déplacer		Use as setas para se mover		Usa las flechas para moverte		Usa le frecce per muoverti!	
+		lvltxt1-3	Tutorial text	Press Up to jump		Appuie sur Haut pour sauter		Pressione Cima para pular		Presiona Arriba para saltar		Premi la freccia SU per saltare 	
+		lvltxt1-4	Tutorial text	This is the end of the level		Fin du niveau		Esse é o final do nível		Este es el final del nivel		Questa è la fine del livello	
+		lvltxt2-1	Tutorial text	Jump		Saute		Pule		Saltar		SALTA	
+		lvltxt2-2	Tutorial text	Go next to the wall		Reste près du mur		Vá para à parede		Vete al muro		Vai vicino al muro	
+		lvltxt2-3	Tutorial text	And jump higher		Pour sauter plus haut		E pule mais alto		Y saltar más alto		E salta più in alto	
+		lvltxt2-4	Tutorial text	Jump on place and press down to smash the ground		Saute sur place et appuie sur bas pour smasher		Pule no lugar e pressione Baixo para fazer um Bate-Estaca		Salta en tu lugar y presiona Abajo para aplastar		Fai uno schianto a terra premendo giù mentre sei in volo	
+		lvltxt2-5	Tutorial text	(you can smash this)		Tu peux smasher ça		(Você pode atravessar usando um bate-estaca aqui)		(Puedes cruzar con el aplastar aquí)		(Puoi rompere questo)	
+		lvltxt2-6	Tutorial text	Jump after a smash		Saute après un Smash		Pule após dar um bate-estaca		Saltar tras aplastar		Salta dopo uno schianto	
+		lvltxt2-7	Tutorial text	To jump higher		Pour sauter plus haut		Para pular bem mais alto		Para saltar mucho mas alto		Per saltare più in alto	
+		lvltxt3-1	Tutorial text	You can slide down walls		Tu peux descendre des murs		Você pode deslizar nas paredes		Puedes deslizarte por las paredes		Puoi scivolare lungo i muri	
+		lvltxt3-2	Tutorial text	Jump while sliding to wall jump		Saute en descendant pour faire un saut mural		Pule enquanto deslize nas paredes para fazer um Pulo De Parede	{"size": 8}	Salta mientras te deslizas por las paredes para hacer un salto de pared		Salta mentre scivoli per fare un salto a parete	
+		lvltxt4-1	Tutorial text	You can even slide!		Tu peux aussi glisser !		Você pode até deslizar no chão!		¡Incluso puedes deslizarte por el suelo!		Puoi anche scivolare!	
+		lvltxt4-2	Tutorial text	Press the down key		Appuie sur Bas		Pressione a tecla Baixo		Presione la tecla Abajo		Premi la freccia giù	
+		lvltxt4-3	Tutorial text	Jump while sliding to dive		Saute en glissant pour plonger		Pule enquanto desliza para Mergulhar		Salta mientras te deslizas para sumergirte		Salta mentre scivoli per fare un tuffo nell'aria	
+		lvltxt4-4	Tutorial text	Be careful not to hit your head		Attention la tête…		Tome cuidado para não bater a cabeça...		Tenga cuidado de no golpearse la cabeza ...		Stai attento a non sbattere la testa	
+		lvltxt5-1	Tutorial text	Those are bad guys		Eux, ils sont méchants		Esse são os malvadões		Estos son los malos		Questi sono dei cattivoni	
+		lvltxt5-2	Tutorial text	Try to do a smash while going right to Dive		Essaie de smasher en restant appuyé sur Droite pour faire un plongeon		Tente fazer um bate-estaca enquanto anda pra direita para Mergulhar		Intenta aplastar mientras caminas directamente a bucear		Prova a fare uno schianto poco prima di fare un tuffo	
+		lvltxt6-1	Tutorial text	Now dive again		Plonge encore		Mergulhe denovo...		Bucea de nuevo ...		Fai un altro tuffo	
+		lvltxt6-2	Tutorial text	And jump		Puis saute !		E Pule!		¡Y salta!		E salta	
+		lvltxt6-3	Tutorial text	Those are good guys		Eux, ils sont cools		Esse são os mocinhos		Estos son los buenos		Questi sono bravi ragazzi	
+		lvltxt7-2	Tutorial text	Smashing the jumpers won't activate them		Smasher les boosters ne les active pas		Fazer um bate-estaca nas molas não irá ativar-las		Aplastar los resortes no los activará		Se fai uno schianto sui trampolini non verranno attivati	
+		lvltxt8-1	Tutorial text	Jump		Saute		Pule		Saltar		Salta	
+		lvltxt8-2	Tutorial text	Dive		Plonge		Mergulhe denovo...		Bucea de nuevo ...		Tuffo	
+		lvltxt8-3	Tutorial text	Re-jump		Re-saute!		Pule denovo!		¡Salta de nuevo!		Ri-salta	
+		lvltxt9-1	Flavor text from 2nd section	Hey... This is		Hé... on a dit		Ei... isso está		Oye, esto se está		Hey questo è...	
+		lvltxt9-2	Indication to pound	SMASH!		SMASH!		KABUM!		SMASH!		SCHANTO!	
+		lvltxt9-3	Flavor text for lvl9	"Getting SERIOUS"		"Les choses Sérieuses"		"ficando tenso"		"Poniendo tenso"		"La cosa si fa SERIA"	
+		lvltxt10-1	Jump pad strength	Strong		Puissant		Forte		Fuerte		Forte	
+		lvltxt10-2	Jump pad strength	Normal		Normal		Normal		Normal		Normale	
+		lvltxt10-3	Jump pad strength	Weak		Faible		Fraco		Débil		Debole	
+		lvltct10-4	hintlvl10	(Sliding increases velocity)		(Glisser augmente ta vitesse)		(Deslizar aumenta a velocidade)		(El deslizamiento aumenta la velocidad)		(Scivolare aumenta la velocità)	
+		lvltxt10-4	Before a jump	Trust		Aie foi		Confie		Confía		Fidati	
+		lvltxt14-1	Indication	Here !		Ici !		Aqui!		¡Aqui!		QUI!	
+		lvltxt17-1	Indication	Slow down!		Ralentis !		Desacelere!		¡Reduzca la velocidad!		RALLENTA!	
+		lvltxt19-1	Tutorial text	Press Up and Down		Appuies sur Haut et Bas		Pressione Cima e Baixo		Presione Arriba y Abajo		Premi su e giù	
+		lvltxt23-1	Before a jump	Believe and Dive		Prie et Plonge !		Confie e Mergulhe!		¡Confía y bucea!		Fidati e tuffati	
+		lvltxt28-1	Text at the end of a useless corridor	Wrong way :)		Mauvais sens :)		Caminho errado :)		Camino equivocado :)		Psto sbagliato :)	
+		lvltxt25-1	Text at the end of a useless corridor 2	Sorry, nothing here...		Y'a rien à voir, désolé…		Nada aqui, foi mal...		Nada aquí, lo siento...		Mi dispiace, non c'è proprio niente qui...	
+		lvltxt25-2	Indication when faced with a door	This can be opened somehow...		Tu dois pouvoir activer ça…		Deve ter alguma forma de abrir isso...		Debe haber alguna forma de abrir esto ...		Si può aprire in qualche modo....	
+		lvltxt51-1	Signature	By Leetle Toady		Par Leetle Toady		Por Leetle Toady		Por Leetle Toady		Di Leetle Toady	
+		lvltxt33-1	Flavor text from Space program section	Take part in the OvO space Program!		Bienvenue dans Le programme spatial OvO !		Bem-vindo ao Programa Espacial OvO!		¡Bienvenido al programa espacial OvO!		Prendi parte allo spazio per i programmatori di Ovo!	
+		lvltxt33-2	Flavor text from Space program section	This way ---->		Par ici ---->		Por aqui ---->		por aquí ---->		Da questa parte ---->	
+		lvltxt33-3	Flavor text from Space program section	Step 1 is...		Etape 1 :		Passo 1 :		Paso 1 :		Il primo passo è...	
+		lvltxt33-4	Flavor text from Space program section	ROCKETS!		ROCKETS!		FOGUETES!		¡COHETES!		RAZZI!	
+		lvltxt33-5	Flavor text from Space program section	MORE ROCKETS!		PLUS DE ROCKETS!		MAIS FOGUETES!		¡MÁS COHETES!		ALTRI RAZZI!	
+		lvltxt33-6	Flavor text from Space program section	MORE ROCKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEETS!		PLUS DE ROCKEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEETS!		MAIS FOGUEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEETES!		¡MÁS COHEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEETES!		ANCORA RAZZIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII!	
+		lvltxt34-1	Indicator text	You will have to outrange rockets however you can		Sois inventif pour éviter les rockets		Você terá que evitar os foguetes de alguma forma		Tendrás que evitar los cohetes de alguna manera.		Dovrai cercare di stare fuori portata quando possibile	
+		lvltxt38-1	Indicator text	Move		Bouge		Mova		Moverse		MUOVITI!	
+		lvltxt41-1	Juice	Quickly		Vite		Rapido		Ràpidamente		VELOCE	
+		lvltxt41-2	Juice	Through		Dans		Para		Mediante		ATTRAVERSA	
+		lvltxt41-3	Juice	The		Le		O		Al		IL 	
+		lvltxt41-4	Juice	Portal!		Portail!		Portal!		Portal		PORTALE!	
+													
+													
+													
+		lvltxt40-1	Indicator text	<--- Dive		<--- Plonge		<--- Mergulhe		<--- Bucea		<--- Tuffo	
+	Level Names	level1	Level name	Start		Départ		Começo		Comienzo		Inizia	
+		level2	Level name	Hard		Dur		Difícil		Difícil		Difficile	
+		level3	Level name	Harder		Super dur		Muito Difícil		Muito Difícil		Più difficile	
+		level4	Level name	Hardest		Trop dur		Super Dificil		Extremadamente Difícil		Il più difficile	
+		level5	Level name	Hellish		Dangereux		Perigoso		Peligroso		Infernale	
+		level6	Level name	Impossible		Impossible		Impossível		Imposible		Impossiile	
+		level7	Level name	Godlike		Agréable		Prazeroso		Agradable		Celestiale	
+		level8	Level name	Jump & Dive		Saute & plonge		Pule e Mergulhe		Saltar y bucear		Salto & tuffo	
+		level9	Level name	A wise Decision		Une sage décision		Uma Decisão Sábia		Una sabia decisión		Una decisione saggia	
+		level10	Level name	A matter of strength		Une question de force		Uma Questão de Força		Una cuestión de fuerza		Questione di forza	
+		level11	Level name	Reactivity		Réactivité		Reatividade		Reactividad		Reattività	
+		level12	Level name	A little wall maze		Le petit labyrinthe		Um Pequeno Labirinto de Paredes		Un pequeño laberinto de muros		Un piccolo labirinto	
+		level13	Level name	A matter of speed		Une question de vitesse		Uma Questão de Velocidade		Una cuestión de velocidad		Questione di velocità	
+		level14	Level name	Timing		Timing		Tempo		Momento		Tempismo	
+		level15	Level name	Deadly contraption I		Piège mortel I		Engenhoca Mortal I		Artilugio mortal I		Aggeggio mortale 1	
+		level16	Level name	A way down		La descente		Ladeira Abaixo		Cuesta abajo		Una via giù	
+		level17	Level name	Take it slow		Vas-y doucement		Pegue Leve		Con calma		Con calma	
+		level18	Level name	Mirrored Room I		Pièce symétrique I		Sala Espelhada I		Habitación con espejos I		Stanza specchiata 1	
+		level19	Level name	Little Spikehouse		Petite maison de piques		Pequena Sala Pontiaguda		Habitación pequeña puntiaguda		Piccola casa spinosa	
+		level20	Level name	Dormant contraption		Piège endormi		Engenhoca Adormecida		Artilugio durmiente		Aggeggio dormiente	
+		level21	Level name	A way up		La montée		Ladeira Acima		Cuesta arriba		Una via SU	
+		level22	Level name	Iterations		Itérations		Iterações		Iteraciones		Iterazioni	
+		level23	Level name	Leap of faith		Saut de la foi		Salto de Fé		Salto de fe		Salto della fede	
+		level24	Level name	Maelstrom		Maelstrom		Redemoinho		Remolino		Vortice	
+		level25	Level name	Simple Mechanics		Méchaniques de base		Mecânicas Simples		Mecánica simple		Semplici meccaniche	
+		level26	Level name	Three doors		Trois portes		Três Portas		Tres puertas		Tre porte	
+		level27	Level name	Awake contraption		Piège éveillé		Engenhoca Acordada		Artilugio despierto		Aggeggio risevegliato	
+		level28	Level name	Deadly contraption II		Piège mortel II		Engenhoca Mortal II		Artilugio mortal II		Aggeggio mortale 2	
+		level29	Level name	Friendly little platform I		Petite plateforme sympathique I		Pequena Plataforma Amigável I		Pequeña plataforma amigable I		Piccola piattaforma amichevole 1	
+		level30	Level name	Friendly little platform II		Petite plateforme sympathique II		Pequena Plataforma Amigável II		Pequeña plataforma amigable II		Piccola piattaforma amichevole 2	
+		level31	Level name	Hilarious Quadrilateral		Quadrilatère Hilarant		Quadrilátero Hilário		Cuadrilátero hilarante		Quadrilatero buffo	
+		level32	Level name	Run for your life		Fuis pour ta vie		Corra Por Sua Vida		Corre por tu vida		Corri se vuoi vivere	
+		level33	Level name	Selection Exam		Examen séléctif		Exame De Seleção		Examen de selección		Esame di selezione	
+		level34	Level name	Test of intelligence		Test d'intelligence		Teste de Inteligência		Prueba de inteligencia		Test di intelligenza	
+		level35	Level name	Test of instinct		Test d'instinct		Teste de Instinto		Prueba de instinto		Test di istinto	
+		level36	Level name	Test of speed		Test de vitesse		Teste de Velocidade		Prueba de velocidad		Test di velocità	
+		level37	Level name	Test of accuracy		Test de visée		Teste de Precisão		Prueba de precisión		Test di accuratezza	
+		level38	Level name	Test of adaptation		Test d'adaptation		Teste de Adaptação		Prueba de adaptación		Test di adattazzione	
+		level39	Level name	Graduation?		Le diplôme ?		O Diploma...?		El diploma ...?		Sfumature?	
+		level40	Level name	Final Exam		Examen final		O Exame Final		El examen final		Esame finale	
+		level41	Level name	Initialization		Initialisation		Inicialização		Puesta en marcha		Inizializzazione	
+		level42	Level name	Procedural		Procédural		Procedural		Procesal		Procedurale	
+		level43	Level name	Hysterical Quadrilatral		Quadrilatère Hystérique		Quadrilátero Histérico		Cuadrilátero histérico		Quadrilatero isterico	
+		level44	Level name	Back-propagation		Propagation arrière		Retropropagação		Retropropagación		Propagazione all'indietro	
+		level45	Level name	Arithmetic		Arithmétique		Aritmética		Aritmética		Aritmetica	
+		level46	Level name	Recursion		Recursion		Recursão		Recursividad		Ricorsione	
+		level47	Level name	Rocket Science		Fuséologie avancée		Ciência de Foguetes		Ciencia espacial		Scienza dei razzi	
+		level48	Level name	Binary		Binaire		Binário		Binario		Binario	
+		level49	Level name	The Iron maiden		La vierge de fer		A Donzela De Ferro		La doncella de hierro		La sirena d'acciaio	
+		level50	Level name	Threading the needle		Au travers de l'aiguille		Linha Na Agulha		Hilo de aguja		Infilare l'ago	
+		level51	Level name	The twin towers		Les deux tours		As Torres Gêmeas		Las torres Gemelas		Le torri gemelle	
+		level52	Level name	Andromeda		Andromède		Andrômeda		Andrómeda		Andromeda	
+		level53	Level name	Welcome to Spikeland !		Bienvenue à Spikeland !		Bem-vindos a Spikeland!		Bienvenido a Spikeland			
+		level54	Level name	The Rocket		Le missile		O Foguete		El Fhoete			
+		level55	Level name	Deadly Contraption III		Piège mortel III		Engenhoca Mortal III		Artilugio mortal III			
+		level56	Level name	Alternating Sequence		Séquence alternée		Sequência Alternada		Secuencia Alterna			
+		level57	Level name	Motion Blur		Flou animé		Borrão de Movimento		Desenfoque de Movimento			
+		level58	Level name	Spikeland		Spikeland		Spikeland		Spikeland			
+		level59	Level name	The Spiral of Death		La spirale de la mort		Espiral da Morte		Espiral de la Muerte			
+		level60	Level name	TOWER OF PAIN		TOUR DE LA DOULEUR		TORRE DA DOR		TORRE DEL DOLOR		Andromeda	
+	End Card	yourfinaltime	End card text	Your Final Time		Temps final		Seu tempo final:		Tu tiempo final:		Il tuo tempo finale	
+		timerforthislevel	End card text	Timer for this level		Temps du niveau		Tempo de niveis		Tiempo de niveles		Timer per questo livello	
+		tryagainhardmode	End card text	Try again in Hard mode !		Essaie en mode difficile maintenant !		Tente denovo no Modo Difícil!		¡Vuelve a intentarlo en Modo Difícil!		Ora prova in modalità difficile!	
